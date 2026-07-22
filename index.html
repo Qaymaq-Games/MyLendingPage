@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Qaymaq Games is an indie game studio crafting bold, playful and memorable indie games.">
+  <title>Qaymaq Games | Indie Game Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="home">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Qaymaq Games home">
+        <span class="brand-mark">QG</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-panel" data-nav-panel>
+        <ul class="nav-links">
+          <li><a href="#games">Games</a></li>
+          <li><a href="#about">Studio</a></li>
+          <li><a href="#browse">Browse</a></li>
+          <li><a href="#mini-interactive">Play</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-small btn-primary" href="#contact">Pitch Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-poster hero-brand reveal">
+        <div class="hero-title-lockup">
+          <h1 id="hero-title">Qaymaq Games</h1>
+        </div>
+      </div>
+
+      <div class="container hero-info reveal">
+        <div>
+          <h2>Qaymaq Games</h2>
+          <p>An indie game studio crafting playful, emotional and memorable worlds for PC and console.</p>
+        </div>
+        <a class="btn btn-primary" href="#games">More Info</a>
+      </div>
+    </section>
+
+    <section class="game-lineup section" id="games" aria-labelledby="games-title">
+      <div class="container">
+        <div class="section-kicker reveal">
+          <p class="eyebrow">Selected projects</p>
+          <h2 id="games-title">Games on the shelf</h2>
+        </div>
+
+        <article class="game-feature reveal">
+          <div class="floppy floppy-custom">
+            <img src="assets/основа копия.png" alt="Green Qaymaq Games diskette with Doom's Day artwork">
+          </div>
+          <div class="game-copy">
+            <h3>Doom's Day</h3>
+            <div class="accent-line"></div>
+            <dl class="game-meta">
+              <div><dt>Release</dt><dd>TBA</dd></div>
+              <div><dt>Genre</dt><dd>Pixel Art Adventure</dd></div>
+              <div><dt>Studio</dt><dd>Qaymaq Games</dd></div>
+            </dl>
+            <button class="btn btn-light" type="button" data-open-modal="age-of-doom">More Info</button>
+          </div>
+        </article>
+
+        <article class="game-feature reverse reveal">
+          <div class="floppy floppy-red coming-soon-floppy" aria-label="Inventor's Lab, coming soon">
+            <div class="floppy-screen lab-label"><span></span><span></span><span></span></div>
+            <span class="floppy-slot"></span>
+            <span class="floppy-ribs"></span>
+            <div class="coming-soon-badge"><span class="mini-lock" aria-hidden="true"></span><strong>Coming Soon</strong></div>
+          </div>
+          <div class="game-copy">
+            <h3>Inventor's Lab</h3>
+            <div class="accent-line red"></div>
+            <dl class="game-meta">
+              <div><dt>Status</dt><dd>Locked</dd></div>
+              <div><dt>Reveal</dt><dd>Soon</dd></div>
+              <div><dt>Studio</dt><dd>Qaymaq</dd></div>
+            </dl>
+            <button class="btn btn-light" type="button" data-open-modal="inventors-lab">More Info</button>
+          </div>
+        </article>
+
+        <article class="game-feature reveal">
+          <div class="floppy floppy-blue coming-soon-floppy" aria-label="Paint Tag Arena, coming soon">
+            <div class="floppy-screen paint-label"><span></span><span></span><span></span></div>
+            <span class="floppy-slot"></span>
+            <span class="floppy-ribs"></span>
+            <div class="coming-soon-badge"><span class="mini-lock" aria-hidden="true"></span><strong>Coming Soon</strong></div>
+          </div>
+          <div class="game-copy">
+            <h3>Paint Tag Arena</h3>
+            <div class="accent-line blue"></div>
+            <dl class="game-meta">
+              <div><dt>Status</dt><dd>Locked</dd></div>
+              <div><dt>Reveal</dt><dd>Soon</dd></div>
+              <div><dt>Studio</dt><dd>Qaymaq</dd></div>
+            </dl>
+            <button class="btn btn-light" type="button" data-open-modal="paint-tag-arena">More Info</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="browse section" id="browse" aria-labelledby="browse-title">
+      <div class="container">
+        <div class="browse-head reveal">
+          <h2 id="browse-title">Browse All</h2>
+          <a class="btn btn-light" href="#contact">See More Games</a>
+        </div>
+
+        <div class="browse-grid">
+          <article class="browse-card reveal">
+            <div class="browse-art browse-diskette">
+              <img class="diskette-preview" src="assets/основа копия.png" alt="Doom's Day diskette">
+            </div>
+            <h3>Doom's Day</h3>
+            <p>by Qaymaq Games <span>Featured</span></p>
+          </article>
+          <article class="browse-card art-lab is-locked reveal">
+            <div><span></span><span></span><span></span></div>
+            <h3>Inventor's Lab</h3>
+            <p>by Qaymaq Games <span>Coming Soon</span></p>
+          </article>
+          <article class="browse-card art-paint is-locked reveal">
+            <div><span></span><span></span><span></span></div>
+            <h3>Paint Tag Arena</h3>
+            <p>by Qaymaq Games <span>Coming Soon</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="reveal">
+          <h2 id="about-title">Qaymaq makes fine indie games</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>We build striking, readable and memorable game concepts with a handmade spirit. Our projects can be cozy, chaotic, mysterious or funny, but they always start with a strong player fantasy.</p>
+          <p>Qaymaq Games focuses on stylized visuals, fast prototyping, friendly systems and the kind of worlds players want to talk about after the screen fades out.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="studio-strip section" id="studio" aria-labelledby="studio-title">
+      <div class="container">
+        <div class="section-kicker reveal">
+          <p class="eyebrow">Production loop</p>
+          <h2 id="studio-title">How We Make Games</h2>
+        </div>
+        <div class="process-grid">
+          <article class="process-card reveal"><span>01</span><h3>Idea</h3><p>Find the fantasy, mood and visual hook.</p></article>
+          <article class="process-card reveal"><span>02</span><h3>Prototype</h3><p>Make the core interaction playable fast.</p></article>
+          <article class="process-card reveal"><span>03</span><h3>Playtest</h3><p>Watch players discover what works.</p></article>
+          <article class="process-card reveal"><span>04</span><h3>Polish</h3><p>Refine feedback, feel, flow and charm.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section interactive-section" id="mini-interactive" aria-labelledby="interactive-title">
+      <div class="container mini-layout">
+        <div class="reveal">
+          <p class="eyebrow">Mini Interactive</p>
+          <h2 id="interactive-title">Qaymaq Pac-Man</h2>
+          <p>Clear the glowing dots with the cabinet controls or your keyboard arrow keys.</p>
+        </div>
+        <div class="mini-game arcade-cabinet reveal">
+          <div class="arcade-marquee" aria-hidden="true"><span>QAYMAQ</span><strong>PAC-MAN</strong></div>
+          <div class="arcade-screen-wrap">
+            <div class="arcade-hud"><span>1UP</span><strong data-score>0000</strong><span data-pellets-left>14 DOTS</span></div>
+            <div class="playfield pacman-field" data-playfield aria-label="Pac-Man game field">
+              <span class="maze maze-one"></span><span class="maze maze-two"></span><span class="maze maze-three"></span>
+              <span class="maze maze-four"></span><span class="maze maze-five"></span><span class="maze maze-six"></span>
+              <span class="pellet" style="left: 13%; top: 18%"></span><span class="pellet" style="left: 31%; top: 18%"></span><span class="pellet" style="left: 49%; top: 18%"></span><span class="pellet" style="left: 69%; top: 18%"></span><span class="pellet" style="left: 87%; top: 18%"></span>
+              <span class="pellet" style="left: 13%; top: 48%"></span><span class="pellet" style="left: 31%; top: 48%"></span><span class="pellet" style="left: 69%; top: 48%"></span><span class="pellet" style="left: 87%; top: 48%"></span>
+              <span class="pellet" style="left: 13%; top: 79%"></span><span class="pellet" style="left: 31%; top: 79%"></span><span class="pellet" style="left: 49%; top: 79%"></span><span class="pellet" style="left: 69%; top: 79%"></span><span class="pellet" style="left: 87%; top: 79%"></span>
+              <div class="pacman facing-right" data-pacman role="img" aria-label="Pac-Man"></div>
+            </div>
+          </div>
+          <div class="arcade-console">
+            <div class="joystick" aria-hidden="true"><span></span></div>
+            <div class="controls" aria-label="Pac-Man movement controls">
+              <button class="control-btn up" type="button" data-move="up" aria-label="Move up">&uarr;</button>
+              <button class="control-btn left" type="button" data-move="left" aria-label="Move left">&larr;</button>
+              <button class="control-btn down" type="button" data-move="down" aria-label="Move down">&darr;</button>
+              <button class="control-btn right" type="button" data-move="right" aria-label="Move right">&rarr;</button>
+            </div>
+            <div class="arcade-buttons"><button class="reset-game" type="button" data-reset-game aria-label="Restart game" title="Restart game">&#8635;</button><span aria-hidden="true"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="pitch-line reveal">
+          <p>Are you working on something fun? Let's talk.</p>
+          <a class="btn btn-light" href="mailto:qaymaqgames@gmail.com">Pitch Us</a>
+        </div>
+
+        <div class="contact-card reveal">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">Let's create something playful</h2>
+            <p>For ideas, partnerships and project questions, write directly to our studio email.</p>
+          </div>
+          <a class="contact-email" href="mailto:qaymaqgames@gmail.com">qaymaqgames@gmail.com</a>
+          <a class="btn btn-primary" href="mailto:qaymaqgames@gmail.com?subject=Hello%20Qaymaq%20Games">Write an email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark">QG</span></a>
+      <p>Qaymaq Games is a developer-friendly indie studio for PC, Mac and consoles.</p>
+      <div class="footer-links">
+        <a href="#games">Games</a>
+        <a href="#about">Studio</a>
+        <a href="#contact">Pitch Us</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="mailto:qaymaqgames@gmail.com">Email</a>
+      </div>
+      <p class="copyright">&copy; <span data-year></span> Qaymaq Games. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" data-modal-backdrop hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close concept modal">&times;</button>
+      <div class="lock-scene" aria-hidden="true">
+        <div class="chain chain-left"><span></span><span></span><span></span><span></span></div>
+        <div class="chain chain-right"><span></span><span></span><span></span><span></span></div>
+        <div class="lock-body"><span class="lock-shackle"></span><span class="lock-keyhole"></span></div>
+      </div>
+      <p class="eyebrow">Qaymaq Games</p>
+      <h2 id="modal-title" data-modal-title>Coming Soon</h2>
+      <p class="modal-note">This project is under lock. The next signal will arrive soon.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
