@@ -975,14 +975,43 @@ h3 {
   z-index: 4;
   width: 32px;
   height: 32px;
-  border-radius: 50%;
-  background: conic-gradient(from 38deg, var(--yellow) 0 284deg, transparent 285deg 360deg);
-  filter: drop-shadow(0 0 7px rgba(255, 207, 55, 0.55));
-  transform: translate(-50%, -50%) rotate(var(--direction, 0deg));
-  transition: left 160ms ease-out, top 160ms ease-out, transform 160ms ease-out;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: left 160ms ease-out, top 160ms ease-out;
+  filter: drop-shadow(0 0 7px rgba(255, 207, 55, 0.65));
 }
 
-.pacman.moving { animation: pacmanChomp 160ms ease-in-out; }
+.pacman::before,
+.pacman::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 16px;
+  background: var(--yellow);
+  transition: transform 90ms ease-out;
+}
+
+.pacman::before {
+  top: 0;
+  border-radius: 16px 16px 0 0;
+  transform-origin: 50% 100%;
+  transform: rotate(-24deg);
+}
+
+.pacman::after {
+  bottom: 0;
+  border-radius: 0 0 16px 16px;
+  transform-origin: 50% 0%;
+  transform: rotate(24deg);
+}
+
+.pacman[data-dir="right"] { transform: translate(-50%, -50%) rotate(0deg); }
+.pacman[data-dir="down"]  { transform: translate(-50%, -50%) rotate(90deg); }
+.pacman[data-dir="left"]  { transform: translate(-50%, -50%) rotate(180deg); }
+.pacman[data-dir="up"]    { transform: translate(-50%, -50%) rotate(270deg); }
+
+.pacman.moving::before { animation: pacmanChompTop 160ms ease-in-out; }
+.pacman.moving::after  { animation: pacmanChompBottom 160ms ease-in-out; }
 .pacman.bump { animation: pacmanBump 180ms ease-out; }
 
 .arcade-console {
@@ -1367,19 +1396,19 @@ h3 {
   }
 }
 
-@keyframes pacmanChomp {
-  0%,
-  100% {
-    scale: 1;
-  }
-  50% {
-    scale: 0.86 1;
-  }
+@keyframes pacmanChompTop {
+  0%, 100% { transform: rotate(-24deg); }
+  50% { transform: rotate(0deg); }
+}
+
+@keyframes pacmanChompBottom {
+  0%, 100% { transform: rotate(24deg); }
+  50% { transform: rotate(0deg); }
 }
 
 @keyframes pacmanBump {
-  0%, 100% { scale: 1; }
-  50% { scale: 0.75 1.1; }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.85); }
 }
 
 @media (max-width: 980px) {

@@ -91,10 +91,10 @@ const pacmanPosition = {
 const gridColumns = [13, 31, 49, 69, 87];
 const gridRows = [18, 48, 79];
 const directionVectors = {
-  up: { x: 0, y: -1, rotation: -90 },
-  down: { x: 0, y: 1, rotation: 90 },
-  left: { x: -1, y: 0, rotation: 180 },
-  right: { x: 1, y: 0, rotation: 0 }
+  up: { x: 0, y: -1 },
+  down: { x: 0, y: 1 },
+  left: { x: -1, y: 0 },
+  right: { x: 1, y: 0 }
 };
 let score = 0;
 
@@ -120,10 +120,11 @@ function collectPellets() {
 
 function movePacman(direction) {
   const vector = directionVectors[direction];
+  if (!vector) return;
   const nextX = pacmanPosition.x + vector.x;
   const nextY = pacmanPosition.y + vector.y;
 
-  pacman.style.setProperty("--direction", `${vector.rotation}deg`);
+  pacman.setAttribute("data-dir", direction);
 
   if (nextX < 0 || nextX >= gridColumns.length || nextY < 0 || nextY >= gridRows.length) {
     pacman.classList.remove("bump");
@@ -136,7 +137,9 @@ function movePacman(direction) {
   pacmanPosition.y = nextY;
   pacman.style.left = `${gridColumns[pacmanPosition.x]}%`;
   pacman.style.top = `${gridRows[pacmanPosition.y]}%`;
-  pacman.className = "pacman moving";
+  pacman.classList.remove("moving");
+  void pacman.offsetWidth;
+  pacman.classList.add("moving");
   window.setTimeout(() => pacman.classList.remove("moving"), 180);
   collectPellets();
 }
@@ -147,7 +150,7 @@ function resetGame() {
   score = 0;
   pacman.style.left = `${gridColumns[pacmanPosition.x]}%`;
   pacman.style.top = `${gridRows[pacmanPosition.y]}%`;
-  pacman.style.setProperty("--direction", "0deg");
+  pacman.setAttribute("data-dir", "right");
   pacman.className = "pacman";
   document.querySelectorAll(".pellet.is-eaten").forEach((pellet) => pellet.classList.remove("is-eaten"));
   scoreDisplay.textContent = "0000";
