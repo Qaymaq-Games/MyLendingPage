@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for Qaymaq Games, MChJ — developer of mobile, PC and console games.">
+  <title>Privacy Policy | Qaymaq Games</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .policy-page {
+      background: radial-gradient(circle at 14% 0%, rgba(255, 75, 69, 0.12), transparent 28rem),
+                  radial-gradient(circle at 85% 20%, rgba(0, 189, 242, 0.08), transparent 28rem),
+                  var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: var(--header-height);
+    }
+    .header-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .header-nav-links a {
+      font-size: 0.92rem;
+      color: var(--cream-dim);
+      transition: color var(--transition);
+    }
+    .header-nav-links a:hover {
+      color: var(--text);
+    }
+    .policy-main {
+      flex: 1;
+      padding: 56px 0 88px;
+    }
+    .policy-copy {
+      max-width: 860px;
+      margin: 0 auto;
+      background: rgba(23, 20, 17, 0.75);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 44px 40px;
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+    }
+    .policy-copy h1 {
+      font-size: 2.5rem;
+      margin: 8px 0 12px;
+      color: var(--cream);
+      letter-spacing: -0.02em;
+    }
+    .policy-updated {
+      display: inline-block;
+      font-size: 0.88rem;
+      color: var(--yellow);
+      background: rgba(255, 207, 55, 0.1);
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 207, 55, 0.25);
+      margin-bottom: 28px;
+    }
+    .policy-copy h2 {
+      font-size: 1.45rem;
+      margin: 36px 0 14px;
+      color: var(--cream);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+    }
+    .policy-copy h3 {
+      font-size: 1.15rem;
+      margin: 22px 0 10px;
+      color: var(--yellow);
+    }
+    .policy-copy p, .policy-copy li {
+      font-size: 1rem;
+      line-height: 1.68;
+      color: #dfd8c2;
+    }
+    .policy-copy ul {
+      padding-left: 22px;
+      margin: 12px 0;
+    }
+    .policy-copy li {
+      margin-bottom: 8px;
+    }
+    .policy-copy a {
+      color: var(--cyan);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity var(--transition);
+    }
+    .policy-copy a:hover {
+      opacity: 0.85;
+    }
+    .info-card {
+      background: rgba(33, 30, 25, 0.85);
+      border: 1px solid rgba(233, 224, 189, 0.18);
+      border-left: 4px solid var(--cyan);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 20px 0;
+    }
+    .alert-card {
+      background: rgba(255, 75, 69, 0.08);
+      border: 1px solid rgba(255, 75, 69, 0.3);
+      border-left: 4px solid var(--red);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 20px 0;
+    }
+    .highlight-badge {
+      background: rgba(0, 189, 242, 0.12);
+      color: var(--cyan);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9em;
+    }
+    .data-table-wrapper {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    .data-table th, .data-table td {
+      padding: 12px 14px;
+      border: 1px solid rgba(233, 224, 189, 0.15);
+      text-align: left;
+    }
+    .data-table th {
+      background: rgba(233, 224, 189, 0.08);
+      color: var(--cream);
+      font-weight: 600;
+    }
+    .data-table tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .step-box {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--red);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+    .step-content {
+      flex: 1;
+    }
+    @media (max-width: 680px) {
+      .policy-copy {
+        padding: 28px 20px;
+      }
+      .policy-copy h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body class="policy-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Qaymaq Games home">
+        <span class="brand-mark">QG</span>
+      </a>
+      <nav class="header-nav-links" aria-label="Legal header navigation">
+        <a href="index.html#games">Games</a>
+        <a href="index.html#about">Studio</a>
+        <a href="terms-of-service.html">Terms</a>
+        <a class="btn btn-small btn-primary" href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="policy-main">
+    <article class="container policy-copy">
+      <p class="eyebrow">Qaymaq Games</p>
+      <h1>Privacy Policy</h1>
+      <span class="policy-updated">Effective Date: September 9, 2026</span>
+
+      <p>
+        This Privacy Policy describes how <strong>Qaymaq Games, MChJ</strong> ("Qaymaq Games", "we", "our", or "us")
+        collects, uses, processes, and protects your information when you visit our official website at
+        <a href="https://www.qaymaqgames.com/">https://www.qaymaqgames.com/</a>, play our mobile games (available via
+        the Google Play Store and other application marketplaces), or otherwise interact with our products and services (collectively, the "Services").
+      </p>
+
+      <div class="info-card">
+        <strong>Data Controller Information:</strong><br>
+        <strong>Legal Entity:</strong> Qaymaq Games, MChJ (D-U-N-S: 933906925)<br>
+        <strong>Address:</strong> 1 Imom Ota Qishlog'i, Samarkand Region, Republic of Uzbekistan<br>
+        <strong>Official Website:</strong> <a href="https://www.qaymaqgames.com/">www.qaymaqgames.com</a><br>
+        <strong>Support & Privacy Inquiries:</strong> <a href="mailto:support@qaymaqgames.com">support@qaymaqgames.com</a><br>
+        <strong>Business & Developer Contact:</strong> <a href="mailto:contact@qaymaqgames.com">contact@qaymaqgames.com</a><br>
+        <strong>Phone:</strong> +998 50 015 39 29
+      </div>
+
+      <h2>1. Information We Collect</h2>
+      <p>We may collect information in two main categories: information you provide voluntarily and information collected automatically through our games and website.</p>
+
+      <h3>A. Information You Provide Directly</h3>
+      <ul>
+        <li><strong>Customer Support & Inquiries:</strong> When you email us directly or submit inquiries through our contact points, we collect your name, email address, message contents, and any attachments or technical details you provide to resolve your question.</li>
+        <li><strong>Feedback & Surveys:</strong> Any suggestions, comments, or bug reports submitted during open playtests or community communications.</li>
+      </ul>
+
+      <h3>B. Information Collected Automatically via Mobile Games</h3>
+      <p>When you download and play our games, our analytics and advertising SDK partners may automatically process certain technical and device data, including:</p>
+      <ul>
+        <li><strong>Device Identifiers:</strong> Google Advertising ID (GAID / ADID), Android ID, Vendor ID, and random pseudonymized app installation tokens.</li>
+        <li><strong>Device Hardware & Software Details:</strong> Device model, manufacturer, operating system version, CPU architecture, screen resolution, system language, and carrier details.</li>
+        <li><strong>Network & Location Information:</strong> IP address (used to infer general coarse location such as country or city level for localization and regulatory compliance; we do <em>not</em> collect precise GPS coordinates).</li>
+        <li><strong>Gameplay & Telemetry Data:</strong> Game session start/stop times, level progression, scores, in-game achievements, virtual currency/item balances, crash logs, and frame-rate performance reports.</li>
+      </ul>
+
+      <h2>2. How We Use Your Information</h2>
+      <p>We process information for the following legitimate purposes:</p>
+      <ul>
+        <li><strong>Game Functionality:</strong> To deliver gameplay, save progress, maintain game balance, and provide customer support.</li>
+        <li><strong>Analytics & Improvement:</strong> To monitor crash logs, analyze retention, evaluate user experience, and optimize performance across devices.</li>
+        <li><strong>In-App Advertising:</strong> To serve contextual or personalized advertisements through authorized ad networks, supporting free-to-play titles.</li>
+        <li><strong>Fraud Prevention & Security:</strong> To detect malicious bots, abuse, unauthorized modification, and protect game integrity.</li>
+        <li><strong>Legal Compliance:</strong> To comply with applicable laws, including tax regulations, digital sellers specifications, and app marketplace developer policies.</li>
+      </ul>
+
+      <h2>3. Third-Party Services, SDKs & Advertising Partners</h2>
+      <p>
+        Our mobile games integrate industry-standard third-party Software Development Kits (SDKs) to provide monetization,
+        analytics, and platform features. Each partner processes data in accordance with their independent privacy policies:
+      </p>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Partner / Service</th>
+              <th>Purpose</th>
+              <th>Privacy Policy & Opt-Out</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Google Play Services & Google AdMob</strong><br><span class="highlight-badge">pub-7814526117537617</span></td>
+              <td>Authentication, in-app billing, rewarded & interstitial ads</td>
+              <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td>
+            </tr>
+            <tr>
+              <td><strong>ironSource LevelPlay</strong><br><span class="highlight-badge">App Key / Ad Mediation</span></td>
+              <td>Ad mediation, rewarded video, playable ads</td>
+              <td><a href="https://www.is.com/privacy-policy/" target="_blank" rel="noopener">ironSource Privacy Policy</a></td>
+            </tr>
+            <tr>
+              <td><strong>InMobi</strong><br><span class="highlight-badge">Mobile Advertising</span></td>
+              <td>Mobile video and display advertising</td>
+              <td><a href="https://www.inmobi.com/privacy-policy/" target="_blank" rel="noopener">InMobi Privacy Policy</a></td>
+            </tr>
+            <tr>
+              <td><strong>Unity Ads</strong><br><span class="highlight-badge">Game Ads</span></td>
+              <td>In-game video and interstitial advertising</td>
+              <td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Privacy Policy</a></td>
+            </tr>
+            <tr>
+              <td><strong>AppsFlyer</strong><br><span class="highlight-badge">Attribution & Analytics</span></td>
+              <td>Install attribution, marketing analytics, fraud prevention</td>
+              <td><a href="https://www.appsflyer.com/legal/privacy-policy/" target="_blank" rel="noopener">AppsFlyer Privacy Policy</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        For authorized digital advertising inventory verification, our studio maintains an official <strong>app-ads.txt</strong> file at
+        <a href="https://www.qaymaqgames.com/app-ads.txt">https://www.qaymaqgames.com/app-ads.txt</a>.
+      </p>
+
+      <h2>4. Children's Privacy (COPPA & Google Play Families Policy)</h2>
+      <p>
+        Protecting the privacy of children is of paramount importance to Qaymaq Games. Our games are designed for general audiences unless explicitly marked otherwise on the store listing.
+      </p>
+      <ul>
+        <li>We do <strong>not</strong> knowingly collect, solicit, or store personal identifiable information from children under 13 years of age (or under 16 where required by EEA/UK law).</li>
+        <li>If an application is participating in the Google Play Designed for Families program or directed toward younger audiences, our ad mediation SDKs are configured to request non-personalized, family-safe advertisements only.</li>
+        <li>If we learn that we have inadvertently collected personal data from a child without verified parental consent, we will promptly delete that data from our servers. Parents or guardians may contact us at <a href="mailto:support@qaymaqgames.com">support@qaymaqgames.com</a> with any concerns.</li>
+      </ul>
+
+      <h2>5. Your Privacy Rights (GDPR, CCPA & Global Players)</h2>
+      <p>Depending on your country or region of residence, you hold specific statutory rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Right to Access:</strong> You may request a summary of the categories and specific pieces of personal information collected about you.</li>
+        <li><strong>Right to Rectification:</strong> You may request correction of inaccurate or incomplete information.</li>
+        <li><strong>Right to Erasure ("Right to Be Forgotten"):</strong> You have the right to request deletion of your personal data.</li>
+        <li><strong>Right to Opt-Out of Personalized Ads:</strong> You can opt out of behavioral targeting at any time directly through your device settings:
+          <ul>
+            <li><em>Android:</em> Settings &rarr; Google &rarr; Ads (or Privacy &rarr; Ads) &rarr; "Delete advertising ID" or "Opt out of Ads Personalization".</li>
+            <li><em>iOS:</em> Settings &rarr; Privacy & Security &rarr; Tracking &rarr; Disable "Allow Apps to Request to Track".</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>6. Mandatory Data Deletion Instructions (Google Play Requirement)</h2>
+      <div class="alert-card">
+        <p><strong>How to request deletion of your data:</strong></p>
+        <p>Google Play policies require developers to provide a clear, public, and accessible mechanism for players to request deletion of their data. To delete your account or any gameplay data associated with your device, please follow these simple steps:</p>
+        
+        <div class="step-box">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            Send an email to our support team at <a href="mailto:support@qaymaqgames.com?subject=Data%20Deletion%20Request"><strong>support@qaymaqgames.com</strong></a> with the subject line: <code>Data Deletion Request</code>.
+          </div>
+        </div>
+        
+        <div class="step-box">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            In your message, please state the <strong>name of the game</strong> you play and your <strong>pseudonymous identifier</strong> (such as your Google Advertising ID, found under Android Settings &rarr; Google &rarr; Ads, or your in-game User ID if displayed in the game settings menu).
+          </div>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            Our team will review your request, purge associated player records from our active databases and attribution logs within <strong>30 calendar days</strong>, and send you written confirmation once the deletion is finalized.
+          </div>
+        </div>
+      </div>
+      <p><em>Please note: Certain transaction records (such as in-app purchase receipts processed by Google Play) may be retained where strictly necessary to satisfy statutory tax, accounting, or anti-fraud obligations.</em></p>
+
+      <h2>7. Data Retention & Security</h2>
+      <p>
+        We employ appropriate technical, physical, and administrative security measures to protect player information against
+        unauthorized access, alteration, disclosure, or destruction. We retain data only for as long as necessary to fulfill the
+        operational purposes outlined in this policy or to satisfy applicable legal obligations.
+      </p>
+
+      <h2>8. International Data Transfers</h2>
+      <p>
+        Qaymaq Games operates internationally. Information collected by third-party services (such as Google, ironSource, or Unity)
+        may be transferred to and processed on servers located in the United States, the European Economic Area, or other countries.
+        These providers adhere to standard contractual clauses and applicable international transfer frameworks.
+      </p>
+
+      <h2>9. Changes to This Privacy Policy</h2>
+      <p>
+        We may update this Privacy Policy periodically to reflect changes in our games, operational practices, or legal requirements.
+        When updates occur, we will revise the "Effective Date" at the top of this document. We encourage players to review this page
+        periodically to remain informed.
+      </p>
+
+      <h2>10. Contact Us</h2>
+      <p>If you have questions, comments, or data protection inquiries, please contact us at:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@qaymaqgames.com">support@qaymaqgames.com</a> (User support & privacy)</li>
+        <li><strong>Official / Business Email:</strong> <a href="mailto:contact@qaymaqgames.com">contact@qaymaqgames.com</a></li>
+        <li><strong>Company:</strong> Qaymaq Games, MChJ</li>
+        <li><strong>Address:</strong> 1 Imom Ota Qishlog'i, Samarkand Region, Republic of Uzbekistan</li>
+        <li><strong>Telephone:</strong> +998 50 015 39 29</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark">QG</span></a>
+      <p>Qaymaq Games is an indie game studio crafting bold, playful and memorable games.</p>
+      <div class="footer-links">
+        <a href="index.html#games">Games</a>
+        <a href="index.html#about">Studio</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="app-ads.txt">app-ads.txt</a>
+        <a href="mailto:contact@qaymaqgames.com">Email</a>
+      </div>
+      <p class="copyright">&copy; <span data-year>2026</span> Qaymaq Games, MChJ. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>document.querySelector('[data-year]').textContent = new Date().getFullYear();</script>
+</body>
+</html>

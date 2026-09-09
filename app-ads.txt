@@ -1,0 +1,14 @@
+# app-ads.txt for qaymaqgames.com
+# Official Authorized Digital Sellers specification for Qaymaq Games, MChJ
+
+# ironSource LevelPlay
+ironsource.com, 679465, DIRECT, 506691456201e74f
+
+# InMobi
+inmobi.com, 2a28431f18814c2588068933f162141e, DIRECT, c404730f875620e5
+
+# Unity Ads
+unity.com, 18968490463892, DIRECT
+
+# Google AdManager / AdMob
+google.com, pub-7814526117537617, DIRECT, f08c47fec0942fa0
