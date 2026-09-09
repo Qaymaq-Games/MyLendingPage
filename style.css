@@ -963,9 +963,32 @@ h3 {
   border-radius: 6px;
   box-shadow: 0 0 8px rgba(0, 189, 242, 0.4), inset 0 0 6px rgba(0, 189, 242, 0.2);
   transform: translate(-50%, -50%);
-  width: 9.8%;
+  width: 8.2%;
   height: 12.8%;
   pointer-events: none;
+}
+
+.warp-tunnel {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 32px;
+  background: rgba(0, 189, 242, 0.12);
+  border: 2px dashed #00bdf2;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.warp-tunnel.left {
+  left: 0;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+}
+
+.warp-tunnel.right {
+  right: 0;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
 }
 
 /* Pellets */

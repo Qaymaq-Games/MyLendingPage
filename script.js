@@ -90,19 +90,19 @@ const resetGameButton = document.querySelector("[data-reset-game]");
 const soundToggleButton = document.querySelector("[data-sound-toggle]");
 const moveButtons = document.querySelectorAll("[data-move]");
 
-// 9 Columns x 7 Rows Grid Coordinates (%)
-const GRID_COLS = [6, 17, 28, 39, 50, 61, 72, 83, 94];
-const GRID_ROWS = [8, 22, 36, 50, 64, 78, 92];
+// 11 Columns x 7 Rows Grid Coordinates (%) - Widescreen Arcade Layout
+const GRID_COLS = [4.5, 13.6, 22.7, 31.8, 40.9, 50, 59.1, 68.2, 77.3, 86.4, 95.5];
+const GRID_ROWS = [7.5, 21.6, 35.8, 50, 64.2, 78.4, 92.5];
 
 // 1: Wall Obstacle, 0: Dot, 2: Power Energizer, 3: Ghost Nest, 4: Pac-Man Start
 const MAP_TEMPLATE = [
-  [1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 2, 0, 0, 1, 0, 0, 2, 1],
-  [1, 0, 1, 0, 0, 0, 1, 0, 1],
-  [1, 0, 1, 0, 3, 0, 1, 0, 1],
-  [1, 0, 1, 0, 1, 0, 1, 0, 1],
-  [1, 0, 0, 0, 4, 0, 0, 0, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1]
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [1, 2, 0, 0, 1, 0, 1, 0, 0, 2, 1],
+  [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+  [1, 0, 1, 0, 1, 3, 1, 0, 1, 0, 1],
+  [1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1],
+  [1, 2, 0, 0, 0, 4, 0, 0, 0, 2, 1],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 ];
 
 const DIRECTION_VECTORS = {
@@ -185,7 +185,7 @@ let frightenedInterval = null;
 let moveTimeout = null;
 
 let pacman = {
-  x: 4,
+  x: 5,
   y: 5,
   dir: "right",
   invulnerable: false,
@@ -197,9 +197,9 @@ let ghosts = [
     id: "blinky",
     name: "Blinky",
     color: "#ff3b30",
-    startX: 4,
+    startX: 5,
     startY: 3,
-    x: 4,
+    x: 5,
     y: 3,
     dir: "up",
     state: "normal",
@@ -211,9 +211,9 @@ let ghosts = [
     id: "inky",
     name: "Inky",
     color: "#00d8f6",
-    startX: 4,
+    startX: 5,
     startY: 2,
-    x: 4,
+    x: 5,
     y: 2,
     dir: "left",
     state: "normal",
@@ -375,7 +375,7 @@ function stopGhostAI() {
 
 function stepGhost(ghost) {
   if (ghost.state === "eaten") {
-    if (ghost.x === 4 && ghost.y === 3) {
+    if (ghost.x === 5 && ghost.y === 3) {
       ghost.state = "normal";
       if (ghost.el) ghost.el.classList.remove("eaten", "frightened", "flashing");
       return;
@@ -386,14 +386,14 @@ function stepGhost(ghost) {
   let targetY = pacman.y;
 
   if (ghost.state === "eaten") {
-    targetX = 4;
+    targetX = 5;
     targetY = 3;
   } else if (ghost.state === "frightened") {
-    targetX = pacman.x <= 4 ? 7 : 1;
+    targetX = pacman.x <= 5 ? 9 : 1;
     targetY = pacman.y <= 3 ? 5 : 1;
   } else if (ghost.id === "inky") {
     const pVec = DIRECTION_VECTORS[pacman.dir] || { x: 0, y: 0 };
-    targetX = Math.max(1, Math.min(7, pacman.x + pVec.x * 2));
+    targetX = Math.max(1, Math.min(9, pacman.x + pVec.x * 2));
     targetY = Math.max(1, Math.min(5, pacman.y + pVec.y * 2));
   }
 
@@ -468,7 +468,7 @@ function handlePacmanDeath() {
     showOverlay("GAME OVER", "The ghosts got you!", "Play Again");
   } else {
     setTimeout(() => {
-      pacman.x = 4;
+      pacman.x = 5;
       pacman.y = 5;
       pacman.dir = "right";
       if (pacman.el) {
@@ -479,9 +479,9 @@ function handlePacmanDeath() {
       }
       pacman.invulnerable = true;
 
-      ghosts[0].x = 4;
+      ghosts[0].x = 5;
       ghosts[0].y = 3;
-      ghosts[1].x = 4;
+      ghosts[1].x = 5;
       ghosts[1].y = 2;
       ghosts.forEach(g => {
         g.state = "normal";
@@ -592,17 +592,17 @@ function resetGame() {
   gameState = "PLAYING";
   currentMap = MAP_TEMPLATE.map(row => [...row]);
 
-  pacman.x = 4;
+  pacman.x = 5;
   pacman.y = 5;
   pacman.dir = "right";
   pacman.invulnerable = false;
 
-  ghosts[0].x = 4;
+  ghosts[0].x = 5;
   ghosts[0].y = 3;
   ghosts[0].dir = "up";
   ghosts[0].state = "normal";
 
-  ghosts[1].x = 4;
+  ghosts[1].x = 5;
   ghosts[1].y = 2;
   ghosts[1].dir = "left";
   ghosts[1].state = "normal";
