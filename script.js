@@ -4,10 +4,26 @@ const navPanel = document.querySelector("[data-nav-panel]");
 const navLinks = document.querySelectorAll('a[href^="#"]');
 const modalBackdrop = document.querySelector("[data-modal-backdrop]");
 const modalTitle = document.querySelector("[data-modal-title]");
+const modalNote = document.querySelector("[data-modal-note]");
 const closeModalButton = document.querySelector("[data-close-modal]");
 const openModalButtons = document.querySelectorAll("[data-open-modal]");
 const yearElement = document.querySelector("[data-year]");
 const tiltCards = document.querySelectorAll(".floppy");
+
+const GAME_MODAL_DATA = {
+  "age-of-doom": {
+    title: "Doom's Day",
+    note: "Pixel Art Adventure in an unpredictable retro world. Development in progress by Qaymaq Games."
+  },
+  "knight-and-hamster": {
+    title: "The Knight and the Hamster",
+    note: "A heroic action roguelite adventure following a brave knight and his faithful hamster companion. Under active development by Qaymaq Games."
+  },
+  "paint-tag-arena": {
+    title: "Paint Tag Arena",
+    note: "High-octane stylized arena action with splattering mechanics. Concept in development by Qaymaq Games."
+  }
+};
 
 function setMenuOpen(isOpen) {
   body.classList.toggle("menu-open", isOpen);
@@ -46,7 +62,13 @@ document.addEventListener("click", (event) => {
 });
 
 function openModal(gameId) {
-  modalTitle.textContent = "Coming Soon";
+  const info = GAME_MODAL_DATA[gameId] || {
+    title: "Coming Soon",
+    note: "This project is under lock. The next signal will arrive soon."
+  };
+
+  if (modalTitle) modalTitle.textContent = info.title;
+  if (modalNote) modalNote.textContent = info.note;
 
   modalBackdrop.hidden = false;
   body.classList.add("modal-open");
