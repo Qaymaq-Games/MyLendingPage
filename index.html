@@ -215,20 +215,17 @@
         <div class="reveal">
           <p class="eyebrow">Mini Interactive</p>
           <h2 id="interactive-title">Qaymaq Pac-Man</h2>
-          <p>Clear the glowing dots with the cabinet controls or your keyboard arrow keys.</p>
+          <p>Collect dots, avoid roaming ghosts, grab power energizers and clear the maze!</p>
         </div>
         <div class="mini-game arcade-cabinet reveal">
           <div class="arcade-marquee" aria-hidden="true"><span>QAYMAQ</span><strong>PAC-MAN</strong></div>
           <div class="arcade-screen-wrap">
-            <div class="arcade-hud"><span>1UP</span><strong data-score>0000</strong><span data-pellets-left>14 DOTS</span></div>
-            <div class="playfield pacman-field" data-playfield aria-label="Pac-Man game field">
-              <span class="maze maze-one"></span><span class="maze maze-two"></span><span class="maze maze-three"></span>
-              <span class="maze maze-four"></span><span class="maze maze-five"></span><span class="maze maze-six"></span>
-              <span class="pellet" style="left: 13%; top: 18%"></span><span class="pellet" style="left: 31%; top: 18%"></span><span class="pellet" style="left: 49%; top: 18%"></span><span class="pellet" style="left: 69%; top: 18%"></span><span class="pellet" style="left: 87%; top: 18%"></span>
-              <span class="pellet" style="left: 13%; top: 48%"></span><span class="pellet" style="left: 31%; top: 48%"></span><span class="pellet" style="left: 69%; top: 48%"></span><span class="pellet" style="left: 87%; top: 48%"></span>
-              <span class="pellet" style="left: 13%; top: 79%"></span><span class="pellet" style="left: 31%; top: 79%"></span><span class="pellet" style="left: 49%; top: 79%"></span><span class="pellet" style="left: 69%; top: 79%"></span><span class="pellet" style="left: 87%; top: 79%"></span>
-              <div class="pacman" data-pacman data-dir="right" role="img" aria-label="Pac-Man"></div>
+            <div class="arcade-hud">
+              <div class="hud-item"><span>1UP</span> <strong data-score>0000</strong></div>
+              <div class="hud-item hud-lives" data-lives title="Lives">❤️❤️❤️</div>
+              <div class="hud-item" data-pellets-left>25 DOTS</div>
             </div>
+            <div class="playfield pacman-field" data-playfield aria-label="Pac-Man game field"></div>
           </div>
           <div class="arcade-console">
             <div class="joystick" aria-hidden="true"><span></span></div>
@@ -238,7 +235,10 @@
               <button class="control-btn down" type="button" data-move="down" aria-label="Move down">&darr;</button>
               <button class="control-btn right" type="button" data-move="right" aria-label="Move right">&rarr;</button>
             </div>
-            <div class="arcade-buttons"><button class="reset-game" type="button" data-reset-game aria-label="Restart game" title="Restart game">&#8635;</button><span aria-hidden="true"></span></div>
+            <div class="arcade-buttons">
+              <button class="reset-game" type="button" data-reset-game aria-label="Restart game" title="Restart game">&#8635;</button>
+              <button class="sound-toggle" type="button" data-sound-toggle aria-label="Toggle sound" title="Sound: ON/OFF">&#128266;</button>
+            </div>
           </div>
         </div>
       </div>
