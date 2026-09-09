@@ -1066,47 +1066,6 @@ h3 {
 .reset-game { width: 28px; height: 28px; padding: 0; border: 2px solid #080a0d; border-radius: 50%; color: #fff5bc; background: radial-gradient(circle at 35% 25%, #ffc737, #d97d00 62%, #713a00); box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.38), 0 3px 0 #07090c; font-size: 1rem; font-weight: 950; line-height: 1; }
 .reset-game:hover { filter: brightness(1.15); }
 
-.controls {
-  display: grid;
-  grid-template-areas:
-    ". up ."
-    "left down right";
-  grid-template-columns: repeat(3, 1fr);
-  align-content: center;
-  gap: 8px;
-}
-
-.control-btn {
-  min-height: 48px;
-  border: 0;
-  border-radius: 999px;
-  color: #1b1512;
-  background: var(--cream);
-  font-size: 0.78rem;
-  font-weight: 950;
-  transition: transform var(--transition), background var(--transition);
-}
-
-.control-btn:hover {
-  transform: translateY(-2px);
-  background: var(--yellow);
-}
-
-.up {
-  grid-area: up;
-}
-
-.left {
-  grid-area: left;
-}
-
-.down {
-  grid-area: down;
-}
-
-.right {
-  grid-area: right;
-}
 
 .contact {
   padding-top: 54px;

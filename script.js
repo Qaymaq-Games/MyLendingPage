@@ -97,6 +97,7 @@ const directionVectors = {
   right: { x: 1, y: 0 }
 };
 let score = 0;
+let moveTimeout = null;
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
@@ -140,7 +141,8 @@ function movePacman(direction) {
   pacman.classList.remove("moving");
   void pacman.offsetWidth;
   pacman.classList.add("moving");
-  window.setTimeout(() => pacman.classList.remove("moving"), 180);
+  if (moveTimeout) clearTimeout(moveTimeout);
+  moveTimeout = window.setTimeout(() => pacman.classList.remove("moving"), 180);
   collectPellets();
 }
 
