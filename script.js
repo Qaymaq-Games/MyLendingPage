@@ -90,9 +90,9 @@ const resetGameButton = document.querySelector("[data-reset-game]");
 const soundToggleButton = document.querySelector("[data-sound-toggle]");
 const moveButtons = document.querySelectorAll("[data-move]");
 
-// 11 Columns x 7 Rows Grid Coordinates (%) - Widescreen Arcade Layout
-const GRID_COLS = [4.5, 13.6, 22.7, 31.8, 40.9, 50, 59.1, 68.2, 77.3, 86.4, 95.5];
-const GRID_ROWS = [7.5, 21.6, 35.8, 50, 64.2, 78.4, 92.5];
+// Widescreen Full-Bleed Grid Coordinates (%) - filling screen to the neon borders
+const GRID_COLS = [2.5, 12.0, 21.5, 31.0, 40.5, 50.0, 59.5, 69.0, 78.5, 88.0, 97.5];
+const GRID_ROWS = [5.5, 20.3, 35.2, 50.0, 64.8, 79.7, 94.5];
 
 // 1: Wall Obstacle, 0: Dot, 2: Power Energizer, 3: Ghost Nest, 4: Pac-Man Start
 const MAP_TEMPLATE = [
