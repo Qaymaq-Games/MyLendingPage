@@ -1,8 +1,10 @@
-﻿{
-   cleanUrls: true,
-  trailingSlash: false,
-  rewrites: [
-    { source: /privacy, destination: /privacy-policy.html },
-    { source: /terms, destination: /terms-of-service.html }
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/privacy", "destination": "/privacy/index.html" },
+    { "source": "/privacy-policy", "destination": "/privacy/index.html" },
+    { "source": "/terms", "destination": "/terms/index.html" },
+    { "source": "/terms-of-service", "destination": "/terms/index.html" }
   ]
 }
