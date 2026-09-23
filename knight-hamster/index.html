@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official game page for The Knight and the Hamster by Qaymaq Games. Action roguelite deckbuilder featuring tactical card combat, a faithful hamster companion, and offline single-player mode on Android.">
+  <meta name="keywords" content="The Knight and the Hamster, Qaymaq Games, roguelite, deckbuilder, card game, android game, mobile indie game">
+  <title>The Knight and the Hamster — Action Roguelite Deckbuilder | Qaymaq Games</title>
+  
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- Open Graph / Facebook / Telegram -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.qaymaqgames.com/knight-hamster">
+  <meta property="og:title" content="The Knight and the Hamster — Action Roguelite Deckbuilder | Qaymaq Games">
+  <meta property="og:description" content="Embark on a perilous roguelite journey alongside your faithful combat hamster. Build an unstoppable deck of strikes, parry ferocious boss attacks, and rebuild the kingdom!">
+  <meta property="og:image" content="https://www.qaymaqgames.com/assets/knight-hamster/feature-graphic-1024x500.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Knight and the Hamster — Qaymaq Games">
+  <meta name="twitter:description" content="Heroic action roguelite deckbuilder on Android. Defeat epic bosses with your faithful hamster companion!">
+  <meta name="twitter:image" content="https://www.qaymaqgames.com/assets/knight-hamster/feature-graphic-1024x500.jpg">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "The Knight and the Hamster",
+    "alternateName": "Knight and Hamster",
+    "description": "Heroic action roguelite adventure featuring tactical deckbuilding and a combat hamster companion.",
+    "genre": ["Action", "Roguelite", "Card Battler"],
+    "operatingSystem": "Android 8.0+",
+    "applicationCategory": "Game",
+    "author": {
+      "@type": "Organization",
+      "name": "Qaymaq Games, MChJ",
+      "url": "https://www.qaymaqgames.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Qaymaq Games, MChJ"
+    },
+    "inLanguage": ["en", "ru"],
+    "playMode": "SinglePlayer"
+  }
+  </script>
+
+  <style>
+    .game-page {
+      background: radial-gradient(circle at 50% 0%, rgba(255, 75, 69, 0.15), transparent 40rem),
+                  radial-gradient(circle at 90% 30%, rgba(0, 189, 242, 0.1), transparent 35rem),
+                  radial-gradient(circle at 10% 70%, rgba(255, 207, 55, 0.08), transparent 30rem),
+                  var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: var(--header-height);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-actions a {
+      color: var(--cream-dim);
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+
+    .nav-actions a:hover {
+      color: var(--cream);
+    }
+
+    /* Hero Section */
+    .game-hero {
+      padding: 64px 0 48px;
+    }
+
+    .game-hero-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .game-icon-box {
+      position: relative;
+      text-align: center;
+    }
+
+    .game-icon {
+      width: 220px;
+      height: 220px;
+      border-radius: 44px;
+      border: 3px solid rgba(255, 207, 55, 0.4);
+      box-shadow: 0 20px 50px rgba(255, 75, 69, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.08);
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      transition: transform var(--transition);
+    }
+
+    .game-icon:hover {
+      transform: scale(1.03);
+    }
+
+    .hero-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .badge-pill {
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-pill.yellow {
+      background: rgba(255, 207, 55, 0.12);
+      color: var(--yellow);
+      border: 1px solid rgba(255, 207, 55, 0.3);
+    }
+
+    .badge-pill.red {
+      background: rgba(255, 75, 69, 0.12);
+      color: var(--red);
+      border: 1px solid rgba(255, 75, 69, 0.3);
+    }
+
+    .badge-pill.cyan {
+      background: rgba(0, 189, 242, 0.12);
+      color: var(--cyan);
+      border: 1px solid rgba(0, 189, 242, 0.3);
+    }
+
+    .game-title {
+      font-size: 2.8rem;
+      line-height: 1.15;
+      margin: 0 0 8px;
+      color: var(--cream);
+      letter-spacing: -0.02em;
+    }
+
+    .game-subtitle {
+      font-size: 1.25rem;
+      color: var(--yellow);
+      font-weight: 700;
+      margin: 0 0 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .game-lead {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--cream-dim);
+      margin-bottom: 28px;
+      max-width: 680px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .btn-playstore {
+      background: linear-gradient(135deg, #00875a, #00b074);
+      color: #fff;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 10px 28px rgba(0, 176, 116, 0.35);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .btn-playstore:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(0, 176, 116, 0.5);
+      color: #fff;
+    }
+
+    /* Video Trailer Section */
+    .video-section {
+      padding: 48px 0;
+    }
+
+    .video-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      background: #000;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    /* Screenshots Section */
+    .screenshots-section {
+      padding: 56px 0;
+    }
+
+    .screenshot-viewer {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .main-screen-frame {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid rgba(233, 224, 189, 0.15);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      margin-bottom: 20px;
+      background: #14110f;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-screen-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: opacity 0.25s ease;
+    }
+
+    .screen-caption {
+      text-align: center;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--yellow);
+      margin-bottom: 16px;
+      min-height: 28px;
+    }
+
+    .thumbs-strip {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+    }
+
+    .thumb-btn {
+      flex: 0 0 130px;
+      scroll-snap-align: start;
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--panel);
+      padding: 0;
+      cursor: pointer;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .thumb-btn:hover {
+      border-color: var(--cyan);
+      transform: translateY(-2px);
+    }
+
+    .thumb-btn.active {
+      border-color: var(--yellow);
+      box-shadow: 0 0 16px rgba(255, 207, 55, 0.4);
+    }
+
+    .thumb-btn img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Features Grid */
+    .features-section {
+      padding: 56px 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .feature-card {
+      background: rgba(23, 20, 17, 0.85);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      transition: transform var(--transition), border-color var(--transition);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 207, 55, 0.4);
+    }
+
+    .feature-card .card-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .feature-card h3 {
+      font-size: 1.3rem;
+      margin: 0 0 10px;
+      color: var(--cream);
+    }
+
+    .feature-card p {
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: var(--cream-dim);
+      margin: 0;
+    }
+
+    /* Specs & Meta */
+    .specs-section {
+      padding: 56px 0 80px;
+    }
+
+    .specs-box {
+      max-width: 860px;
+      margin: 0 auto;
+      background: rgba(23, 20, 17, 0.85);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 36px 32px;
+    }
+
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .specs-table th, .specs-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(233, 224, 189, 0.1);
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .specs-table th {
+      color: var(--cream-dim);
+      font-weight: 600;
+      width: 32%;
+    }
+
+    .specs-table td {
+      color: var(--cream);
+    }
+
+    @media (max-width: 768px) {
+      .game-hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+      }
+      .game-title {
+        font-size: 2.2rem;
+      }
+      .hero-badge-row {
+        justify-content: center;
+      }
+      .hero-cta-group {
+        justify-content: center;
+      }
+      .game-lead {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .specs-box {
+        padding: 24px 18px;
+      }
+      .specs-table th, .specs-table td {
+        padding: 10px 8px;
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+<body class="game-page">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container top-bar">
+      <a class="brand" href="/" aria-label="Qaymaq Games home">
+        <span class="brand-mark">QG</span>
+        <span class="brand-name">Qaymaq Games</span>
+      </a>
+      <nav class="nav-actions" aria-label="Game page navigation">
+        <a href="#features">Features</a>
+        <a href="#trailer">Trailer</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#specs">Specifications</a>
+        <a href="/knight-hamster/privacy-policy" style="color: var(--yellow);">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="game-hero">
+      <div class="container">
+        <div class="game-hero-grid">
+          <div class="game-icon-box">
+            <img class="game-icon" src="/assets/knight-hamster/icon-512.png" alt="The Knight and the Hamster game icon" width="220" height="220">
+          </div>
+          <div>
+            <div class="hero-badge-row">
+              <span class="badge-pill yellow">⭐ Google Play Store</span>
+              <span class="badge-pill red">🎮 Action Roguelite Deckbuilder</span>
+              <span class="badge-pill cyan">📶 100% Offline Playable</span>
+            </div>
+            <h1 class="game-title">The Knight and the Hamster</h1>
+            <p class="game-subtitle">Roguelite Action & Deckbuilding Adventure</p>
+            <p class="game-lead">
+              A heroic deckbuilding roguelite with fast-paced tactical combat and village meta-progression. 
+              Take command of a valiant knight and his faithful battle hamster companion: slay menacing bosses, 
+              forge unstoppable card synergies, and rebuild your fallen home kingdom!
+            </p>
+            <div class="hero-cta-group">
+              <a class="btn-playstore" href="https://play.google.com/store/apps/details?id=com.knighthamster.game" target="_blank" rel="noopener noreferrer">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3.6 1.8c-.4.4-.6 1-.6 1.7v17c0 .7.2 1.3.6 1.7l.1.1 9.6-9.6v-.2L3.7 1.7l-.1.1zM17.1 11.2l-3.3-3.3V7.7l3.3-3.3.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3l-3.9 2.2h-.1zM13.3 12.5L3.7 22.1c.3.3.9.4 1.5.1l11.9-6.8-3.8-2.9zM13.3 11.5L17.1 7.7 5.2.9C4.6.6 4 .7 3.7 1l9.6 10.5z"/>
+                </svg>
+                Google Play (Android)
+              </a>
+              <a class="btn btn-light" href="#trailer">Watch Trailer</a>
+              <a class="btn btn-secondary" href="/knight-hamster/privacy-policy">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trailer Section -->
+    <section class="video-section section" id="trailer">
+      <div class="container">
+        <div class="section-kicker reveal" style="text-align: center; margin-bottom: 24px;">
+          <p class="eyebrow">Gameplay Trailer</p>
+          <h2>Boss Combat & Dynamic Battle Flow</h2>
+        </div>
+        <div class="video-wrapper">
+          <video controls playsinline preload="metadata" poster="/assets/knight-hamster/feature-graphic-1024x500.jpg">
+            <source src="/assets/knight-hamster/trailer.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="screenshots-section section" id="screenshots">
+      <div class="container">
+        <div class="section-kicker reveal" style="text-align: center; margin-bottom: 28px;">
+          <p class="eyebrow">Gallery</p>
+          <h2>In-Game Action & Screenshots</h2>
+        </div>
+
+        <div class="screenshot-viewer">
+          <div class="main-screen-frame">
+            <img class="main-screen-img" id="mainScreen" src="/assets/knight-hamster/01-boss.jpg" alt="Epic Boss Battle in The Knight and the Hamster">
+          </div>
+          <div class="screen-caption" id="screenCaption">1 / 7 · Epic Boss Battles</div>
+
+          <div class="thumbs-strip" role="tablist" aria-label="Game Screenshots">
+            <button class="thumb-btn active" type="button" data-src="/assets/knight-hamster/01-boss.jpg" data-caption="1 / 7 · Epic Boss Battles">
+              <img src="/assets/knight-hamster/01-boss.jpg" alt="Boss Battles">
+            </button>
+            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/02-cards.jpg" data-caption="2 / 7 · Tactical Deckbuilding & Combos">
+              <img src="/assets/knight-hamster/02-cards.jpg" alt="Deckbuilding">
+            </button>
+            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/03-village.jpg" data-caption="3 / 7 · Village Restoration & Upgrades">
+              <img src="/assets/knight-hamster/03-village.jpg" alt="Village Upgrades">
+            </button>
+            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/04-block.jpg" data-caption="4 / 7 · Active Shield, Blocks & Parries">
+              <img src="/assets/knight-hamster/04-block.jpg" alt="Block and Parry">
+            </button>
+            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/05-pets.jpg" data-caption="5 / 7 · Faithful Hamster Companion & Pets">
+              <img src="/assets/knight-hamster/05-pets.jpg" alt="Hamster Companions">
+            </button>
+            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/06-weapons.jpg" data-caption="6 / 7 · Weapon Arsenal & Gear Upgrades">
+              <img src="/assets/knight-hamster/06-weapons.jpg" alt="Weapons and Gear">
+            </button>
+            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/07-camp.jpg" data-caption="7 / 7 · Camp Recovery & Strategic Decisions">
+              <img src="/assets/knight-hamster/07-camp.jpg" alt="Camp Recovery">
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="features-section section" id="features">
+      <div class="container">
+        <div class="section-kicker reveal" style="text-align: center;">
+          <p class="eyebrow">Core Features</p>
+          <h2>Why Players Love The Knight and the Hamster</h2>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <span class="card-icon">🃏</span>
+            <h3>Tactical Combat Depth</h3>
+            <p>Dozens of distinct combat cards: sweeping slashes, iron-clad shield stances, enchanted arrows, and poisonous blades. Forge unstoppable synergies on every single run.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <span class="card-icon">🐹</span>
+            <h3>Battle Hamster Companion</h3>
+            <p>Your furry partner is a true brother-in-arms! He cheers on the knight, distracts menacing foes, casts protective shields, and saves you from fatal strikes.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <span class="card-icon">🏰</span>
+            <h3>Kingdom Meta-Progression</h3>
+            <p>Spend earned gold and rations to rebuild your ruined village. Upgrade the blacksmith, ancient shrine, and tavern for permanent hero stat bonuses.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <span class="card-icon">🛡️</span>
+            <h3>Fair Play & Offline Freedom</h3>
+            <p>Zero intrusive banner ads or forced interstitials. Rewarded ads only play when you choose them for bonus perks. Fully playable offline anytime, anywhere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specs and Tech Info -->
+    <section class="specs-section section" id="specs">
+      <div class="container">
+        <div class="specs-box reveal">
+          <p class="eyebrow" style="color: var(--yellow);">Technical Specifications</p>
+          <h2 style="margin: 6px 0 16px; color: var(--cream);">Application & Build Details</h2>
+          <p style="color: var(--cream-dim); margin-bottom: 24px;">Official package details for Google Play Console, press, and players.</p>
+
+          <table class="specs-table">
+            <tbody>
+              <tr>
+                <th>Game Title</th>
+                <td><strong>The Knight and the Hamster</strong></td>
+              </tr>
+              <tr>
+                <th>Package ID</th>
+                <td><code>com.knighthamster.game</code></td>
+              </tr>
+              <tr>
+                <th>Developer & Publisher</th>
+                <td><strong>Qaymaq Games, MChJ</strong> (D-U-N-S: 933906925)</td>
+              </tr>
+              <tr>
+                <th>Platform</th>
+                <td>Android (Google Play)</td>
+              </tr>
+              <tr>
+                <th>Minimum OS</th>
+                <td>Android 8.0 (Oreo) or higher</td>
+              </tr>
+              <tr>
+                <th>Supported Languages</th>
+                <td>English, Russian</td>
+              </tr>
+              <tr>
+                <th>Genre</th>
+                <td>Action Roguelite / Card Battler / Casual RPG</td>
+              </tr>
+              <tr>
+                <th>Age Rating</th>
+                <td>16+ (Teen)</td>
+              </tr>
+              <tr>
+                <th>Privacy Policy</th>
+                <td><a href="/knight-hamster/privacy-policy" style="color: var(--cyan); text-decoration: underline;">Read Privacy Policy (EN / RU)</a></td>
+              </tr>
+              <tr>
+                <th>Player Support</th>
+                <td><a href="mailto:support@qaymaqgames.com" style="color: var(--cyan);">support@qaymaqgames.com</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="brand footer-brand" href="/"><span class="brand-mark">QG</span></a>
+      <p>«The Knight and the Hamster» is an official mobile game by Qaymaq Games, MChJ.</p>
+      <div class="footer-links">
+        <a href="/">Qaymaq Games Home</a>
+        <a href="/knight-hamster/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service.html">Terms of Service</a>
+        <a href="/app-ads.txt">app-ads.txt</a>
+        <a href="mailto:support@qaymaqgames.com">Support</a>
+      </div>
+      <p class="copyright">&copy; 2026 Qaymaq Games, MChJ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Gallery script -->
+  <script>
+    const mainScreen = document.getElementById("mainScreen");
+    const screenCaption = document.getElementById("screenCaption");
+    const thumbButtons = document.querySelectorAll(".thumb-btn");
+
+    thumbButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        thumbButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const newSrc = btn.getAttribute("data-src");
+        const newCap = btn.getAttribute("data-caption");
+
+        mainScreen.style.opacity = "0.3";
+        setTimeout(() => {
+          mainScreen.src = newSrc;
+          screenCaption.textContent = newCap;
+          mainScreen.style.opacity = "1";
+        }, 150);
+      });
+    });
+  </script>
+</body>
+</html>

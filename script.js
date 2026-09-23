@@ -4,7 +4,12 @@ const navPanel = document.querySelector("[data-nav-panel]");
 const navLinks = document.querySelectorAll('a[href^="#"]');
 const modalBackdrop = document.querySelector("[data-modal-backdrop]");
 const modalTitle = document.querySelector("[data-modal-title]");
+const modalEyebrow = document.querySelector("[data-modal-eyebrow]");
+const modalSubtitle = document.querySelector("[data-modal-subtitle]");
+const modalVisual = document.querySelector("[data-modal-visual]");
+const modalTags = document.querySelector("[data-modal-tags]");
 const modalNote = document.querySelector("[data-modal-note]");
+const modalAction = document.querySelector("[data-modal-action]");
 const closeModalButton = document.querySelector("[data-close-modal]");
 const openModalButtons = document.querySelectorAll("[data-open-modal]");
 const yearElement = document.querySelector("[data-year]");
@@ -13,15 +18,34 @@ const tiltCards = document.querySelectorAll(".floppy");
 const GAME_MODAL_DATA = {
   "age-of-doom": {
     title: "Doom's Day",
-    note: "Pixel Art Adventure in an unpredictable retro world. Development in progress by Qaymaq Games."
+    subtitle: "Pixel Art Adventure",
+    eyebrow: "Qaymaq Games · In Active Development",
+    icon: "assets/cartridge-doomsday.png",
+    tags: ["Pixel Art", "Retro Adventure", "PC & Consoles"],
+    note: "Immerse yourself in an unpredictable retro world of pixelated adventure. Active development in progress by Qaymaq Games.",
+    actions: [
+      { text: "More Info Soon", href: "#games", primary: false }
+    ]
   },
   "knight-and-hamster": {
     title: "The Knight and the Hamster",
-    note: "A heroic action roguelite adventure following a brave knight and his faithful hamster companion. Under active development by Qaymaq Games."
+    subtitle: "Action Roguelite Deckbuilder · Google Play",
+    eyebrow: "Qaymaq Games · Ready for Launch",
+    icon: "/assets/knight-hamster/icon-512.png",
+    tags: ["⭐ Google Play", "⚔️ Action Roguelite", "🃏 Deckbuilder", "📶 100% Offline"],
+    note: "A heroic action roguelite deckbuilder featuring tactical card combat, a faithful hamster companion, and village meta-progression. Submission to Google Play is complete — visit the official game page for the trailer, gameplay screenshots, and details.",
+    actions: [
+      { text: "Visit Game Page ↗", href: "/knight-hamster", primary: true, newTab: true },
+      { text: "Privacy Policy", href: "/knight-hamster/privacy-policy", primary: false, newTab: true }
+    ]
   },
   "paint-tag-arena": {
     title: "Paint Tag Arena",
-    note: "High-octane stylized arena action with splattering mechanics. Concept in development by Qaymaq Games."
+    eyebrow: "Qaymaq Games · Secret Concept",
+    showLock: true,
+    tags: ["Stylized Arena", "Multiplayer Concept"],
+    note: "High-octane stylized arena action with splattering mechanics. Concept under lock — further signals will arrive soon.",
+    actions: []
   }
 };
 
@@ -64,11 +88,67 @@ document.addEventListener("click", (event) => {
 function openModal(gameId) {
   const info = GAME_MODAL_DATA[gameId] || {
     title: "Coming Soon",
+    eyebrow: "Qaymaq Games",
+    showLock: true,
     note: "This project is under lock. The next signal will arrive soon."
   };
 
   if (modalTitle) modalTitle.textContent = info.title;
+  if (modalEyebrow) modalEyebrow.textContent = info.eyebrow || "Qaymaq Games";
+
+  if (modalSubtitle) {
+    if (info.subtitle) {
+      modalSubtitle.textContent = info.subtitle;
+      modalSubtitle.hidden = false;
+    } else {
+      modalSubtitle.hidden = true;
+    }
+  }
+
   if (modalNote) modalNote.textContent = info.note;
+
+  if (modalVisual) {
+    if (info.icon) {
+      modalVisual.innerHTML = `<img class="modal-game-icon" src="${info.icon}" alt="${info.title}" width="96" height="96">`;
+      modalVisual.hidden = false;
+    } else if (info.showLock) {
+      modalVisual.innerHTML = `
+        <div class="lock-scene" aria-hidden="true">
+          <div class="chain chain-left"><span></span><span></span><span></span><span></span></div>
+          <div class="chain chain-right"><span></span><span></span><span></span><span></span></div>
+          <div class="lock-body"><span class="lock-shackle"></span><span class="lock-keyhole"></span></div>
+        </div>
+      `;
+      modalVisual.hidden = false;
+    } else {
+      modalVisual.innerHTML = "";
+      modalVisual.hidden = true;
+    }
+  }
+
+  if (modalTags) {
+    if (info.tags && info.tags.length > 0) {
+      modalTags.innerHTML = info.tags.map((tag, idx) => `<span class="modal-tag ${idx % 2 === 1 ? 'cyan' : ''}">${tag}</span>`).join("");
+      modalTags.hidden = false;
+    } else {
+      modalTags.innerHTML = "";
+      modalTags.hidden = true;
+    }
+  }
+
+  if (modalAction) {
+    if (info.actions && info.actions.length > 0) {
+      modalAction.innerHTML = info.actions.map(act => {
+        const cls = act.primary ? 'btn btn-primary' : 'btn btn-light';
+        const target = act.newTab ? ' target="_blank" rel="noopener noreferrer"' : '';
+        return `<a class="${cls}" href="${act.href}"${target}>${act.text}</a>`;
+      }).join("");
+      modalAction.hidden = false;
+    } else {
+      modalAction.innerHTML = "";
+      modalAction.hidden = true;
+    }
+  }
 
   modalBackdrop.hidden = false;
   body.classList.add("modal-open");
