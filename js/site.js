@@ -93,7 +93,6 @@
     "contact.lead": ["Publishing, partnerships, press, or a game you want to make together.", "Издание, партнёрство, пресса или игра, которую хочется сделать вместе."],
     "contact.biz": ["Partnerships and publishing", "Сотрудничество и издание"],
     "contact.players": ["Player support and data requests", "Поддержка игроков и запросы о данных"],
-    "contact.phone": ["Phone", "Телефон"],
     "copy": ["Copy", "Копировать"],
     "copied": ["Copied", "Скопировано"],
     "f.privacy": ["Privacy Policy", "Политика конфиденциальности"],
