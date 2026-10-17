@@ -2,27 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Qaymaq Games is an indie game studio crafting bold, playful and memorable games for mobile, PC and console.">
-  <title>Qaymaq Games | Indie Game Studio</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Qaymaq Games | Indie Game Studio from Samarkand</title>
+  <meta name="description" content="Qaymaq Games is an indie game studio from the Samarkand Region, Uzbekistan. Play The Knight and the Hamster on Google Play, follow Doom's Day, and try to break the seal on our next game.">
+  <meta name="theme-color" content="#f1ede5">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="canonical" href="https://www.qaymaqgames.com/">
+  <link rel="alternate" hreflang="en" href="https://www.qaymaqgames.com/">
+  <link rel="alternate" hreflang="ru" href="https://www.qaymaqgames.com/ru">
+  <link rel="alternate" hreflang="x-default" href="https://www.qaymaqgames.com/">
 
-  <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Qaymaq Games">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
   <meta property="og:url" content="https://www.qaymaqgames.com/">
-  <meta property="og:title" content="Qaymaq Games | Indie Game Studio">
-  <meta property="og:description" content="Crafting bold, playful and memorable game concepts with a handmade spirit.">
-  <meta property="og:image" content="https://www.qaymaqgames.com/assets/основа%20копия.png">
-
-  <!-- Twitter Cards -->
+  <meta property="og:title" content="Qaymaq Games | Indie Game Studio from Samarkand">
+  <meta property="og:description" content="Small ideas, big worlds. Indie games for mobile and PC from the Samarkand Region, Uzbekistan.">
+  <meta property="og:image" content="https://www.qaymaqgames.com/assets/site/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://www.qaymaqgames.com/">
-  <meta name="twitter:title" content="Qaymaq Games | Indie Game Studio">
-  <meta name="twitter:description" content="Crafting bold, playful and memorable game concepts with a handmade spirit.">
-  <meta name="twitter:image" content="https://www.qaymaqgames.com/assets/основа%20копия.png">
+  <meta name="twitter:title" content="Qaymaq Games | Indie Game Studio from Samarkand">
+  <meta name="twitter:description" content="Small ideas, big worlds. Indie games for mobile and PC from the Samarkand Region, Uzbekistan.">
+  <meta name="twitter:image" content="https://www.qaymaqgames.com/assets/site/og-image.jpg">
 
-  <!-- Schema.org Organization Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,6 +38,7 @@
     "legalName": "Qaymaq Games, MChJ",
     "url": "https://www.qaymaqgames.com",
     "logo": "https://www.qaymaqgames.com/favicon.svg",
+    "duns": "933906925",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+998-500153929",
@@ -46,260 +54,288 @@
     }
   }
   </script>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Golos+Text:wght@400;500;600&family=Sofia+Sans+Extra+Condensed:wght@700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yuji+Boku&text=%E7%8C%AB%E5%B0%81%E4%B8%80%E4%BA%8C%E4%B8%89%E5%9B%9B%E5%A2%A8%E5%87%BA%E9%8D%9B&display=swap">
+  <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-  <header class="site-header" id="home">
-    <nav class="nav container" aria-label="Primary navigation">
-      <a class="brand" href="#home" aria-label="Qaymaq Games home">
-        <span class="brand-mark">QG</span>
-      </a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="7" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="4"/>
+    </filter>
+    <filter id="inkedge" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency=".03 .06" numOctaves="3" seed="3" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="14"/>
+    </filter>
+    <symbol id="qg" viewBox="76 58 368 300">
+      <path fill="var(--qg-base, #f1ede5)" style="stroke: var(--qg-base, #f1ede5); stroke-width: var(--qg-rim, 0px); stroke-linejoin: round" d="M146.8 76.8 140.8 85.5 133.2 102.5 126.8 123.8 120.8 150.5 116.5 188.5 116.5 207.8 118.2 228.5 115.5 240.0 114.5 253.0 109.8 258.0 93.0 260.5 88.2 262.8 86.0 265.5 86.5 268.5 89.2 271.5 98.0 276.0 111.5 280.0 115.0 285.2 114.2 290.2 111.5 293.2 98.0 297.5 92.0 301.2 91.5 304.2 94.0 307.5 100.5 310.5 112.0 312.8 141.8 313.2 157.8 324.5 172.2 332.2 190.2 339.0 203.5 342.5 218.5 345.0 230.2 338.8 233.2 338.2 237.5 339.5 239.8 341.8 240.8 347.5 268.5 348.2 298.8 346.0 324.8 341.0 342.0 335.5 359.2 327.5 369.2 321.2 370.2 316.8 374.5 313.0 408.0 312.8 420.2 310.2 427.8 305.8 428.5 302.2 427.2 300.5 420.8 297.0 408.5 293.2 405.0 288.0 405.8 283.0 408.5 280.0 428.5 273.0 433.0 269.2 434.0 265.5 432.8 263.5 427.8 260.8 412.2 258.0 407.5 253.0 406.5 239.2 404.0 229.2 405.8 195.0 402.2 194.0 398.8 188.8 399.5 184.0 404.8 179.2 400.0 143.5 393.5 117.0 386.2 95.8 379.2 82.0 371.2 72.8 364.0 68.8 354.0 67.8 348.0 69.5 341.5 73.8 334.2 81.2 328.0 90.0 318.0 108.2 310.8 124.8 306.2 128.8 301.5 129.0 274.0 122.5 257.0 121.5 229.0 126.5 224.8 132.0 220.5 133.2 216.2 132.0 213.5 129.2 197.0 94.8 189.2 83.0 180.0 73.2 172.2 68.8 163.5 67.8 153.8 70.8Z"/>
+      <path fill="currentColor" fill-rule="evenodd" d="M369.5 320.8 361.8 314.8 353.2 306.5 347.5 299.5 343.8 293.8 331.5 294.0 318.8 293.2 300.0 308.8 284.0 320.5 260.5 336.0 240.8 347.5 253.8 348.2 268.5 348.2 280.5 347.8 298.8 346.0 317.5 342.8 331.0 339.2 345.8 334.0 359.2 327.5 364.8 324.2Z M405.8 195.0 402.0 198.8 396.8 205.0 388.2 217.0 388.2 218.0 390.0 221.8 391.2 228.5 391.0 239.5 389.5 247.0 387.5 253.2 382.2 264.8 375.8 275.0 368.8 283.5 363.5 288.2 357.5 291.2 362.2 297.5 368.2 303.5 380.5 313.2 402.0 313.2 413.0 312.0 422.2 309.5 426.0 307.5 427.8 305.8 428.5 304.2 428.5 302.2 427.2 300.5 420.8 297.0 410.5 294.0 396.5 291.8 400.2 284.8 402.0 280.5 412.8 278.8 423.2 275.5 428.5 273.0 431.0 271.2 433.0 269.2 434.0 267.0 434.0 265.5 432.8 263.5 431.0 262.2 427.0 260.5 418.2 258.8 407.0 258.2 407.0 243.0 405.8 235.2 404.0 229.2 404.0 224.5 405.5 210.0Z M368.0 70.5 364.8 69.0 360.8 68.0 352.5 68.0 348.0 69.5 345.2 71.0 339.5 75.5 333.2 82.5 325.2 94.5 318.0 108.2 309.5 127.8 307.8 130.2 306.5 130.5 297.0 127.5 284.8 124.5 274.0 122.5 265.0 121.5 257.0 121.5 249.8 122.2 236.2 124.8 228.0 127.0 244.2 147.0 261.5 170.2 277.2 193.2 291.0 215.5 296.0 212.5 309.8 208.5 323.8 205.8 335.8 204.5 350.8 204.5 358.2 205.2 366.5 206.8 371.2 208.0 376.5 210.0 377.8 210.0 384.5 200.0 390.8 192.2 399.2 183.5 404.8 179.2 403.2 163.2 400.0 143.5 394.8 121.5 390.0 105.8 384.5 91.8 379.2 82.0 374.2 75.5Z M160.2 68.2 156.2 69.5 150.2 73.2 145.8 78.0 140.8 85.5 137.2 92.5 133.2 102.5 129.2 114.8 124.8 131.8 119.5 158.0 117.0 179.8 116.5 188.5 116.5 207.8 118.2 228.5 116.5 234.8 115.0 244.0 115.0 258.5 104.2 258.5 95.8 259.8 92.2 260.8 89.0 262.2 87.0 263.8 86.0 265.5 86.0 267.2 87.0 269.2 89.2 271.5 95.5 275.0 102.5 277.5 108.2 279.0 120.2 280.8 122.0 285.0 125.5 291.5 124.8 292.0 119.5 292.2 110.5 293.8 101.2 296.2 98.0 297.5 93.0 300.2 91.5 302.0 91.5 304.2 92.2 305.8 96.0 308.8 100.5 310.5 107.0 312.0 120.5 313.5 135.8 313.5 142.5 312.8 148.5 318.0 157.8 324.5 163.8 328.0 177.5 334.5 195.5 340.5 210.8 344.0 218.5 345.0 239.0 334.0 261.5 320.2 283.8 305.0 294.0 297.2 302.2 290.2 296.5 286.8 292.8 283.0 290.8 280.0 288.8 275.5 285.5 264.8 283.8 254.8 283.0 245.5 283.0 237.5 283.8 230.2 283.5 228.5 279.5 221.0 269.5 204.8 254.8 182.8 241.2 164.0 227.2 145.8 213.2 129.0 205.8 111.8 199.2 98.8 194.8 91.0 187.2 80.5 180.0 73.2 173.5 69.2 167.8 67.8 163.5 67.8ZM153.8 213.8 155.0 212.0 157.2 210.2 164.2 208.5 170.8 208.5 178.5 210.0 182.8 211.8 181.2 218.0 180.0 227.8 180.0 237.5 181.2 246.5 183.5 254.2 186.5 260.5 189.8 265.0 194.8 269.2 197.2 270.5 200.0 271.2 204.8 271.2 208.5 269.8 212.5 266.2 214.8 263.0 217.5 257.2 220.0 248.8 221.5 239.8 223.8 242.0 228.5 248.5 235.5 260.2 234.0 262.5 227.8 268.8 222.8 272.8 215.8 277.2 206.8 281.2 198.8 283.0 193.0 283.0 186.8 281.5 180.2 278.5 174.0 274.2 166.8 267.2 160.2 258.2 156.0 249.5 153.5 241.5 152.0 231.8 152.2 219.5 153.0 215.5Z"/>
+      <path fill="var(--qg-base, #f1ede5)" d="M201.0 221.5 207.2 226.2 207.5 236.2 206.8 249.8 205.8 256.0 203.8 259.5 202.2 258.2 201.5 256.5 199.5 243.5 199.2 230.5 199.8 225.0Z"/>
+    </symbol>
+  </defs>
+</svg>
+<div class="grain" aria-hidden="true"></div>
 
-      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="nav-panel" data-nav-panel>
-        <ul class="nav-links">
-          <li><a href="#games">Games</a></li>
-          <li><a href="#about">Studio</a></li>
-          <li><a href="#browse">Browse</a></li>
-          <li><a href="#mini-interactive">Play</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a class="btn btn-small btn-primary" href="#contact">Pitch Us</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-poster hero-brand reveal">
-        <div class="hero-title-lockup">
-          <h1 id="hero-title">Qaymaq Games</h1>
-        </div>
-      </div>
-
-      <div class="container hero-info reveal">
-        <div>
-          <h2>Qaymaq Games</h2>
-          <p>An indie game studio crafting playful, emotional and memorable worlds for PC and console.</p>
-        </div>
-        <a class="btn btn-primary" href="#games">More Info</a>
-      </div>
-    </section>
-
-    <section class="game-lineup section" id="games" aria-labelledby="games-title">
-      <div class="container">
-        <div class="section-kicker reveal">
-          <p class="eyebrow">Selected projects</p>
-          <h2 id="games-title">Games on the shelf</h2>
-        </div>
-
-        <article class="game-feature reveal">
-          <div class="floppy floppy-custom">
-            <img src="assets/основа копия.png" alt="Green Qaymaq Games diskette with Doom's Day artwork">
-          </div>
-          <div class="game-copy">
-            <h3>Doom's Day</h3>
-            <div class="accent-line"></div>
-            <dl class="game-meta">
-              <div><dt>Release</dt><dd>TBA</dd></div>
-              <div><dt>Genre</dt><dd>Pixel Art Adventure</dd></div>
-              <div><dt>Studio</dt><dd>Qaymaq Games</dd></div>
-            </dl>
-            <button class="btn btn-light" type="button" data-open-modal="age-of-doom">More Info</button>
-          </div>
-        </article>
-
-        <article class="game-feature reverse reveal">
-          <a class="floppy floppy-custom" href="/knight-hamster" target="_blank" rel="noopener noreferrer" aria-label="The Knight and the Hamster — Open game page in new tab" title="Open The Knight and the Hamster game page in new tab">
-            <img src="assets/knight-hamster-floppy.png" alt="The Knight and the Hamster diskette" width="450" height="450">
-          </a>
-          <div class="game-copy">
-            <h3>The Knight and the Hamster</h3>
-            <div class="accent-line red"></div>
-            <dl class="game-meta">
-              <div><dt>Status</dt><dd>Ready for Launch</dd></div>
-              <div><dt>Genre</dt><dd>Action / Roguelite</dd></div>
-              <div><dt>Studio</dt><dd>Qaymaq Games</dd></div>
-            </dl>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px;">
-              <a class="btn btn-primary" href="/knight-hamster">Game Page →</a>
-              <button class="btn btn-light" type="button" data-open-modal="knight-and-hamster">More Info</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="game-feature reveal">
-          <div class="floppy floppy-blue coming-soon-floppy" aria-label="Paint Tag Arena, coming soon">
-            <div class="floppy-screen paint-label"><span></span><span></span><span></span></div>
-            <span class="floppy-slot"></span>
-            <span class="floppy-ribs"></span>
-            <div class="coming-soon-badge"><span class="mini-lock" aria-hidden="true"></span><strong>Coming Soon</strong></div>
-          </div>
-          <div class="game-copy">
-            <h3>Paint Tag Arena</h3>
-            <div class="accent-line blue"></div>
-            <dl class="game-meta">
-              <div><dt>Status</dt><dd>Locked</dd></div>
-              <div><dt>Reveal</dt><dd>Soon</dd></div>
-              <div><dt>Studio</dt><dd>Qaymaq</dd></div>
-            </dl>
-            <button class="btn btn-light" type="button" data-open-modal="paint-tag-arena">More Info</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="browse section" id="browse" aria-labelledby="browse-title">
-      <div class="container">
-        <div class="browse-head reveal">
-          <h2 id="browse-title">Browse All</h2>
-          <a class="btn btn-light" href="#contact">See More Games</a>
-        </div>
-
-        <div class="browse-grid">
-          <article class="browse-card reveal">
-            <div class="browse-art browse-diskette">
-              <img class="diskette-preview" src="assets/основа копия.png" alt="Doom's Day diskette">
-            </div>
-            <h3>Doom's Day</h3>
-            <p>by Qaymaq Games <span>Featured</span></p>
-          </article>
-          <article class="browse-card reveal">
-            <a href="/knight-hamster" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-              <div class="browse-art browse-diskette">
-                <img class="diskette-preview" src="assets/knight-hamster-floppy.png" alt="The Knight and the Hamster diskette">
-              </div>
-              <h3>The Knight & the Hamster</h3>
-              <p>by Qaymaq Games <span>Ready for Launch</span></p>
-            </a>
-          </article>
-          <article class="browse-card art-paint is-locked reveal">
-            <div><span></span><span></span><span></span></div>
-            <h3>Paint Tag Arena</h3>
-            <p>by Qaymaq Games <span>Coming Soon</span></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about section" id="about" aria-labelledby="about-title">
-      <div class="container about-grid">
-        <div class="reveal">
-          <h2 id="about-title">Qaymaq makes fine indie games</h2>
-        </div>
-        <div class="about-copy reveal">
-          <p>We build striking, readable and memorable game concepts with a handmade spirit. Our projects can be cozy, chaotic, mysterious or funny, but they always start with a strong player fantasy.</p>
-          <p>Qaymaq Games focuses on stylized visuals, fast prototyping, friendly systems and the kind of worlds players want to talk about after the screen fades out.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="studio-strip section" id="studio" aria-labelledby="studio-title">
-      <div class="container">
-        <div class="section-kicker reveal">
-          <p class="eyebrow">Production loop</p>
-          <h2 id="studio-title">How We Make Games</h2>
-        </div>
-        <div class="process-grid">
-          <article class="process-card reveal"><span>01</span><h3>Idea</h3><p>Find the fantasy, mood and visual hook.</p></article>
-          <article class="process-card reveal"><span>02</span><h3>Prototype</h3><p>Make the core interaction playable fast.</p></article>
-          <article class="process-card reveal"><span>03</span><h3>Playtest</h3><p>Watch players discover what works.</p></article>
-          <article class="process-card reveal"><span>04</span><h3>Polish</h3><p>Refine feedback, feel, flow and charm.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section interactive-section" id="mini-interactive" aria-labelledby="interactive-title">
-      <div class="container mini-layout">
-        <div class="reveal">
-          <p class="eyebrow">Mini Interactive</p>
-          <h2 id="interactive-title">Qaymaq Pac-Man</h2>
-          <p>Collect dots, avoid roaming ghosts, grab power energizers and clear the maze!</p>
-        </div>
-        <div class="mini-game arcade-cabinet reveal">
-          <div class="arcade-marquee" aria-hidden="true"><span>QAYMAQ</span><strong>PAC-MAN</strong></div>
-          <div class="arcade-screen-wrap">
-            <div class="arcade-hud">
-              <div class="hud-item"><span>1UP</span> <strong data-score>0000</strong></div>
-              <div class="hud-item hud-lives" data-lives title="Lives">❤️❤️❤️</div>
-              <div class="hud-item" data-pellets-left>25 DOTS</div>
-            </div>
-            <div class="playfield pacman-field" data-playfield aria-label="Pac-Man game field"></div>
-          </div>
-          <div class="arcade-console">
-            <div class="joystick" aria-hidden="true"><span></span></div>
-            <div class="controls" aria-label="Pac-Man movement controls">
-              <button class="control-btn up" type="button" data-move="up" aria-label="Move up">&uarr;</button>
-              <button class="control-btn left" type="button" data-move="left" aria-label="Move left">&larr;</button>
-              <button class="control-btn down" type="button" data-move="down" aria-label="Move down">&darr;</button>
-              <button class="control-btn right" type="button" data-move="right" aria-label="Move right">&rarr;</button>
-            </div>
-            <div class="arcade-buttons">
-              <button class="reset-game" type="button" data-reset-game aria-label="Restart game" title="Restart game">&#8635;</button>
-              <button class="sound-toggle" type="button" data-sound-toggle aria-label="Toggle sound" title="Sound: ON/OFF">&#128266;</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact section" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="pitch-line reveal">
-          <p>Are you working on something fun? Let's talk.</p>
-          <a class="btn btn-light" href="mailto:contact@qaymaqgames.com">Pitch Us</a>
-        </div>
-
-        <div class="contact-card reveal">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h2 id="contact-title">Let's create something playful</h2>
-            <p>For business, partnerships and publishing, write to our studio team:</p>
-            <p style="margin-top: 6px; font-size: 0.95rem; color: var(--cream-dim);">Player support & data inquiries: <a href="mailto:support@qaymaqgames.com" style="color: var(--cyan); text-decoration: underline;">support@qaymaqgames.com</a></p>
-          </div>
-          <a class="contact-email" href="mailto:contact@qaymaqgames.com">contact@qaymaqgames.com</a>
-          <a class="btn btn-primary" href="mailto:contact@qaymaqgames.com?subject=Hello%20Qaymaq%20Games">Write an email</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <a class="brand footer-brand" href="#home"><span class="brand-mark">QG</span></a>
-      <p>Qaymaq Games is a developer-friendly indie studio crafting games for mobile, PC and consoles.</p>
-      <div class="footer-links">
-        <a href="#games">Games</a>
-        <a href="/knight-hamster">Knight & Hamster</a>
-        <a href="#about">Studio</a>
-        <a href="#contact">Contact</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-service.html">Terms of Service</a>
-        <a href="app-ads.txt">app-ads.txt</a>
-        <a href="mailto:contact@qaymaqgames.com">Email</a>
-      </div>
-      <p class="copyright">&copy; <span data-year></span> Qaymaq Games, MChJ. All rights reserved.</p>
+<header class="site-header" data-tone="paper">
+  <nav class="nav wrap" aria-label="Primary">
+    <a class="brand" href="#top" aria-label="Qaymaq Games, home">
+      <svg aria-hidden="true"><use href="#qg"/></svg>
+      <span class="brand-word">QAYMAQ</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#games" data-i18n="nav.games">Games</a></li>
+      <li><a href="#play" data-i18n="nav.play">Play</a></li>
+      <li><a href="#studio" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Write to us</a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true"><span>EN</span></button>
+      <button type="button" data-lang="ru" aria-pressed="false"><span>RU</span></button>
     </div>
-  </footer>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span></button>
+  </nav>
+</header>
 
-  <div class="modal-backdrop" data-modal-backdrop hidden>
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" type="button" data-close-modal aria-label="Close modal">&times;</button>
-      <div data-modal-visual></div>
-      <p class="eyebrow" data-modal-eyebrow>Qaymaq Games</p>
-      <h2 id="modal-title" data-modal-title>The Knight and the Hamster</h2>
-      <div class="modal-subtitle" data-modal-subtitle hidden></div>
-      <div class="modal-tags" data-modal-tags></div>
-      <p class="modal-note" data-modal-note></p>
-      <div class="modal-actions" data-modal-action></div>
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="layer l-sun" data-depth="0.25" aria-hidden="true"><canvas id="sun"></canvas></div>
+    <img class="layer plate l-range" data-depth="0.35" src="/assets/site/range.webp" alt="" aria-hidden="true">
+    <div class="mist m3" aria-hidden="true"></div>
+    <div class="birds" aria-hidden="true"><svg viewBox="0 0 120 50"><path d="M4 22q8-9 16 0q8-9 16 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M58 8q6-7 12 0q6-7 12 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M84 36q5-6 10 0q5-6 10 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+    <div class="mist m1" aria-hidden="true"></div>
+    <img class="layer plate l-pagoda" data-depth="0.7" src="/assets/site/pagoda.webp" alt="" aria-hidden="true">
+    <img class="layer plate l-cliff" data-depth="0.9" src="/assets/site/cliff.webp" alt="" aria-hidden="true">
+    <img class="layer plate l-pine" data-depth="1.1" src="/assets/site/pine.webp" alt="" aria-hidden="true">
+    <div class="water" aria-hidden="true"></div>
+    <div class="mist m2" aria-hidden="true"></div>
+
+    <div class="hero-seal" aria-hidden="true"><span class="rule"></span><span class="seal">猫</span></div>
+    <div class="hero-tag" aria-hidden="true" data-i18n-html="hero.tag"><span>Small</span><span>Ideas</span><span>Big</span><span>Worlds</span></div>
+
+    <div class="hero-center">
+      <svg class="mark hero-mark" viewBox="0 0 520.0 425.0" role="img" aria-label="Qaymaq Games cat mark" style="--eye-x:193.9px;--eye-y:245.9px;--eye-top:208.5px;--hc-x:194.2px;--hc-y:206.5px">
+        <g class="m-spin"><g class="m-swirl" fill="var(--shu)"><path d="M51.0 167.8 46.8 171.5 42.0 178.0 39.8 183.2 38.5 189.5 38.8 197.5 40.8 205.0 43.5 211.0 50.0 220.5 42.5 227.2 39.0 232.0 36.8 236.5 35.0 244.0 35.2 251.8 37.5 260.0 41.0 267.5 47.5 277.2 54.0 285.0 65.2 296.0 75.5 304.5 85.8 312.0 94.5 317.8 106.5 324.8 120.5 331.5 129.8 334.5 129.8 335.0 124.0 334.5 117.5 334.8 113.0 336.2 111.8 338.0 112.2 340.8 113.8 343.0 117.8 347.0 127.5 354.0 145.0 363.5 161.2 370.2 171.8 373.5 187.2 377.5 214.8 383.5 201.5 378.8 186.0 371.5 171.8 363.2 160.2 355.2 150.5 347.2 140.8 337.8 131.8 327.0 122.5 313.8 111.8 313.0 102.2 311.2 95.5 308.8 91.8 305.5 91.0 303.2 91.2 302.0 94.0 299.2 102.8 295.5 111.5 293.5 108.8 287.8 105.2 278.5 98.0 276.2 91.5 273.2 89.2 271.8 86.8 269.2 85.8 267.2 86.0 264.8 88.5 262.2 93.8 260.0 99.5 259.0 96.5 241.0 95.8 232.0 95.5 220.8 96.0 210.0 97.2 199.2 101.2 180.8 96.8 174.2 91.5 169.0 86.0 165.2 79.2 162.5 74.2 161.5 65.2 161.8 57.0 164.2Z"/><path d="M504.0 221.5 498.8 215.0 493.0 209.2 487.8 205.0 482.8 201.8 477.8 199.2 470.0 196.8 465.2 196.0 459.2 196.0 453.0 197.2 446.2 200.5 440.8 205.8 438.0 210.5 436.8 214.8 436.5 222.0 437.2 226.0 440.5 234.0 447.0 243.0 455.5 251.0 465.8 258.2 461.8 260.5 458.0 264.8 456.0 269.8 455.5 274.5 457.2 280.8 460.5 286.2 464.2 291.0 471.2 297.8 464.5 297.8 461.2 298.5 455.2 301.0 450.0 304.2 442.2 310.5 435.8 317.0 427.2 327.2 421.8 332.8 414.2 338.2 406.5 342.5 395.8 346.8 390.8 347.5 384.0 347.5 378.8 346.8 370.0 346.8 363.5 347.8 353.2 350.8 342.2 355.5 332.5 360.5 321.0 364.5 307.5 367.2 280.5 370.8 274.2 372.0 264.5 374.8 300.8 369.2 330.0 363.8 355.8 358.0 383.0 350.8 406.5 343.2 429.2 334.5 447.0 326.2 466.5 315.0 479.5 305.5 491.5 294.2 495.8 289.2 500.8 282.2 506.2 271.8 508.2 266.2 509.8 260.2 510.8 252.5 510.8 246.0 510.2 241.0 508.8 233.8 507.0 228.2Z"/><path d="M419.8 92.8 419.5 83.8 418.5 79.0 416.5 73.2 411.5 64.0 404.8 55.5 395.8 47.2 389.5 42.8 384.0 39.5 377.8 36.5 370.8 34.0 360.0 32.0 353.0 32.2 347.2 33.8 342.5 36.2 338.8 39.8 336.8 42.5 334.2 48.0 332.8 55.2 332.5 61.2 332.0 61.8 316.2 64.0 297.2 68.5 280.8 74.2 268.2 80.5 277.5 76.2 287.2 73.5 296.5 72.2 305.5 72.2 313.2 73.2 320.5 75.0 327.5 77.5 334.5 80.8 340.2 74.5 343.0 72.2 348.5 69.0 354.0 67.5 359.0 67.5 362.0 68.0 368.0 70.2 372.5 73.5 376.5 77.8 380.0 82.8 383.5 89.0 386.2 95.5 393.2 97.2 397.5 99.2 400.0 101.0 403.0 104.0 405.5 107.5 409.2 115.2 413.5 110.0 417.0 103.5 418.5 99.2Z"/><path d="M91.0 143.0 78.5 134.8 70.5 131.0 63.2 129.0 56.0 128.8 51.8 129.8 47.0 132.2 43.2 135.8 40.2 140.0 37.2 146.5 35.2 153.2 33.8 161.2 32.8 172.5 32.8 185.5 34.2 202.8 34.2 189.5 36.2 178.8 38.0 173.5 40.8 167.5 46.5 159.0 52.8 152.8 56.0 150.2 60.8 147.2 67.2 144.2 73.0 142.5 80.0 141.5 86.2 141.8Z"/><path d="M411.5 116.2 413.0 117.5 415.0 120.8 416.8 126.2 417.5 133.5 417.0 140.2 415.5 146.5 414.0 150.5 409.0 159.2 403.8 165.2 404.0 167.8 418.0 157.8 427.5 148.8 432.8 141.5 434.5 137.2 435.0 134.5 434.2 129.5 432.8 126.8 429.5 123.5 423.0 119.8Z"/><path d="M130.5 110.2 124.8 112.5 120.8 115.2 115.5 121.2 112.2 127.5 110.0 134.2 108.5 141.2 104.8 170.8 108.2 162.0 112.8 153.5 118.5 145.0 122.8 140.2 126.5 123.8Z"/><path d="M219.0 384.8 239.2 389.8 256.8 392.2 267.2 393.0 283.5 393.0 296.8 392.0 275.8 392.0 258.8 390.8 239.0 388.2Z"/></g></g>
+        <g class="m-head">
+          <path fill="var(--paper)" d="M146.8 76.8 140.8 85.5 133.2 102.5 126.8 123.8 120.8 150.5 116.5 188.5 116.5 207.8 118.2 228.5 115.5 240.0 114.5 253.0 109.8 258.0 93.0 260.5 88.2 262.8 86.0 265.5 86.5 268.5 89.2 271.5 98.0 276.0 111.5 280.0 115.0 285.2 114.2 290.2 111.5 293.2 98.0 297.5 92.0 301.2 91.5 304.2 94.0 307.5 100.5 310.5 112.0 312.8 141.8 313.2 157.8 324.5 172.2 332.2 190.2 339.0 203.5 342.5 218.5 345.0 230.2 338.8 233.2 338.2 237.5 339.5 239.8 341.8 240.8 347.5 268.5 348.2 298.8 346.0 324.8 341.0 342.0 335.5 359.2 327.5 369.2 321.2 370.2 316.8 374.5 313.0 408.0 312.8 420.2 310.2 427.8 305.8 428.5 302.2 427.2 300.5 420.8 297.0 408.5 293.2 405.0 288.0 405.8 283.0 408.5 280.0 428.5 273.0 433.0 269.2 434.0 265.5 432.8 263.5 427.8 260.8 412.2 258.0 407.5 253.0 406.5 239.2 404.0 229.2 405.8 195.0 402.2 194.0 398.8 188.8 399.5 184.0 404.8 179.2 400.0 143.5 393.5 117.0 386.2 95.8 379.2 82.0 371.2 72.8 364.0 68.8 354.0 67.8 348.0 69.5 341.5 73.8 334.2 81.2 328.0 90.0 318.0 108.2 310.8 124.8 306.2 128.8 301.5 129.0 274.0 122.5 257.0 121.5 229.0 126.5 224.8 132.0 220.5 133.2 216.2 132.0 213.5 129.2 197.0 94.8 189.2 83.0 180.0 73.2 172.2 68.8 163.5 67.8 153.8 70.8Z"/>
+          <path fill="var(--ink)" fill-rule="evenodd" d="M369.5 320.8 361.8 314.8 353.2 306.5 347.5 299.5 343.8 293.8 331.5 294.0 318.8 293.2 300.0 308.8 284.0 320.5 260.5 336.0 240.8 347.5 253.8 348.2 268.5 348.2 280.5 347.8 298.8 346.0 317.5 342.8 331.0 339.2 345.8 334.0 359.2 327.5 364.8 324.2Z M405.8 195.0 402.0 198.8 396.8 205.0 388.2 217.0 388.2 218.0 390.0 221.8 391.2 228.5 391.0 239.5 389.5 247.0 387.5 253.2 382.2 264.8 375.8 275.0 368.8 283.5 363.5 288.2 357.5 291.2 362.2 297.5 368.2 303.5 380.5 313.2 402.0 313.2 413.0 312.0 422.2 309.5 426.0 307.5 427.8 305.8 428.5 304.2 428.5 302.2 427.2 300.5 420.8 297.0 410.5 294.0 396.5 291.8 400.2 284.8 402.0 280.5 412.8 278.8 423.2 275.5 428.5 273.0 431.0 271.2 433.0 269.2 434.0 267.0 434.0 265.5 432.8 263.5 431.0 262.2 427.0 260.5 418.2 258.8 407.0 258.2 407.0 243.0 405.8 235.2 404.0 229.2 404.0 224.5 405.5 210.0Z M368.0 70.5 364.8 69.0 360.8 68.0 352.5 68.0 348.0 69.5 345.2 71.0 339.5 75.5 333.2 82.5 325.2 94.5 318.0 108.2 309.5 127.8 307.8 130.2 306.5 130.5 297.0 127.5 284.8 124.5 274.0 122.5 265.0 121.5 257.0 121.5 249.8 122.2 236.2 124.8 228.0 127.0 244.2 147.0 261.5 170.2 277.2 193.2 291.0 215.5 296.0 212.5 309.8 208.5 323.8 205.8 335.8 204.5 350.8 204.5 358.2 205.2 366.5 206.8 371.2 208.0 376.5 210.0 377.8 210.0 384.5 200.0 390.8 192.2 399.2 183.5 404.8 179.2 403.2 163.2 400.0 143.5 394.8 121.5 390.0 105.8 384.5 91.8 379.2 82.0 374.2 75.5Z M160.2 68.2 156.2 69.5 150.2 73.2 145.8 78.0 140.8 85.5 137.2 92.5 133.2 102.5 129.2 114.8 124.8 131.8 119.5 158.0 117.0 179.8 116.5 188.5 116.5 207.8 118.2 228.5 116.5 234.8 115.0 244.0 115.0 258.5 104.2 258.5 95.8 259.8 92.2 260.8 89.0 262.2 87.0 263.8 86.0 265.5 86.0 267.2 87.0 269.2 89.2 271.5 95.5 275.0 102.5 277.5 108.2 279.0 120.2 280.8 122.0 285.0 125.5 291.5 124.8 292.0 119.5 292.2 110.5 293.8 101.2 296.2 98.0 297.5 93.0 300.2 91.5 302.0 91.5 304.2 92.2 305.8 96.0 308.8 100.5 310.5 107.0 312.0 120.5 313.5 135.8 313.5 142.5 312.8 148.5 318.0 157.8 324.5 163.8 328.0 177.5 334.5 195.5 340.5 210.8 344.0 218.5 345.0 239.0 334.0 261.5 320.2 283.8 305.0 294.0 297.2 302.2 290.2 296.5 286.8 292.8 283.0 290.8 280.0 288.8 275.5 285.5 264.8 283.8 254.8 283.0 245.5 283.0 237.5 283.8 230.2 283.5 228.5 279.5 221.0 269.5 204.8 254.8 182.8 241.2 164.0 227.2 145.8 213.2 129.0 205.8 111.8 199.2 98.8 194.8 91.0 187.2 80.5 180.0 73.2 173.5 69.2 167.8 67.8 163.5 67.8ZM153.8 213.8 155.0 212.0 157.2 210.2 164.2 208.5 170.8 208.5 178.5 210.0 182.8 211.8 181.2 218.0 180.0 227.8 180.0 237.5 181.2 246.5 183.5 254.2 186.5 260.5 189.8 265.0 194.8 269.2 197.2 270.5 200.0 271.2 204.8 271.2 208.5 269.8 212.5 266.2 214.8 263.0 217.5 257.2 220.0 248.8 221.5 239.8 223.8 242.0 228.5 248.5 235.5 260.2 234.0 262.5 227.8 268.8 222.8 272.8 215.8 277.2 206.8 281.2 198.8 283.0 193.0 283.0 186.8 281.5 180.2 278.5 174.0 274.2 166.8 267.2 160.2 258.2 156.0 249.5 153.5 241.5 152.0 231.8 152.2 219.5 153.0 215.5Z"/>
+          <clipPath id="eyeclip"><path d="M153.8 213.8 157.2 210.2 164.2 208.5 174.2 209.0 182.8 211.8 181.2 218.0 180.0 227.8 180.0 237.5 181.2 246.5 183.5 254.2 186.5 260.5 189.8 265.0 194.8 269.2 200.0 271.2 204.8 271.2 208.5 269.8 212.5 266.2 214.8 263.0 217.5 257.2 220.0 248.8 221.5 239.8 228.5 248.5 235.0 259.2 235.2 260.8 227.8 268.8 222.8 272.8 215.8 277.2 206.8 281.2 198.8 283.0 193.0 283.0 186.8 281.5 180.2 278.5 174.0 274.2 166.8 267.2 160.2 258.2 156.0 249.5 153.5 241.5 152.0 231.8 152.2 219.5Z"/></clipPath>
+          <g clip-path="url(#eyeclip)"><path class="m-pupil" fill="var(--paper)" d="M201.0 221.5 207.2 226.2 207.5 236.2 206.8 249.8 205.8 256.0 203.8 259.5 202.2 258.2 201.5 256.5 199.5 243.5 199.2 230.5 199.8 225.0Z"/></g>
+          <path class="m-lid" fill="var(--ink)" stroke="var(--ink)" stroke-width="9" stroke-linejoin="round" d="M153.8 213.8 157.2 210.2 164.2 208.5 174.2 209.0 182.8 211.8 181.2 218.0 180.0 227.8 180.0 237.5 181.2 246.5 183.5 254.2 186.5 260.5 189.8 265.0 194.8 269.2 200.0 271.2 204.8 271.2 208.5 269.8 212.5 266.2 214.8 263.0 217.5 257.2 220.0 248.8 221.5 239.8 228.5 248.5 235.0 259.2 235.2 260.8 227.8 268.8 222.8 272.8 215.8 277.2 206.8 281.2 198.8 283.0 193.0 283.0 186.8 281.5 180.2 278.5 174.0 274.2 166.8 267.2 160.2 258.2 156.0 249.5 153.5 241.5 152.0 231.8 152.2 219.5Z"/>
+        </g>
+      </svg>
+      <h1 id="hero-title" class="wordmark">QAY MAQ <span class="sr-only">Games</span></h1>
+      <p class="hero-sub" data-i18n="hero.sub">Indie games for mobile &amp; PC</p>
+      <span class="hero-rule" aria-hidden="true"></span>
+      <p class="hero-tag-m" aria-hidden="true"><span class="seal">猫</span><span data-i18n="hero.tagline">Small ideas · Big worlds</span></p>
+      <div class="hero-cta">
+        <a class="btn" href="#games"><span data-i18n="hero.cta">See the games</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a>
+      </div>
+      <a class="hero-now" href="#games" data-i18n="hero.now">Now on Google Play: The Knight and the Hamster</a>
     </div>
+    <canvas class="leaves" id="leaves" aria-hidden="true"></canvas>
+    <svg class="tear bottom" viewBox="0 0 1440 34" preserveAspectRatio="none" aria-hidden="true"><path fill="var(--night)" d="M0 34V18L22 20L44 21L68 24L82 20L106 21L119 16L141 14L153 9L178 15L187 18L207 19L220 22L228 24L238 18L247 15L262 18L270 24L292 23L314 26L328 28L343 28L360 28L368 28L378 28L394 28L419 23L435 22L450 24L467 18L477 21L488 21L499 19L519 14L527 18L535 15L549 9L572 9L592 9L602 12L616 18L632 17L642 15L660 9L681 15L692 11L707 16L718 10L727 11L750 7L775 6L797 8L811 13L823 13L843 8L863 8L877 6L893 12L919 10L927 7L940 7L966 6L975 6L989 7L1005 6L1023 6L1043 6L1053 6L1067 9L1082 6L1101 6L1123 6L1149 7L1175 6L1195 6L1207 6L1222 9L1237 14L1251 10L1276 7L1296 8L1306 8L1315 6L1326 6L1350 6L1365 11L1385 9L1406 12L1429 10L1440 6V34Z"/></svg>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee"></div>
   </div>
 
-  <script src="script.js"></script>
+  <section class="games" id="games" aria-labelledby="games-title">
+    <div class="wrap">
+      <div class="games-head">
+        <h2 id="games-title" class="display h2"><span class="brush-u" style="white-space: pre-line" data-i18n="games.title">Three games.
+One under seal.</span></h2>
+        <p class="lead" data-i18n="games.lead">One is out now, one is being forged, one is still under seal. The leaf game below holds the key.</p>
+      </div>
+
+      <div class="stack" id="stack">
+        <article class="panel p-kh" style="--i:0" aria-labelledby="kh-title">
+          <i class="rod top" aria-hidden="true"></i><i class="rod bot" aria-hidden="true"></i><div class="sheet" aria-hidden="true"></div>
+          <span class="stamp stamp--on" data-i18n="kh.stamp">Out now</span>
+          <div class="kh-feat" style="background-image:url('/assets/site/kh_feat.webp')" aria-hidden="true"></div>
+          <div class="panel-in">
+            <div>
+              <div class="kh-top">
+                <img class="kh-icon" src="/assets/site/kh_icon.webp" alt="The Knight and the Hamster app icon" width="64" height="64">
+              </div>
+              <h3 id="kh-title" style="margin-top:16px">The Knight and the Hamster</h3>
+              <dl class="meta">
+                <dt data-i18n="m.status">Status</dt><dd data-i18n="kh.status">Out now on Google Play</dd>
+                <dt data-i18n="m.genre">Genre</dt><dd data-i18n="kh.genre">Action roguelite deckbuilder</dd>
+                <dt data-i18n="m.platform">Platform</dt><dd data-i18n="kh.platform">Android, plays fully offline</dd>
+              </dl>
+              <p class="desc" data-i18n="kh.desc">Tactical card combat, a faithful hamster companion and a village you rebuild between runs. A new boss waits every fifth wave.</p>
+              <div class="actions">
+                <a class="btn btn--shu" href="https://play.google.com/store/apps/details?id=com.knighthamster.game" target="_blank" rel="noopener noreferrer"><span data-i18n="kh.play">Get it on Google Play</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+                <a class="btn btn--ghost" href="/knight-hamster"><span data-i18n="kh.page">Game page</span></a>
+              </div>
+            </div>
+            <div class="phones" aria-label="Screenshots">
+              <div class="phone"><img src="/assets/site/kh2_en_02.webp" alt="Pick your power: legendary cards"><img class="is-off" alt=""></div>
+              <div class="phone"><img src="/assets/site/kh2_en_01.webp" alt="Epic boss fights"><img class="is-off" alt=""></div>
+              <div class="phone"><img src="/assets/site/kh2_en_03.webp" alt="Block at the right moment"><img class="is-off" alt=""></div>
+              <button class="trailer-btn" id="trailerBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg><span data-i18n="kh.trailer">Watch the trailer</span></button>
+              <button class="trailer-close" id="trailerClose" type="button" hidden><span class="sr-only" data-i18n="kh.close">Close the trailer</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel p-dd" style="--i:1" aria-labelledby="dd-title">
+          <i class="rod top" aria-hidden="true"></i><i class="rod bot" aria-hidden="true"></i><div class="sheet" aria-hidden="true"></div>
+          <span class="stamp" data-i18n="dd.stamp">In development</span>
+          <div class="ink-land" aria-hidden="true"></div>
+          <div class="panel-in">
+            <div class="cart-wrap"><img class="cart" id="cart" src="/assets/site/dd_cart.webp" alt="Doom's Day game cartridge with pixel-art cover" loading="lazy"></div>
+            <div>
+              <h3 id="dd-title" class="pixel-title" data-scramble>Doom's Day</h3>
+              <dl class="meta">
+                <dt data-i18n="m.status">Status</dt><dd data-i18n="dd.status">In development</dd>
+                <dt data-i18n="m.genre">Genre</dt><dd data-i18n="dd.genre">Pixel-art adventure</dd>
+                <dt data-i18n="m.platform">Platform</dt><dd data-i18n="dd.platform">PC and consoles</dd>
+                <dt data-i18n="m.release">Release</dt><dd data-i18n="dd.release">To be announced</dd>
+              </dl>
+              <p class="desc" data-i18n="dd.desc">An unpredictable retro world of pixel-art adventure, in active development at Qaymaq.</p>
+              <div class="actions"><a class="btn btn--ghost" href="#contact"><span data-i18n="dd.ask">Ask about Doom's Day</span></a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel p-sec" style="--i:2" id="secret" aria-labelledby="sec-title">
+          <i class="rod top" aria-hidden="true"></i><i class="rod bot" aria-hidden="true"></i><div class="sheet" aria-hidden="true"></div>
+          <div class="ink-land" aria-hidden="true" style="opacity:.13"></div>
+          <div class="sec-ink" aria-hidden="true"></div>
+          <canvas class="sec-tease" id="tease" aria-hidden="true"></canvas>
+          <div class="panel-in">
+            <div>
+              <h3 id="sec-title" class="sr-only" data-i18n="sec.title">Name classified</h3>
+              <div class="redact" id="redact" aria-hidden="true"><span class="ghost">KXRTE WOLAN</span><i></i><i></i><i></i></div>
+              <p class="redact-cap" data-i18n="sec.title">Name classified</p>
+              <dl class="meta">
+                <dt data-i18n="m.status">Status</dt><dd id="secStatus" data-i18n="sec.status">Sealed</dd>
+                <dt data-i18n="m.genre">Genre</dt><dd id="secGenre" data-i18n="sec.classified">Classified</dd>
+                <dt data-i18n="m.platform">Platform</dt><dd data-i18n="sec.classified">Classified</dd>
+                <dt data-i18n="m.release">Release</dt><dd id="secRelease" data-i18n="sec.release">When the seal breaks</dd>
+              </dl>
+              <p class="desc" data-i18n="sec.desc">We can't say its name yet. We can say it's coming.</p>
+            </div>
+            <div class="seal-stage">
+              <canvas class="paint" id="paint" aria-hidden="true"></canvas>
+              <div class="big-seal" id="bigSeal" aria-hidden="true"><span class="half l">封</span><span class="half r">封</span></div>
+              <div class="hold" id="hold">
+                <svg viewBox="0 0 46 46" aria-hidden="true"><circle class="track" cx="23" cy="23" r="20" fill="none" stroke-width="3"/><circle class="prog" cx="23" cy="23" r="20" fill="none" stroke-width="3" pathLength="1"/></svg>
+                <div class="unlock-text">
+                  <span data-i18n="sec.hold">Score 25 in the leaf game to break the seal</span>
+                  <small id="sealProgress">Best: 0 / 25</small>
+                </div>
+                <a class="btn btn--ghost unlock-play" href="#play"><span data-i18n="sec.play">Play</span></a>
+              </div>
+              <div class="sec-reveal" aria-live="polite">
+                <strong data-i18n="sec.after1">It's mechs.</strong>
+                <span data-i18n="sec.after2">Release: Q4 2026, closer to December. The name stays sealed for now.</span>
+                <button class="reseal" id="reseal" type="button" data-i18n="sec.reseal">Seal it again</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <svg class="tear bottom" viewBox="0 0 1440 34" preserveAspectRatio="none" aria-hidden="true"><path fill="var(--paper)" d="M0 34V18L23 16L47 20L66 16L86 10L105 11L121 15L143 20L158 22L166 26L178 27L197 23L215 20L224 23L238 18L262 22L280 26L300 28L310 22L319 26L343 23L353 23L375 18L396 14L421 13L446 9L455 11L468 13L478 13L499 17L522 18L542 20L550 24L560 21L576 20L595 25L615 28L632 23L648 20L666 19L685 21L711 27L735 23L743 23L764 17L788 11L803 15L824 9L844 6L855 12L880 9L893 6L909 6L930 6L953 6L962 8L984 7L998 6L1015 7L1038 12L1061 9L1074 10L1099 9L1112 6L1127 9L1135 7L1153 6L1168 12L1176 14L1185 11L1196 10L1221 12L1233 6L1251 12L1267 16L1278 13L1302 15L1325 16L1344 14L1366 19L1379 20L1396 23L1405 21L1423 23L1440 28V34Z"/></svg>
+  </section>
+
+  <section class="play" id="play" aria-labelledby="play-title">
+    <div class="wrap play-grid">
+      <div class="play-copy">
+        <h2 id="play-title" class="display h2"><span class="brush-u" data-i18n="play.title">Slash the falling leaves</span></h2>
+        <p class="lead" data-i18n="play.desc">The cat guards the pass. Swipe across red leaves to cut them. Three leaves on the ground and the round is over. Cut a drop of ink and it ends at once.</p>
+      </div>
+      <div class="play-hud">
+        <div class="board" aria-live="polite">
+          <div><b id="score">0</b><span class="label" data-i18n="play.score">Score</span></div>
+          <div><b id="best">0</b><span class="label" data-i18n="play.best">Best</span></div>
+          <div><span class="lives" id="lives" aria-label="Lives"><i></i><i></i><i></i></span><span class="label" data-i18n="play.lives">Lives</span></div>
+        </div>
+        <button class="sound-toggle" id="sound" type="button" aria-pressed="false"><span class="sw" aria-hidden="true"></span><span data-i18n="play.sound">Sound</span></button>
+      </div>
+      <div class="dojo" id="dojo">
+        <canvas id="game" aria-label="Leaf slashing mini-game"></canvas>
+        <div class="dojo-over" id="over">
+          <h3 id="overTitle" data-i18n="play.ready">Ready, ronin?</h3>
+          <p class="final" id="final" hidden>0</p>
+          <p id="overText" data-i18n="play.hint">Swipe or drag across the leaves. Leave the ink alone.</p>
+          <button class="btn btn--shu" id="start" type="button"><span data-i18n="play.start">Start</span></button>
+          <a class="over-link" id="overLink" href="https://play.google.com/store/apps/details?id=com.knighthamster.game" target="_blank" rel="noopener noreferrer" hidden data-i18n="play.longer">Want a longer run? Play The Knight and the Hamster</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="studio" id="studio" aria-labelledby="studio-title">
+    <svg class="tear top" viewBox="0 0 1440 34" preserveAspectRatio="none" aria-hidden="true"><path fill="var(--paper)" d="M0 34V18L16 16L29 20L44 24L56 21L69 17L79 19L93 24L110 18L131 14L139 12L151 7L167 8L188 6L204 6L219 7L244 10L265 14L284 14L302 18L313 17L329 22L351 24L363 25L385 27L398 25L412 21L436 20L452 19L474 17L490 17L502 20L525 22L540 25L555 22L574 18L584 18L606 18L614 23L635 17L650 13L673 19L695 23L711 19L732 24L748 28L767 25L786 27L798 28L813 28L836 25L845 28L871 22L890 25L916 24L929 22L943 18L968 13L983 9L993 9L1018 15L1043 20L1052 21L1070 25L1080 27L1088 23L1105 18L1126 16L1142 19L1152 20L1176 19L1185 13L1203 12L1215 13L1240 15L1264 16L1279 20L1293 18L1302 18L1326 23L1339 28L1351 26L1372 28L1386 26L1407 28L1422 27L1437 28L1440 28V34Z"/></svg>
+    <div class="wrap">
+      <div class="studio-head">
+        <h2 id="studio-title" class="display h2"><span class="brush-u" data-i18n="studio.title">How we make games</span></h2>
+        <p class="lead" data-i18n="studio.lead">We build striking, readable and memorable games with a handmade spirit. Cozy, chaotic, mysterious or funny, each one starts with a strong player fantasy.</p>
+      </div>
+      <div class="path-wrap">
+        <svg class="path-svg" aria-hidden="true"><path id="trail" pathLength="1" d="M0 0"/><circle id="trailTip" r="6"/></svg>
+        <ol class="steps">
+          <li class="step"><span class="seal">一</span><h3 data-i18n="s1.t">Idea</h3><p data-i18n="s1.d">Find the fantasy, the mood and the visual hook.</p></li>
+          <li class="step"><span class="seal">二</span><h3 data-i18n="s2.t">Prototype</h3><p data-i18n="s2.d">Make the core interaction playable, fast.</p></li>
+          <li class="step"><span class="seal">三</span><h3 data-i18n="s3.t">Playtest</h3><p data-i18n="s3.d">Watch players discover what works.</p></li>
+          <li class="step"><span class="seal">四</span><h3 data-i18n="s4.t">Polish</h3><p data-i18n="s4.d">Refine feedback, feel, flow and charm.</p></li>
+        </ol>
+      </div>
+      <p class="place" data-i18n="studio.place">Made in the Samarkand Region, Uzbekistan</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <svg class="contact-mark" aria-hidden="true" style="--qg-base: var(--shu); color: var(--ink)"><use href="#qg"/></svg>
+    <div class="wrap">
+      <h2 id="contact-title" class="display h2"><span class="brush-u" data-i18n="contact.title">Write to the studio</span></h2>
+      <p class="lead" data-i18n="contact.lead">Publishing, partnerships, press, or a game you want to make together.</p>
+      <div class="addr-list">
+        <div class="addr">
+          <span class="label" data-i18n="contact.biz">Business and publishing</span>
+          <a href="mailto:contact@qaymaqgames.com">contact@qaymaqgames.com</a>
+          <button class="copy" type="button" data-copy="contact@qaymaqgames.com" data-i18n="copy">Copy</button>
+        </div>
+        <div class="addr">
+          <span class="label" data-i18n="contact.players">Players and data requests</span>
+          <a href="mailto:support@qaymaqgames.com">support@qaymaqgames.com</a>
+          <button class="copy" type="button" data-copy="support@qaymaqgames.com" data-i18n="copy">Copy</button>
+        </div>
+        <div class="addr">
+          <span class="label" data-i18n="contact.phone">Phone</span>
+          <a href="tel:+998500153929">+998 50 015 39 29</a>
+          <button class="copy" type="button" data-copy="+998500153929" data-i18n="copy">Copy</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <a class="brand" href="#top" aria-label="Qaymaq Games, back to top">
+      <svg aria-hidden="true"><use href="#qg"/></svg>
+      <span class="brand-word">QAYMAQ</span>
+    </a>
+    <nav class="foot-links" aria-label="Legal">
+      <a href="/knight-hamster">Knight &amp; Hamster</a>
+      <a href="/privacy" data-i18n="f.privacy">Privacy Policy</a>
+      <a href="/terms" data-i18n="f.terms">Terms of Service</a>
+      <a href="/app-ads.txt">app-ads.txt</a>
+    </nav>
+    <small>&copy; <span id="year">2026</span> Qaymaq Games, MChJ · D-U-N-S 933906925 · <span data-i18n="f.place">Samarkand Region, Uzbekistan</span></small>
+  </div>
+</footer>
+
+<script src="/js/site.js"></script>
 </body>
 </html>
