@@ -1,0 +1,26 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Logs, deps, local tooling
+*.log
+node_modules/
+.vercel/
+.env
+.env.*
+
+# Claude Code local config (launch configs, local settings)
+.claude/
+
+# Impeccable: review screenshots and live-mode state are local; surface briefs stay tracked
+.impeccable/review/
+.impeccable/live/
+.impeccable/build/
+.impeccable/mocks/
+.impeccable/config.local.json

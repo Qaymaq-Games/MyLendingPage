@@ -1,0 +1,488 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T00:00:00Z",
+  "title": "Design System: Qaymaq Games",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Rice Paper",
+        "canonical": "#f1ede5",
+        "oklch": "oklch(94.7% 0.012 84.6)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#28251f",
+          "#45423b",
+          "#64615a",
+          "#85827b",
+          "#a8a59d",
+          "#cdc9c1",
+          "#f2eee6"
+        ]
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Aged Paper",
+        "canonical": "#e4ddd0",
+        "oklch": "oklch(90.0% 0.019 83.1)",
+        "tonalRamp": [
+          "#0f0a03",
+          "#2a241a",
+          "#474137",
+          "#676055",
+          "#888276",
+          "#aba498",
+          "#cfc8bc",
+          "#f5eee0"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Sumi Ink",
+        "canonical": "#141312",
+        "oklch": "oklch(18.7% 0.003 67.7)",
+        "tonalRamp": [
+          "#0c0b0a",
+          "#262524",
+          "#434240",
+          "#626160",
+          "#838281",
+          "#a6a5a3",
+          "#cac9c7",
+          "#f0eeed"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Diluted Ink",
+        "canonical": "#46423d",
+        "oklch": "oklch(38.1% 0.010 73.6)",
+        "tonalRamp": [
+          "#0e0b07",
+          "#282420",
+          "#45413c",
+          "#65605b",
+          "#86817c",
+          "#a9a49e",
+          "#cdc8c2",
+          "#f3eee7"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#c8c1b5",
+        "oklch": "oklch(81.3% 0.018 81.3)",
+        "tonalRamp": [
+          "#0f0a04",
+          "#2a241b",
+          "#474137",
+          "#676056",
+          "#888176",
+          "#aba498",
+          "#cfc8bc",
+          "#f5eee1"
+        ]
+      },
+      "shu": {
+        "role": "primary",
+        "displayName": "Shu Vermilion",
+        "canonical": "#cf1f28",
+        "oklch": "oklch(54.9% 0.207 25.7)",
+        "tonalRamp": [
+          "#210000",
+          "#4d0005",
+          "#7f0811",
+          "#b41720",
+          "#dc4643",
+          "#f47c74",
+          "#ffada5",
+          "#ffddd7"
+        ]
+      },
+      "shu-lit": {
+        "role": "primary",
+        "displayName": "Lantern Shu",
+        "canonical": "#ff5d63",
+        "oklch": "oklch(69.3% 0.197 21.8)",
+        "tonalRamp": [
+          "#200001",
+          "#4c020c",
+          "#7c0f1d",
+          "#b01f30",
+          "#d84a50",
+          "#f07e7d",
+          "#ffaeab",
+          "#ffdedb"
+        ]
+      },
+      "shu-deep": {
+        "role": "primary",
+        "displayName": "Dried Shu",
+        "canonical": "#9e1219",
+        "oklch": "oklch(44.8% 0.172 26.1)",
+        "tonalRamp": [
+          "#1e0101",
+          "#470b0b",
+          "#761e1c",
+          "#a8312e",
+          "#cf564f",
+          "#e8857c",
+          "#ffb3ab",
+          "#ffe1db"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "#0b0c10",
+        "oklch": "oklch(15.5% 0.009 274.3)",
+        "tonalRamp": [
+          "#0a0b0f",
+          "#242529",
+          "#404247",
+          "#5f6166",
+          "#808288",
+          "#a3a5ab",
+          "#c7c9cf",
+          "#eceef4"
+        ]
+      },
+      "bone": {
+        "role": "neutral",
+        "displayName": "Bone",
+        "canonical": "#ede7db",
+        "oklch": "oklch(92.9% 0.017 84.6)",
+        "tonalRamp": [
+          "#0f0b04",
+          "#29241c",
+          "#464138",
+          "#666156",
+          "#878277",
+          "#aaa499",
+          "#cec8bd",
+          "#f4eee2"
+        ]
+      },
+      "bone-dim": {
+        "role": "neutral",
+        "displayName": "Dim Bone",
+        "canonical": "#a9a397",
+        "oklch": "oklch(71.7% 0.018 84.6)",
+        "tonalRamp": [
+          "#0f0b04",
+          "#29241b",
+          "#474137",
+          "#666156",
+          "#878276",
+          "#aaa498",
+          "#cfc8bc",
+          "#f4eee1"
+        ]
+      },
+      "paint-a": {
+        "role": "tertiary",
+        "displayName": "Tease Cyan",
+        "canonical": "#18c4d6",
+        "oklch": "oklch(75.1% 0.126 206.8)",
+        "tonalRamp": [
+          "#000f14",
+          "#002d35",
+          "#004e5a",
+          "#007281",
+          "#0095a4",
+          "#58b5c1",
+          "#96d6df",
+          "#cff7fd"
+        ],
+        "note": "Declared as --paint-a in site.css but hardcoded in js/site.js (secret paint tease); scoped to the sealed project only."
+      },
+      "paint-b": {
+        "role": "tertiary",
+        "displayName": "Tease Yellow",
+        "canonical": "#ffc83a",
+        "oklch": "oklch(85.9% 0.160 86.1)",
+        "tonalRamp": [
+          "#150800",
+          "#372000",
+          "#5c3b00",
+          "#855800",
+          "#a87a00",
+          "#c5a048",
+          "#e1c68a",
+          "#ffedc7"
+        ],
+        "note": "Declared as --paint-a in site.css but hardcoded in js/site.js (secret paint tease); scoped to the sealed project only."
+      }
+    },
+    "typographyMeta": {
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "QAY MAQ hero wordmark, gate word and header brand only."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Section headings, always with the brush underline."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Game names on hanging sheets and the redacted title."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Process steps, game-over heading; contact addresses run larger."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading copy; 16px under 760px; measures 26 to 46ch."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Paragraph beside a section heading, ink-soft, max 46ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, nav, meta terms, scoreboard and address captions, stamps; 13 to 19px, 0.08 to 0.16em."
+      },
+      "seal-kanji": {
+        "displayName": "Seal Kanji",
+        "purpose": "Kanji inside hanko seals only; Google Fonts request subset via text= to the seal glyphs."
+      }
+    },
+    "fonts": {
+      "source": "Google Fonts",
+      "families": [
+        "Anton",
+        "Sofia Sans Extra Condensed 700;800;900",
+        "Golos Text 400;500;600",
+        "Yuji Boku (text-subset)"
+      ],
+      "cssVars": {
+        "--f-mark": "Anton",
+        "--f-display": "Sofia Sans Extra Condensed",
+        "--f-body": "Golos Text",
+        "--f-brush": "Yuji Boku"
+      }
+    },
+    "shadows": [
+      {
+        "name": "device-lift",
+        "value": "0 0 0 5px var(--ink), 0 26px 40px -18px rgba(20,19,18,.6)",
+        "purpose": "Phone mockups; the 5px ring is the bezel."
+      },
+      {
+        "name": "icon-lift",
+        "value": "0 10px 20px -8px rgba(20,19,18,.45)",
+        "purpose": "App icon on the paper sheet."
+      },
+      {
+        "name": "rod-drop",
+        "value": "0 6px 10px -4px rgba(0,0,0,.55)",
+        "purpose": "Wooden scroll rods on hanging sheets."
+      },
+      {
+        "name": "cartridge-drop",
+        "value": "drop-shadow(0 30px 40px rgba(0,0,0,.55))",
+        "purpose": "Cartridge art on the forge sheet (filter)."
+      },
+      {
+        "name": "dark-sheet-vignette",
+        "value": "inset 0 0 0 1.5px rgba(237,231,219,.14), inset 0 0 70px rgba(0,0,0,.45)",
+        "purpose": "The two dark hanging sheets."
+      },
+      {
+        "name": "header-hairline",
+        "value": "0 1px 0 rgba(20,19,18,.08)",
+        "purpose": "Scrolled header on paper (bone at .08 on night)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Default for wipes, underlines, reveals, menu."
+      },
+      {
+        "name": "ease-cut",
+        "value": "cubic-bezier(.7, 0, .2, 1)",
+        "purpose": "Katana slash: gate split, slash line draw, head reveal."
+      },
+      {
+        "name": "stamp",
+        "value": "cubic-bezier(.2, 1.6, .4, 1) .55s",
+        "purpose": "Seal stamping in with overshoot."
+      },
+      {
+        "name": "button-wipe",
+        "value": "clip-path .5s var(--ease-out)",
+        "purpose": "Diagonal hover wedge on buttons."
+      },
+      {
+        "name": "gate-split",
+        "value": "transform .95s var(--ease-cut)",
+        "purpose": "Intro halves flying apart along the diagonal."
+      },
+      {
+        "name": "brush-draw",
+        "value": "transform 1.1s var(--ease-out)",
+        "purpose": "Heading underline drawing in."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation and transition durations .001ms; JS skips progressive effects",
+        "purpose": "Calm static end states under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "980px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      }
+    ],
+    "filters": [
+      {
+        "name": "rough",
+        "value": "feTurbulence fractalNoise .045, 2 octaves, displacement scale 4",
+        "purpose": "Pressed-ink edge on seals, stamps, brush strokes, ink path."
+      },
+      {
+        "name": "grain",
+        "value": "fixed SVG fractal noise .85, opacity .32, multiply",
+        "purpose": "Paper grain over the whole page."
+      }
+    ],
+    "legacy": {
+      "path": "/css/style.css",
+      "usedBy": [
+        "/privacy",
+        "/terms",
+        "/knight-hamster"
+      ],
+      "note": "Older separate system; out of scope for this DESIGN.md."
+    }
+  },
+  "components": [
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Primary action on paper; a shu wedge slashes in diagonally on hover.",
+      "html": "<a class=\"ds-btn\" href=\"#\">See the games <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 4v16M5 13l7 7 7-7\"/></svg></a>",
+      "css": ".ds-btn { position: relative; display: inline-flex; align-items: center; gap: 12px; padding: 15px 26px 14px; border: 0; border-radius: 2px; background: var(--bg, var(--ink)); color: var(--fg, var(--paper)); text-decoration: none; font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 19px; letter-spacing: .08em; overflow: hidden; isolation: isolate; cursor: pointer; transition: transform .35s var(--ease-out), color .25s; } .ds-btn::before { content: ''; position: absolute; inset: -2px; z-index: -1; background: var(--wipe, var(--shu)); clip-path: polygon(0 0, 0 0, -20% 100%, -20% 100%); transition: clip-path .5s var(--ease-out); } .ds-btn:hover::before { clip-path: polygon(0 0, 120% 0, 100% 100%, -20% 100%); } .ds-btn:active { transform: translateY(1px) scale(.985); } .ds-btn:focus-visible { outline: 2px solid var(--shu); outline-offset: 3px; }"
+    },
+    {
+      "name": "Shu Button",
+      "kind": "button",
+      "refersTo": "button-shu",
+      "description": "Red action; the hover wipe is ink.",
+      "html": "<a class=\"ds-btn ds-btn-shu\" href=\"#\">Google Play</a>",
+      "css": ".ds-btn { position: relative; display: inline-flex; align-items: center; gap: 12px; padding: 15px 26px 14px; border: 0; border-radius: 2px; background: var(--bg, var(--ink)); color: var(--fg, var(--paper)); text-decoration: none; font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 19px; letter-spacing: .08em; overflow: hidden; isolation: isolate; cursor: pointer; transition: transform .35s var(--ease-out), color .25s; } .ds-btn::before { content: ''; position: absolute; inset: -2px; z-index: -1; background: var(--wipe, var(--shu)); clip-path: polygon(0 0, 0 0, -20% 100%, -20% 100%); transition: clip-path .5s var(--ease-out); } .ds-btn:hover::before { clip-path: polygon(0 0, 120% 0, 100% 100%, -20% 100%); } .ds-btn:active { transform: translateY(1px) scale(.985); } .ds-btn:focus-visible { outline: 2px solid var(--shu); outline-offset: 3px; } .ds-btn-shu { --bg: var(--shu); --fg: var(--paper); --wipe: var(--ink); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action; 1.5px inset rule, shu wipe on hover.",
+      "html": "<a class=\"ds-btn ds-btn-ghost\" href=\"#\">Trailer</a>",
+      "css": ".ds-btn { position: relative; display: inline-flex; align-items: center; gap: 12px; padding: 15px 26px 14px; border: 0; border-radius: 2px; background: var(--bg, var(--ink)); color: var(--fg, var(--paper)); text-decoration: none; font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 19px; letter-spacing: .08em; overflow: hidden; isolation: isolate; cursor: pointer; transition: transform .35s var(--ease-out), color .25s; } .ds-btn::before { content: ''; position: absolute; inset: -2px; z-index: -1; background: var(--wipe, var(--shu)); clip-path: polygon(0 0, 0 0, -20% 100%, -20% 100%); transition: clip-path .5s var(--ease-out); } .ds-btn:hover::before { clip-path: polygon(0 0, 120% 0, 100% 100%, -20% 100%); } .ds-btn:active { transform: translateY(1px) scale(.985); } .ds-btn:focus-visible { outline: 2px solid var(--shu); outline-offset: 3px; } .ds-btn-ghost { --bg: transparent; --fg: var(--ink); box-shadow: inset 0 0 0 1.5px currentColor; } .ds-btn-ghost:hover { color: var(--paper); }"
+    },
+    {
+      "name": "Hanko Seal",
+      "kind": "custom",
+      "refersTo": "seal",
+      "description": "Identity mark: one kanji in a roughened shu square with unequal corners.",
+      "html": "<span class=\"ds-seal\">猫</span>",
+      "css": ".ds-seal { display: inline-grid; place-items: center; width: 44px; height: 44px; background: var(--shu); color: var(--paper); font-family: var(--f-brush); font-size: 26px; line-height: 1; border-radius: 3px 5px 4px 6px; box-shadow: inset 0 0 0 2px rgba(241,237,229,.18); }"
+    },
+    {
+      "name": "Status Stamp",
+      "kind": "chip",
+      "refersTo": "stamp",
+      "description": "Game status as a tilted ink stamp; filled when released, outlined in development.",
+      "html": "<span class=\"ds-stamp ds-stamp-on\">Out now</span> <span class=\"ds-stamp\">In development</span>",
+      "css": ".ds-stamp { display: inline-grid; place-items: center; min-width: 92px; padding: 9px 12px 7px; margin: 12px; font-family: var(--f-display); font-weight: 900; text-transform: uppercase; letter-spacing: .1em; font-size: 17px; line-height: 1; border: 3px solid var(--shu); color: var(--shu); border-radius: 4px 7px 5px 8px; transform: rotate(-7deg); } .ds-stamp-on { background: var(--shu); color: var(--paper); }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "lang-toggle",
+      "description": "Top bar links with a shu underline that slashes in from the left, plus the EN/RU toggle.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"true\">Games</a><a href=\"#\">Play</a><a href=\"#\">Studio</a><a href=\"#\">Write to us</a><span class=\"ds-lang\"><button aria-pressed=\"true\"><span>EN</span></button><button aria-pressed=\"false\"><span>RU</span></button></span></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 26px; height: 64px; color: var(--ink); } .ds-nav a { position: relative; text-decoration: none; color: inherit; font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 17px; letter-spacing: .12em; padding-block: 6px; } .ds-nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--shu); transform: scaleX(0); transform-origin: right; transition: transform .45s var(--ease-out); } .ds-nav a:hover::after, .ds-nav a[aria-current='true']::after { transform: scaleX(1); transform-origin: left; } .ds-nav a:focus-visible { outline: 2px solid var(--shu); outline-offset: 3px; } .ds-lang { display: inline-flex; gap: 2px; padding: 3px; border-radius: 2px; box-shadow: inset 0 0 0 1.5px currentColor; } .ds-lang button { border: 0; background: transparent; color: inherit; padding: 5px 9px 4px; border-radius: 1px; font-family: var(--f-display); font-weight: 800; font-size: 15px; letter-spacing: .1em; cursor: pointer; } .ds-lang button[aria-pressed='true'] { background: currentColor; } .ds-lang button[aria-pressed='true'] span { color: var(--paper); }"
+    },
+    {
+      "name": "Contact Address Row",
+      "kind": "card",
+      "refersTo": "button-copy",
+      "description": "Contact band row: label, huge address as plain selectable text, ink copy button; on shu.",
+      "html": "<div class=\"ds-addr-band\"><div class=\"ds-addr\"><span class=\"ds-addr-label\">Business and publishing</span><a href=\"mailto:contact@qaymaqgames.com\">contact@qaymaqgames.com</a><button class=\"ds-copy\">Copy</button></div></div>",
+      "css": ".ds-addr-band { background: var(--shu); color: var(--paper); padding: 24px; } .ds-addr { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: end; gap: 6px 24px; padding-block: 22px; border-top: 1.5px solid rgba(241,237,229,.55); border-bottom: 1.5px solid rgba(241,237,229,.55); } .ds-addr-label { grid-column: 1 / -1; font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 14px; letter-spacing: .14em; } .ds-addr a { color: inherit; font-family: var(--f-display); font-weight: 900; font-size: clamp(30px, 5vw, 70px); line-height: .95; text-decoration: none; overflow-wrap: anywhere; } .ds-addr a:hover { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; } .ds-copy { min-width: 136px; border: 0; background: var(--ink); color: var(--paper); border-radius: 2px; padding: 11px 16px 10px; font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 15px; letter-spacing: .14em; cursor: pointer; transition: background-color .2s, color .2s, transform .2s var(--ease-out); } .ds-copy:hover { background: var(--paper); color: var(--ink); } .ds-copy:active { transform: scale(.97); } .ds-copy:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Section Heading with Brush Underline",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Display heading; a roughened shu brush stroke draws under it on entry.",
+      "html": "<h2 class=\"ds-h2\"><span class=\"ds-brush\">How we make games</span></h2>",
+      "css": ".ds-h2 { margin: 0; font-family: var(--f-display); font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; line-height: .92; font-size: clamp(44px, 6.6vw, 96px); color: var(--ink); } .ds-brush { position: relative; display: inline-block; } .ds-brush::after { content: ''; position: absolute; left: -2%; right: -2%; bottom: -.08em; height: .14em; background: var(--shu); border-radius: 40% 60% 50% 50%; transform: scaleX(.001); transform-origin: left; transition: transform 1.1s var(--ease-out); } .ds-h2:hover .ds-brush::after { transform: scaleX(1); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Cut Ink Scroll",
+    "overview": "The site is one long sumi-e scroll of rice paper. Ink lives on it in washes from soot to mist; a single vermilion, shu, marks the sun, the seals, the slashes and the call to act. Where the games hang, the paper tears into a night-ink band (the dark of the logo video), and the sheets that hang there are hanging scrolls, not cards. The scroll returns to paper for play and craft and closes on a solid shu band for contact, then night again for the footer.\n\nEverything is cut, stamped or brushed. Edges are torn (SVG tear strips between bands, jittered polygon masks on sheets), marks are pressed through a turbulence filter so they read hand-made, and motion follows one grammar: the katana slash. The intro gate splits along a diagonal, the sealed project breaks along a diagonal on a held slash, and the mini-game is slashing falling leaves. Type is heavy, condensed and uppercase for anything that is shouted; a calm Cyrillic-ready grotesque carries reading. Kanji appears only inside red hanko seals.\n\nThe page is bilingual (EN/RU) and motion-heavy by intent, so every animation collapses under `prefers-reduced-motion`, the intro is skippable, and all content (contacts included) is plain readable text without interaction.",
+    "keyCharacteristics": [
+      "Rice paper ground under a fixed multiply grain; ink washes, not grey UI tints.",
+      "One accent, shu vermilion, carrying sun, seals, slashes and action.",
+      "A night-ink band for the games, entered and left through torn paper edges.",
+      "Heavy extra-condensed uppercase display; Golos Text for reading; Yuji Boku kanji only inside seals.",
+      "Near-square, cut corners; organic irregular radii only on stamped marks.",
+      "The katana slash as the single signature motion."
+    ],
+    "rules": [
+      {
+        "name": "The One Red Rule",
+        "body": "Shu is the only chromatic accent on paper and on night. If a new element wants a second color, it takes ink, paper or bone instead.",
+        "section": "colors"
+      },
+      {
+        "name": "The Red Band Rule",
+        "body": "A full shu surface is reserved for the closing contact band. On it, ink replaces red as the accent (underline, button, nav underline).",
+        "section": "colors"
+      },
+      {
+        "name": "The Seal-Only Kanji Rule",
+        "body": "Yuji Boku sets kanji inside red hanko seals (and the marquee kanji in shu). It never sets Latin or Cyrillic text.",
+        "section": "typography"
+      },
+      {
+        "name": "The Wordmark Rule",
+        "body": "Anton is the logotype face. Headings use Sofia Sans Extra Condensed, never Anton.",
+        "section": "typography"
+      },
+      {
+        "name": "The Objects-Only Shadow Rule",
+        "body": "A shadow means a thing is physically on the paper. UI never casts one.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep shu as the only chromatic accent; use `shu-lit` for red marks on dark sheets.",
+      "**Do** set shouted text in Sofia Sans Extra Condensed uppercase at 700 to 900, and reading text in Golos Text at 16 to 20px.",
+      "**Do** join bands of different grounds with a torn paper edge.",
+      "**Do** mark status with a stamp and identity with a seal, both through the `#rough` filter.",
+      "**Do** make every new motion either a slash, a stamp, a brush stroke or ambient drift, and give it a reduced-motion end state.",
+      "**Do** keep text over the scene and contacts readable as plain text without interaction."
+    ],
+    "donts": [
+      "**Don't** use rounded content cards; panels are hanging sheets with torn edges and rods.",
+      "**Don't** cast drop shadows from UI elements; shadows belong to physical objects only.",
+      "**Don't** introduce a second accent hue on paper or night; tease cyan and yellow stay inside the sealed project.",
+      "**Don't** set Latin or Cyrillic text in Yuji Boku, or headings in Anton.",
+      "**Don't** add small uppercase lines above headings; a heading stands on its own with its brush underline."
+    ]
+  }
+}

@@ -1,9 +1,11 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/knight-and-hamster", "destination": "/knight-hamster", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/knight-hamster", "destination": "/knight-hamster/index.html" },
-    { "source": "/knight-and-hamster", "destination": "/knight-hamster/index.html" },
     { "source": "/knight-hamster/privacy-policy", "destination": "/knight-hamster/privacy-policy.html" },
     { "source": "/privacy", "destination": "/privacy-policy.html" },
     { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
