@@ -164,7 +164,7 @@ Ink on paper with one red, plus a night-ink register for the games band.
 - **Dim Bone** (`bone-dim`): secondary text on night and on dark sheets.
 
 ### Tertiary (scoped)
-- **Tease Cyan / Tease Yellow** (`paint-a`, `paint-b`): paint splatters revealed only around the sealed project's hanko. A deliberate leak from another world; they never appear anywhere else.
+- **Blueprint Cyan / Spark Yellow** (`paint-a`, `paint-b`): only around the sealed project. Cyan draws the machine blueprint the cursor reveals under the ink and that stays behind once the seal breaks; yellow (with bone and shu-lit) colours the sparks of the break. A deliberate leak from the mech world; they never appear anywhere else.
 
 ### Named Rules
 **The One Red Rule.** Shu is the only chromatic accent on paper and on night. If a new element wants a second color, it takes ink, paper or bone instead.
@@ -251,7 +251,7 @@ Cut, loud and uppercase; hover is a slash of the other color.
 Section headings carry a shu brush stroke (0.14em, uneven radii, roughened) that draws in from the left when the heading enters view; ink on the shu band. The heading text itself is always visible.
 
 ### Katana Slash (signature motion)
-The one motion grammar, on the cut ease (`cubic-bezier(.7, 0, .2, 1)`). Intro gate: night halves split along a diagonal and fly apart after a glowing red slash line. Sealed project: holding a button fills a shu progress ring, the big seal rattles, then breaks into two halves along a diagonal. Mini-game: pointer slashes leave a brush-ink trail across falling leaves. Under reduced motion, all of it resolves to its end state.
+The one motion grammar, on the cut ease (`cubic-bezier(.7, 0, .2, 1)`). Intro gate: night halves split along a diagonal and fly apart after a glowing red slash line. Sealed project: the shu progress ring fills with the visitor's best score in the mini-game; at 25 points the game flashes "The seal cracked!", and when the panel is next in view the big seal rattles, then breaks into two halves along a diagonal in a burst of sparks, leaving a blueprint behind. Mini-game: pointer slashes leave a brush-ink trail across falling leaves. Under reduced motion, all of it resolves to its end state.
 
 ## Do's and Don'ts
 

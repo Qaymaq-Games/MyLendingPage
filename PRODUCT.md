@@ -30,7 +30,7 @@ A small Uzbek indie studio whose identity is a one-eyed ninja cat in a sumi-e in
 - Games to show (three):
   - **The Knight and the Hamster**: action roguelite deckbuilder, Android, released on Google Play (`com.knighthamster.game`), offline single-player; own page at /knight-hamster with trailer and screenshots.
   - **Doom's Day**: pixel-art adventure, in active development, release TBA, PC & consoles.
-  - **Secret project**: must be presented as a secret that builds intrigue. Its working name must not be revealed on the site.
+  - **Secret project**: must be presented as a secret that builds intrigue. Its working name must not be revealed on the site. Confirmed by the owner (2026-10-17): it is a mech game, release Q4 2026 (around December). On the site these two facts are revealed only when a visitor scores 25 points in the mini-game, which breaks the seal; platform and name stay classified.
 - A small interactive mini-game featuring the cat mascot replaces the old Pac-Man game.
 - Contacts: contact@qaymaqgames.com (business, partnerships, publishing), support@qaymaqgames.com (player support and data requests), +998 50 015 39 29.
 - Undecided: social links, team/hiring content, store links beyond Google Play.

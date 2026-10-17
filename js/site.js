@@ -28,9 +28,18 @@
     "m.status": ["Status", "Статус"],
     "kh.stamp": ["Out now", "Вышла"], "dd.stamp": ["In development", "В работе"], "sec.stamp": ["Sealed", "Печать"],
     "play.longer": ["Want a longer run? Play The Knight and the Hamster", "Хотите забег подольше? Сыграйте в The Knight and the Hamster"],
+    "sec.play": ["Play", "Играть"],
+    "sec.progress": ["Best: {n} / 25", "Рекорд: {n} / 25"],
+    "sec.open.status": ["Seal broken", "Печать сломана"],
+    "sec.open.genre": ["Mechs", "Мехи"],
+    "sec.open.release": ["Q4 2026, closer to December", "4 квартал 2026, ближе к декабрю"],
+    "sec.cracked": ["The seal cracked!", "Печать треснула!"],
+    "sec.seeinside": ["The seal is broken. See what is inside", "Печать сломана. Посмотрите, что внутри"],
+    "kh.trailer": ["Watch the trailer", "Смотреть трейлер"],
+    "kh.close": ["Close the trailer", "Закрыть трейлер"],
     "gate.skip": ["Skip intro", "Пропустить"],
     "games.title": ["Three games.\nOne under seal.", "Три игры.\nОдна под печатью."],
-    "games.lead": ["One is out now, one is being forged, one is still under seal. Break it if you dare.", "Одна уже вышла, вторая куётся, третья пока под печатью. Сломайте её, если решитесь."],
+    "games.lead": ["One is out now, one is being forged, one is still under seal. The leaf game below holds the key.", "Одна уже вышла, вторая куётся, третья пока под печатью. Ключ от неё в игре с листьями ниже."],
     "m.genre": ["Genre", "Жанр"],
     "m.platform": ["Platform", "Платформа"],
     "m.release": ["Release", "Релиз"],
@@ -51,9 +60,9 @@
     "sec.classified": ["Classified", "Засекречено"],
     "sec.release": ["When the seal breaks", "Когда треснет печать"],
     "sec.desc": ["We can't say its name yet. We can say it's coming.", "Имя пока не скажем. Но она уже в пути."],
-    "sec.hold": ["Hold to break the seal", "Удерживайте, чтобы сломать печать"],
-    "sec.after1": ["Ink is not the only color.", "Тушь — не единственный цвет."],
-    "sec.after2": ["The next signal comes soon. Bookmark this page.", "Скоро новый сигнал. Добавьте страницу в закладки."],
+    "sec.hold": ["Score 25 in the leaf game to break the seal", "Наберите 25 очков в игре с листьями, чтобы сломать печать"],
+    "sec.after1": ["It's mechs.", "Это мехи."],
+    "sec.after2": ["Release: Q4 2026, closer to December. The name stays sealed for now.", "Релиз: 4 квартал 2026, ближе к декабрю. Название пока под печатью."],
     "sec.reseal": ["Seal it again", "Запечатать снова"],
     "play.title": ["Slash the falling leaves", "Рубите падающие листья"],
     "play.desc": ["The cat guards the pass. Swipe across red leaves to cut them. Three leaves on the ground and the round is over. Cut a drop of ink and it ends at once.", "Кот охраняет перевал. Проведите по красным листьям, чтобы разрубить их. Три листа на земле, и раунд окончен. Разрубите каплю туши, и он закончится сразу."],
@@ -92,7 +101,14 @@
     "f.place": ["Samarkand Region, Uzbekistan", "Самаркандская область, Узбекистан"],
     "marquee": ["The Knight and the Hamster|Doom's Day|Sealed project|Samarkand", "The Knight and the Hamster|Doom's Day|Проект под печатью|Самарканд"],
   };
-  let lang = store.get("qg-lang") || ((navigator.language || "en").toLowerCase().startsWith("ru") ? "ru" : "en");
+  const onRuPath = /^\/ru(\/|$)/.test(location.pathname);
+  let lang = onRuPath ? "ru" : (store.get("qg-lang") || ((navigator.language || "en").toLowerCase().startsWith("ru") ? "ru" : "en"));
+  function syncLangUrl() {
+    if (!/^https?:$/.test(location.protocol)) return;
+    const want = lang === "ru" ? "/ru" : "/";
+    const isRu = /^\/ru(\/|$)/.test(location.pathname);
+    if ((lang === "ru") !== isRu) { try { history.replaceState(null, "", want + location.hash); } catch (e) {} }
+  }
   const t = (k) => (T[k] ? T[k][lang === "ru" ? 1 : 0] : k);
   const GLYPHS = "QAYMKXZRSTЖЯФШЮДЛБ";
   function scramble(el, to) {
@@ -122,10 +138,11 @@
     buildMarquee();
     if (typeof showShots === "function" && phoneEls && phoneEls.length) showShots(true);
     if (window.__dojoLang) window.__dojoLang();
+    if (typeof updateSealProgress === "function" && sealProgress) updateSealProgress();
   }
   $$(".lang button").forEach(b => b.addEventListener("click", () => {
     if (b.dataset.lang === lang) return;
-    lang = b.dataset.lang; store.set("qg-lang", lang); applyLang(true);
+    lang = b.dataset.lang; store.set("qg-lang", lang); applyLang(true); syncLangUrl();
   }));
 
   /* ================= marquee ================= */
@@ -344,13 +361,38 @@
   if (phoneEls.length) {
     new IntersectionObserver((e) => { phonesOn = e[0].isIntersecting; }, { threshold: .2 }).observe($(".phones"));
     $(".phones").addEventListener("pointerenter", () => { phonesHover = true; });
-    $(".phones").addEventListener("pointerleave", () => { phonesHover = false; });
+    $(".phones").addEventListener("pointerleave", () => { phonesHover = !!document.querySelector(".phones.is-playing"); });
     if (!reduce) setInterval(() => {
       if (!phonesOn || phonesHover || document.hidden) return;
       const k = [1, 0, 2][shotTick % 3]; shotTick++;
       let next = (Math.max(...shotIdx) + 1) % 8; while (shotIdx.includes(next)) next = (next + 1) % 8;
       shotIdx[k] = next; shotBase = k; showShots(false);
     }, 2400);
+  }
+
+  /* ================= trailer in the centre phone ================= */
+  const phonesBox = $(".phones"), trailerBtn = $("#trailerBtn"), trailerClose = $("#trailerClose");
+  let trailerVid = null;
+  function stopTrailer() {
+    if (!trailerVid) return;
+    trailerVid.pause(); trailerVid.remove(); trailerVid = null;
+    phonesBox.classList.remove("is-playing"); trailerClose.hidden = true; phonesHover = false; trailerBtn.focus({ preventScroll: true });
+  }
+  if (trailerBtn) {
+    trailerBtn.addEventListener("click", () => {
+      if (trailerVid) return;
+      const ph = phoneEls[1];
+      trailerVid = document.createElement("video");
+      trailerVid.className = "phone-video"; trailerVid.src = "/assets/knight-hamster/trailer.mp4"; trailerVid.playsInline = true; trailerVid.setAttribute("playsinline", "");
+      trailerVid.addEventListener("ended", stopTrailer);
+      trailerVid.addEventListener("click", () => { trailerVid.paused ? trailerVid.play() : trailerVid.pause(); });
+      ph.appendChild(trailerVid);
+      phonesBox.classList.add("is-playing"); trailerClose.hidden = false; phonesHover = true;
+      const pr = trailerVid.play(); if (pr && pr.catch) pr.catch(() => { trailerVid && (trailerVid.muted = true, trailerVid.play()); });
+    });
+    trailerClose.addEventListener("click", stopTrailer);
+    addEventListener("keydown", (e) => { if (e.key === "Escape") stopTrailer(); });
+    new IntersectionObserver((e) => { if (!e[0].isIntersecting) stopTrailer(); }, { threshold: .1 }).observe(phonesBox);
   }
 
   /* ================= reveal observers ================= */
@@ -431,75 +473,79 @@
     try { navigator.clipboard.writeText(b.dataset.copy).then(done, fallback); } catch (e) { fallback(); }
   }));
 
-  /* ================= sealed project ================= */
-  const sec = $("#secret"), holdBtn = $("#hold"), prog = $("#hold .prog"), bigSeal = $("#bigSeal"), paint = $("#paint");
-  let holdT0 = 0, holding = false, holdRaf = 0;
-  const HOLD = 1300;
-  function holdStep(now) {
-    if (!holding) return;
-    const p = clamp((now - holdT0) / HOLD, 0, 1);
-    prog.style.strokeDashoffset = String(1 - p);
-    if (p >= 1) { holding = false; bigSeal.classList.remove("is-shaking"); breakSeal(true); return; }
-    holdRaf = requestAnimationFrame(holdStep);
+  /* ================= sealed project: the seal breaks at 25 points in the leaf game ================= */
+  const UNLOCK = 25;
+  const sec = $("#secret"), prog = $("#hold .prog"), bigSeal = $("#bigSeal"), paint = $("#paint"), sealProgress = $("#sealProgress");
+  const sealState = () => store.get("qg-seal") || "";
+  function updateSealProgress(live) {
+    const best = Math.max(+(store.get("qg-best") || 0), live || 0);
+    prog.style.strokeDashoffset = String(1 - Math.min(best / UNLOCK, 1));
+    sealProgress.textContent = t("sec.progress").replace("{n}", Math.min(best, UNLOCK));
   }
-  function holdStart(e) { if (sec.classList.contains("is-broken") || holding) return; if (e && e.preventDefault) e.preventDefault(); holding = true; holdT0 = performance.now(); bigSeal.classList.add("is-shaking"); holdRaf = requestAnimationFrame(holdStep); }
-  function holdEnd() { if (!holding) return; holding = false; cancelAnimationFrame(holdRaf); bigSeal.classList.remove("is-shaking"); prog.style.transition = "stroke-dashoffset .4s"; prog.style.strokeDashoffset = "1"; setTimeout(() => { prog.style.transition = ""; }, 420); }
-  holdBtn.addEventListener("pointerdown", holdStart);
-  ["pointerup", "pointerleave", "pointercancel"].forEach(ev => holdBtn.addEventListener(ev, holdEnd));
-  holdBtn.addEventListener("keydown", (e) => { if ((e.key === " " || e.key === "Enter") && !e.repeat) holdStart(e); });
-  holdBtn.addEventListener("keyup", (e) => { if (e.key === " " || e.key === "Enter") holdEnd(); });
-  holdBtn.addEventListener("contextmenu", (e) => e.preventDefault());
-  function splatter(c, w, h, cx, cy, n, spread, seed) {
-    const r = rng(seed); const cols = ["#18c4d6", "#ffc83a", "#18c4d6", "#ede7db"];
-    return Array.from({ length: n }, (_, i) => {
-      const a = r() * 6.28, d = (i === 0 ? 0 : 14 + Math.pow(r(), .7) * spread);
-      const big = i < 4 || r() < .12;
-      return { x: cx + Math.cos(a) * d, y: cy + Math.sin(a) * d * .82, rad: big ? 16 + r() * 34 : 2 + r() * 9, col: cols[(r() * cols.length) | 0], a, seed: r() * 1e6, drip: big && r() < .5 ? 24 + r() * 70 : 0, streak: !big && r() < .35 };
+  function setSecMeta(open) {
+    [["secStatus", "sec.status", "sec.open.status"], ["secGenre", "sec.classified", "sec.open.genre"], ["secRelease", "sec.release", "sec.open.release"]].forEach(([id, shut, opened]) => {
+      const el = document.getElementById(id); el.dataset.i18n = open ? opened : shut; el.textContent = t(el.dataset.i18n);
     });
   }
-  function blobPath(c, x, y, rad, seed) {
-    const r = rng(seed | 0), n = 16, pts = [];
-    for (let k = 0; k < n; k++) { const a = k / n * 6.28, rr = rad * (.72 + r() * .5 + (r() < .18 ? .45 : 0)); pts.push([x + Math.cos(a) * rr, y + Math.sin(a) * rr]); }
-    c.beginPath(); c.moveTo((pts[0][0] + pts[n - 1][0]) / 2, (pts[0][1] + pts[n - 1][1]) / 2);
-    for (let k = 0; k < n; k++) { const p = pts[k], q = pts[(k + 1) % n]; c.quadraticCurveTo(p[0], p[1], (p[0] + q[0]) / 2, (p[1] + q[1]) / 2); }
-    c.closePath();
-  }
-  function drawBlobs(c, blobs, cx, cy, e) {
-    for (const bl of blobs) {
-      const x = lerp(cx, bl.x, e), y = lerp(cy, bl.y, e), rad = bl.rad * Math.min(1, e * 1.4);
-      c.fillStyle = bl.col;
-      if (bl.streak) {
-        c.globalAlpha = .85; c.beginPath(); const tx = x - Math.cos(bl.a) * rad * 5 * e, ty = y - Math.sin(bl.a) * rad * 5 * e;
-        c.moveTo(tx, ty); c.lineTo(x + Math.sin(bl.a) * rad * .5, y - Math.cos(bl.a) * rad * .5); c.lineTo(x - Math.sin(bl.a) * rad * .5, y + Math.cos(bl.a) * rad * .5); c.closePath(); c.fill();
-      }
-      c.globalAlpha = .18; blobPath(c, x, y, rad * 1.5, bl.seed + 7); c.fill();
-      c.globalAlpha = .94; blobPath(c, x, y, rad, bl.seed); c.fill();
-      if (bl.drip) {
-        const L = bl.drip * e, wd = rad * .32;
-        c.beginPath(); c.moveTo(x - wd, y); c.quadraticCurveTo(x - wd * .5, y + L * .6, x - wd * .55, y + L); c.arc(x, y + L, wd * .55, Math.PI, 0, true); c.quadraticCurveTo(x + wd * .5, y + L * .6, x + wd, y); c.closePath(); c.fill();
-      }
+  // hidden blueprint under the ink: the flashlight shows machine drawings, not paint
+  function drawBlueprint(c, w, h, seed, alpha) {
+    const r = rng(seed); c.save(); c.globalAlpha = alpha; c.strokeStyle = "#18c4d6"; c.fillStyle = "#18c4d6"; c.lineWidth = 1;
+    c.globalAlpha = alpha * .35; c.beginPath();
+    for (let x = 0; x < w; x += 26) { c.moveTo(x + .5, 0); c.lineTo(x + .5, h); }
+    for (let y = 0; y < h; y += 26) { c.moveTo(0, y + .5); c.lineTo(w, y + .5); }
+    c.stroke(); c.globalAlpha = alpha;
+    const gear = (x, y, R, teeth) => { c.beginPath(); for (let i = 0; i <= teeth * 2; i++) { const a = i / (teeth * 2) * Math.PI * 2, rr = i % 2 ? R : R * .82; c.lineTo(x + Math.cos(a) * rr, y + Math.sin(a) * rr); } c.closePath(); c.stroke(); c.beginPath(); c.arc(x, y, R * .32, 0, 6.28); c.stroke(); };
+    const joint = (x, y, R) => { c.beginPath(); c.arc(x, y, R, 0, 6.28); c.stroke(); c.beginPath(); c.moveTo(x - R * 1.5, y); c.lineTo(x + R * 1.5, y); c.moveTo(x, y - R * 1.5); c.lineTo(x, y + R * 1.5); c.stroke(); };
+    const plate = (x, y, pw, ph) => { const k = Math.min(pw, ph) * .22; c.beginPath(); c.moveTo(x + k, y); c.lineTo(x + pw - k, y); c.lineTo(x + pw, y + k); c.lineTo(x + pw, y + ph - k); c.lineTo(x + pw - k, y + ph); c.lineTo(x + k, y + ph); c.lineTo(x, y + ph - k); c.lineTo(x, y + k); c.closePath(); c.stroke();
+      [[x + k, y + k * .7], [x + pw - k, y + k * .7], [x + k, y + ph - k * .7], [x + pw - k, y + ph - k * .7]].forEach(([bx, by]) => { c.beginPath(); c.arc(bx, by, 2.4, 0, 6.28); c.fill(); }); };
+    const dim = (x1, y1, x2) => { c.beginPath(); c.moveTo(x1, y1); c.lineTo(x2, y1); c.moveTo(x1, y1 - 6); c.lineTo(x1, y1 + 6); c.moveTo(x2, y1 - 6); c.lineTo(x2, y1 + 6); c.stroke(); };
+    const n = Math.max(6, Math.round(w * h / 26000));
+    for (let i = 0; i < n; i++) {
+      const x = r() * w, y = r() * h, s = 18 + r() * 46, k = r();
+      if (k < .3) gear(x, y, s, 8 + ((r() * 6) | 0)); else if (k < .55) joint(x, y, s * .5); else if (k < .85) plate(x - s, y - s * .6, s * 2, s * 1.2); else dim(x, y, x + s * 2.4);
     }
-    c.globalAlpha = 1;
+    // a leg linkage, the clearest mech hint
+    const lx = w * (.3 + r() * .4), ly = h * .25, L1 = h * .22, L2 = h * .24;
+    c.lineWidth = 2; joint(lx, ly, 10); c.beginPath(); c.moveTo(lx, ly); c.lineTo(lx + L1 * .35, ly + L1); c.lineTo(lx - L2 * .1, ly + L1 + L2); c.lineTo(lx + 46, ly + L1 + L2); c.stroke(); joint(lx + L1 * .35, ly + L1, 8);
+    c.restore();
   }
   const tease = $("#tease");
   function paintTease() {
     const b = tease.getBoundingClientRect(); if (!b.width) return; const dpr = Math.min(devicePixelRatio || 1, 2);
     tease.width = b.width * dpr; tease.height = b.height * dpr; const c = tease.getContext("2d"); c.setTransform(dpr, 0, 0, dpr, 0, 0);
-    for (let k = 0; k < 28; k++) { const r = rng(100 + k); const cx = b.width * (.04 + ((k % 7) + r()) / 7 * .92), cy = b.height * (.08 + (((k / 7) | 0) + r()) / 4 * .84); drawBlobs(c, splatter(c, b.width, b.height, cx, cy, 9, 60, 300 + k), cx, cy, 1); }
+    drawBlueprint(c, b.width, b.height, 77, .9);
   }
   function breakSeal(animate) {
-    sec.classList.add("is-broken"); store.set("qg-seal", "broken");
+    sec.classList.add("is-broken"); store.set("qg-seal", "broken"); setSecMeta(true);
     const b = paint.getBoundingClientRect(); const dpr = Math.min(devicePixelRatio || 1, 2);
     paint.width = b.width * dpr; paint.height = b.height * dpr; const c = paint.getContext("2d"); c.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const cx = b.width / 2, cy = b.height * .38;
-    const blobs = splatter(c, b.width, b.height, cx, cy, 52, Math.min(b.width, b.height) * .38, Date.now() % 9999);
-    const t0 = performance.now(), dur = animate && !reduce ? 700 : 1;
+    const cx = b.width / 2, cy = b.height * .38, r = rng(Date.now() % 9999);
+    const sparks = Array.from({ length: 90 }, () => { const a = r() * 6.28, v = 120 + r() * 520; return { a, v, len: 8 + r() * 26, col: r() < .6 ? "#ffc83a" : (r() < .5 ? "#ede7db" : "#ff5d63") }; });
+    const t0 = performance.now(), dur = animate && !reduce ? 1100 : 1;
     (function step(now) {
-      const p = clamp((now - t0) / dur, 0, 1), e = 1 - Math.pow(1 - p, 3);
-      c.clearRect(0, 0, b.width, b.height); drawBlobs(c, blobs, cx, cy, e);
-      if (p < 1) requestAnimationFrame(step);
+      const p = clamp((now - t0) / dur, 0, 1), e = 1 - Math.pow(1 - p, 2);
+      c.clearRect(0, 0, b.width, b.height);
+      drawBlueprint(c, b.width, b.height, 77, .55 * Math.min(1, p * 2));
+      if (p < 1) {
+        c.lineCap = "round";
+        for (const s of sparks) {
+          const d = s.v * e * (dur / 1000), x = cx + Math.cos(s.a) * d, y = cy + Math.sin(s.a) * d + 120 * p * p;
+          c.globalAlpha = 1 - p; c.strokeStyle = s.col; c.lineWidth = 2;
+          c.beginPath(); c.moveTo(x, y); c.lineTo(x - Math.cos(s.a) * s.len, y - Math.sin(s.a) * s.len); c.stroke();
+        }
+        c.globalAlpha = 1; requestAnimationFrame(step);
+      }
     })(t0);
   }
+  function earnSeal() {
+    if (sealState() === "broken" || sealState() === "earned") return false;
+    store.set("qg-seal", "earned"); return true;
+  }
+  new IntersectionObserver((en) => {
+    if (!en[0].isIntersecting || sealState() !== "earned") return;
+    bigSeal.classList.add("is-cracking");
+    setTimeout(() => { bigSeal.classList.remove("is-cracking"); breakSeal(true); }, reduce ? 0 : 650);
+  }, { threshold: .45 }).observe(sec);
   const redact = $("#redact"), ghost = redact && redact.querySelector(".ghost");
   if (ghost && !reduce) {
     const abc = "ABDEFGHKLMNORSTUVWXYZ";
@@ -510,7 +556,7 @@
       setTimeout(() => { ghost.textContent = word(4 + ((Math.random() * 3) | 0)) + " " + word(4 + ((Math.random() * 3) | 0)); ghost.classList.remove("fade"); }, 900);
     }, 3200);
   }
-  $("#reseal").addEventListener("click", () => { sec.classList.remove("is-broken"); store.set("qg-seal", ""); prog.style.strokeDashoffset = "1"; const c = paint.getContext("2d"); c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, paint.width, paint.height); });
+  $("#reseal").addEventListener("click", () => { sec.classList.remove("is-broken"); store.set("qg-seal", "sealed-again"); setSecMeta(false); const c = paint.getContext("2d"); c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, paint.width, paint.height); updateSealProgress(); });
 
   /* ================= mini-game: leaf cutter ================= */
   (function dojoGame() {
@@ -576,7 +622,11 @@
       overTitle.textContent = reason === "ink" ? t("play.inked") : t("play.over");
       finalEl.hidden = false; finalEl.textContent = score;
       overText.textContent = nb && score > 0 ? t("play.newbest") : t("play.tryagain");
-      startBtn.firstElementChild.textContent = t("play.again"); over.hidden = false; $("#overLink").hidden = false;
+      startBtn.firstElementChild.textContent = t("play.again"); over.hidden = false;
+      const ol = $("#overLink"); ol.hidden = false;
+      if (sealState() === "earned") { ol.href = "#secret"; ol.removeAttribute("target"); ol.dataset.i18n = "sec.seeinside"; }
+      else { ol.href = "https://play.google.com/store/apps/details?id=com.knighthamster.game"; ol.target = "_blank"; ol.dataset.i18n = "play.longer"; }
+      ol.textContent = t(ol.dataset.i18n);
     }
     window.__dojoLang = () => {
       if (state === "over") { overTitle.textContent = endReason === "ink" ? t("play.inked") : t("play.over"); overText.textContent = t("play.tryagain"); startBtn.firstElementChild.textContent = t("play.again"); }
@@ -606,6 +656,8 @@
           if (it.ink) { beep("ink"); for (let k = 0; k < 40; k++) drops.push({ x: it.x, y: it.y, vx: (Math.random() - .5) * 600, vy: (Math.random() - .5) * 600, r: 3 + Math.random() * 14, life: 1, ink: true }); lives = 0; setLives(); state = "dying"; setTimeout(() => end("ink"), 260); return; }
           beep("cut"); strokeHits++;
           const gain = strokeHits; score += gain; scoreEl.textContent = score;
+          updateSealProgress(score);
+          if (score >= UNLOCK && earnSeal()) { floats.push({ x: W / 2 - 80, y: H * .3, txt: t("sec.cracked"), life: 2.2, big: true }); beep("cut"); }
           if (strokeHits > 1) floats.push({ x: it.x, y: it.y, txt: "x" + strokeHits, life: 1 });
           for (const side of [-1, 1]) bits.push({ x: it.x, y: it.y, vx: Math.cos(ang + side * 1.57) * 90 + (b.x - a.x) * 2, vy: Math.sin(ang + side * 1.57) * 90 - 40, rot: it.rot, vr: side * 6, s: it.s, side, life: 1 });
           for (let k = 0; k < 10; k++) drops.push({ x: it.x, y: it.y, vx: (Math.random() - .5) * 260, vy: (Math.random() - .7) * 260, r: 1.5 + Math.random() * 3.5, life: 1 });
@@ -641,7 +693,7 @@
       }
       for (let i = bits.length - 1; i >= 0; i--) { const b = bits[i]; b.vy += 600 * dt; b.x += b.vx * dt; b.y += b.vy * dt; b.rot += b.vr * dt; b.life -= dt * .9; if (b.life <= 0 || b.y > H + 40) { bits.splice(i, 1); continue; } c.globalAlpha = clamp(b.life, 0, 1); drawLeaf(b, b.side); c.globalAlpha = 1; }
       for (let i = drops.length - 1; i >= 0; i--) { const d = drops[i]; d.vy += 500 * dt; d.x += d.vx * dt; d.y += d.vy * dt; d.vx *= .97; d.life -= dt * (d.ink ? .6 : 1.4); if (d.life <= 0) { drops.splice(i, 1); continue; } c.globalAlpha = clamp(d.life, 0, 1); c.fillStyle = d.ink ? "#141312" : "#b5121b"; c.beginPath(); c.arc(d.x, d.y, d.r, 0, 6.28); c.fill(); c.globalAlpha = 1; }
-      for (let i = floats.length - 1; i >= 0; i--) { const f = floats[i]; f.y -= 40 * dt; f.life -= dt; if (f.life <= 0) { floats.splice(i, 1); continue; } c.globalAlpha = f.life; c.fillStyle = "#141312"; c.font = "900 34px 'Sofia Sans Extra Condensed', sans-serif"; c.fillText(f.txt, f.x + 12, f.y); c.globalAlpha = 1; }
+      for (let i = floats.length - 1; i >= 0; i--) { const f = floats[i]; f.y -= 40 * dt; f.life -= dt; if (f.life <= 0) { floats.splice(i, 1); continue; } c.globalAlpha = Math.min(1, f.life); c.fillStyle = f.big ? "#cf1f28" : "#141312"; c.font = (f.big ? "900 54px" : "900 34px") + " 'Sofia Sans Extra Condensed', sans-serif"; c.fillText(f.txt, f.x + 12, f.y); c.globalAlpha = 1; }
       const cutoff = now - 180; while (trailPts.length && trailPts[0].time < cutoff) trailPts.shift();
       if (trailPts.length > 2) {
         const P = trailPts, n = P.length, L = [], R = [], Lr = [], Rr = [];
@@ -753,7 +805,9 @@
   addEventListener("resize", () => { sizeLeaves(); if (Math.abs(innerWidth - lastVW) < 2) return; lastVW = innerWidth; paintSun(false); paintTease(); });
 
   applyLang(false);
+  syncLangUrl();
   if (store.get("qg-seal") === "broken") requestAnimationFrame(() => breakSeal(false));
+  updateSealProgress();
   sizeLeaves(); paintTease();
   if (reduce) { tickLeaves(0); }
   runGate();

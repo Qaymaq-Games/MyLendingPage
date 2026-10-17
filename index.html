@@ -11,9 +11,14 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="canonical" href="https://www.qaymaqgames.com/">
+  <link rel="alternate" hreflang="en" href="https://www.qaymaqgames.com/">
+  <link rel="alternate" hreflang="ru" href="https://www.qaymaqgames.com/ru">
+  <link rel="alternate" hreflang="x-default" href="https://www.qaymaqgames.com/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Qaymaq Games">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
   <meta property="og:url" content="https://www.qaymaqgames.com/">
   <meta property="og:title" content="Qaymaq Games | Indie Game Studio from Samarkand">
   <meta property="og:description" content="Small ideas, big worlds. Indie games for mobile and PC from the Samarkand Region, Uzbekistan.">
@@ -145,7 +150,7 @@
       <div class="games-head">
         <h2 id="games-title" class="display h2"><span class="brush-u" style="white-space: pre-line" data-i18n="games.title">Three games.
 One under seal.</span></h2>
-        <p class="lead" data-i18n="games.lead">One is out now, one is being forged, one is still under seal. Break it if you dare.</p>
+        <p class="lead" data-i18n="games.lead">One is out now, one is being forged, one is still under seal. The leaf game below holds the key.</p>
       </div>
 
       <div class="stack" id="stack">
@@ -174,6 +179,8 @@ One under seal.</span></h2>
               <div class="phone"><img src="/assets/site/kh2_en_02.webp" alt="Pick your power: legendary cards"><img class="is-off" alt=""></div>
               <div class="phone"><img src="/assets/site/kh2_en_01.webp" alt="Epic boss fights"><img class="is-off" alt=""></div>
               <div class="phone"><img src="/assets/site/kh2_en_03.webp" alt="Block at the right moment"><img class="is-off" alt=""></div>
+              <button class="trailer-btn" id="trailerBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg><span data-i18n="kh.trailer">Watch the trailer</span></button>
+              <button class="trailer-close" id="trailerClose" type="button" hidden><span class="sr-only" data-i18n="kh.close">Close the trailer</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
             </div>
           </div>
         </article>
@@ -209,23 +216,27 @@ One under seal.</span></h2>
               <div class="redact" id="redact" aria-hidden="true"><span class="ghost">KXRTE WOLAN</span><i></i><i></i><i></i></div>
               <p class="redact-cap" data-i18n="sec.title">Name classified</p>
               <dl class="meta">
-                <dt data-i18n="m.status">Status</dt><dd data-i18n="sec.status">Sealed</dd>
-                <dt data-i18n="m.genre">Genre</dt><dd data-i18n="sec.classified">Classified</dd>
+                <dt data-i18n="m.status">Status</dt><dd id="secStatus" data-i18n="sec.status">Sealed</dd>
+                <dt data-i18n="m.genre">Genre</dt><dd id="secGenre" data-i18n="sec.classified">Classified</dd>
                 <dt data-i18n="m.platform">Platform</dt><dd data-i18n="sec.classified">Classified</dd>
-                <dt data-i18n="m.release">Release</dt><dd data-i18n="sec.release">When the seal breaks</dd>
+                <dt data-i18n="m.release">Release</dt><dd id="secRelease" data-i18n="sec.release">When the seal breaks</dd>
               </dl>
               <p class="desc" data-i18n="sec.desc">We can't say its name yet. We can say it's coming.</p>
             </div>
             <div class="seal-stage">
               <canvas class="paint" id="paint" aria-hidden="true"></canvas>
               <div class="big-seal" id="bigSeal" aria-hidden="true"><span class="half l">封</span><span class="half r">封</span></div>
-              <button class="hold" id="hold" type="button">
+              <div class="hold" id="hold">
                 <svg viewBox="0 0 46 46" aria-hidden="true"><circle class="track" cx="23" cy="23" r="20" fill="none" stroke-width="3"/><circle class="prog" cx="23" cy="23" r="20" fill="none" stroke-width="3" pathLength="1"/></svg>
-                <span data-i18n="sec.hold">Hold to break the seal</span>
-              </button>
+                <div class="unlock-text">
+                  <span data-i18n="sec.hold">Score 25 in the leaf game to break the seal</span>
+                  <small id="sealProgress">Best: 0 / 25</small>
+                </div>
+                <a class="btn btn--ghost unlock-play" href="#play"><span data-i18n="sec.play">Play</span></a>
+              </div>
               <div class="sec-reveal" aria-live="polite">
-                <strong data-i18n="sec.after1">Ink is not the only color.</strong>
-                <span data-i18n="sec.after2">The next signal comes soon. Bookmark this page.</span>
+                <strong data-i18n="sec.after1">It's mechs.</strong>
+                <span data-i18n="sec.after2">Release: Q4 2026, closer to December. The name stays sealed for now.</span>
                 <button class="reseal" id="reseal" type="button" data-i18n="sec.reseal">Seal it again</button>
               </div>
             </div>
