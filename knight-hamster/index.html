@@ -2,666 +2,278 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Official game page for The Knight and the Hamster by Qaymaq Games. Action roguelite deckbuilder featuring tactical card combat, a faithful hamster companion, and offline single-player mode on Android.">
-  <meta name="keywords" content="The Knight and the Hamster, Qaymaq Games, roguelite, deckbuilder, card game, android game, mobile indie game">
-  <title>The Knight and the Hamster — Action Roguelite Deckbuilder | Qaymaq Games</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Knight and the Hamster: Action Roguelite Deckbuilder | Qaymaq Games</title>
+  <meta name="description" content="The Knight and the Hamster by Qaymaq Games: an action roguelite deckbuilder for Android with tactical card combat, a hamster companion, a village to rebuild and full offline play.">
+  <meta name="theme-color" content="#f1ede5">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="canonical" href="https://www.qaymaqgames.com/knight-hamster">
 
-  <!-- Open Graph / Facebook / Telegram -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Qaymaq Games">
   <meta property="og:url" content="https://www.qaymaqgames.com/knight-hamster">
-  <meta property="og:title" content="The Knight and the Hamster — Action Roguelite Deckbuilder | Qaymaq Games">
-  <meta property="og:description" content="Embark on a perilous roguelite journey alongside your faithful combat hamster. Build an unstoppable deck of strikes, parry ferocious boss attacks, and rebuild the kingdom!">
+  <meta property="og:title" content="The Knight and the Hamster: Action Roguelite Deckbuilder | Qaymaq Games">
+  <meta property="og:description" content="A roguelite journey with your faithful combat hamster. Build a deck of strikes, parry boss attacks and rebuild the village. On Google Play, fully playable offline.">
   <meta property="og:image" content="https://www.qaymaqgames.com/assets/knight-hamster/feature-graphic-1024x500.jpg">
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Knight and the Hamster — Qaymaq Games">
-  <meta name="twitter:description" content="Heroic action roguelite deckbuilder on Android. Defeat epic bosses with your faithful hamster companion!">
+  <meta name="twitter:title" content="The Knight and the Hamster | Qaymaq Games">
+  <meta name="twitter:description" content="Action roguelite deckbuilder on Android. Defeat bosses with your faithful hamster companion.">
   <meta name="twitter:image" content="https://www.qaymaqgames.com/assets/knight-hamster/feature-graphic-1024x500.jpg">
 
-  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "VideoGame",
     "name": "The Knight and the Hamster",
     "alternateName": "Knight and Hamster",
-    "description": "Heroic action roguelite adventure featuring tactical deckbuilding and a combat hamster companion.",
+    "url": "https://www.qaymaqgames.com/knight-hamster",
+    "image": "https://www.qaymaqgames.com/assets/knight-hamster/feature-graphic-1024x500.jpg",
+    "description": "Action roguelite deckbuilder with tactical card combat, a hamster companion and a village to rebuild between runs.",
     "genre": ["Action", "Roguelite", "Card Battler"],
+    "gamePlatform": "Android",
     "operatingSystem": "Android 8.0+",
     "applicationCategory": "Game",
-    "author": {
-      "@type": "Organization",
-      "name": "Qaymaq Games, MChJ",
-      "url": "https://www.qaymaqgames.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Qaymaq Games, MChJ"
-    },
     "inLanguage": ["en", "ru"],
-    "playMode": "SinglePlayer"
+    "playMode": "SinglePlayer",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.knighthamster.game",
+    "author": { "@type": "Organization", "name": "Qaymaq Games, MChJ", "url": "https://www.qaymaqgames.com/" },
+    "publisher": { "@type": "Organization", "name": "Qaymaq Games, MChJ" }
   }
   </script>
 
-  <style>
-    .game-page {
-      background: radial-gradient(circle at 50% 0%, rgba(255, 75, 69, 0.15), transparent 40rem),
-                  radial-gradient(circle at 90% 30%, rgba(0, 189, 242, 0.1), transparent 35rem),
-                  radial-gradient(circle at 10% 70%, rgba(255, 207, 55, 0.08), transparent 30rem),
-                  var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .top-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: var(--header-height);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .nav-actions a {
-      color: var(--cream-dim);
-      font-size: 0.92rem;
-      text-decoration: none;
-      transition: color var(--transition);
-    }
-
-    .nav-actions a:hover {
-      color: var(--cream);
-    }
-
-    /* Hero Section */
-    .game-hero {
-      padding: 64px 0 48px;
-    }
-
-    .game-hero-grid {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .game-icon-box {
-      position: relative;
-      text-align: center;
-    }
-
-    .game-icon {
-      width: 220px;
-      height: 220px;
-      border-radius: 44px;
-      border: 3px solid rgba(255, 207, 55, 0.4);
-      box-shadow: 0 20px 50px rgba(255, 75, 69, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.08);
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-      transition: transform var(--transition);
-    }
-
-    .game-icon:hover {
-      transform: scale(1.03);
-    }
-
-    .hero-badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .badge-pill {
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .badge-pill.yellow {
-      background: rgba(255, 207, 55, 0.12);
-      color: var(--yellow);
-      border: 1px solid rgba(255, 207, 55, 0.3);
-    }
-
-    .badge-pill.red {
-      background: rgba(255, 75, 69, 0.12);
-      color: var(--red);
-      border: 1px solid rgba(255, 75, 69, 0.3);
-    }
-
-    .badge-pill.cyan {
-      background: rgba(0, 189, 242, 0.12);
-      color: var(--cyan);
-      border: 1px solid rgba(0, 189, 242, 0.3);
-    }
-
-    .game-title {
-      font-size: 2.8rem;
-      line-height: 1.15;
-      margin: 0 0 8px;
-      color: var(--cream);
-      letter-spacing: -0.02em;
-    }
-
-    .game-subtitle {
-      font-size: 1.25rem;
-      color: var(--yellow);
-      font-weight: 700;
-      margin: 0 0 16px;
-      letter-spacing: 0.02em;
-    }
-
-    .game-lead {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: var(--cream-dim);
-      margin-bottom: 28px;
-      max-width: 680px;
-    }
-
-    .hero-cta-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-    }
-
-    .btn-playstore {
-      background: linear-gradient(135deg, #00875a, #00b074);
-      color: #fff;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
-      border-radius: 12px;
-      text-decoration: none;
-      box-shadow: 0 10px 28px rgba(0, 176, 116, 0.35);
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-
-    .btn-playstore:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 34px rgba(0, 176, 116, 0.5);
-      color: #fff;
-    }
-
-    /* Video Trailer Section */
-    .video-section {
-      padding: 48px 0;
-    }
-
-    .video-wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
-      background: #000;
-    }
-
-    .video-wrapper video {
-      width: 100%;
-      height: auto;
-      display: block;
-      aspect-ratio: 16 / 9;
-      background: #000;
-    }
-
-    /* Screenshots Section */
-    .screenshots-section {
-      padding: 56px 0;
-    }
-
-    .screenshot-viewer {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .main-screen-frame {
-      border-radius: 20px;
-      overflow: hidden;
-      border: 2px solid rgba(233, 224, 189, 0.15);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-      margin-bottom: 20px;
-      background: #14110f;
-      aspect-ratio: 16 / 9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .main-screen-img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-      transition: opacity 0.25s ease;
-    }
-
-    .screen-caption {
-      text-align: center;
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--yellow);
-      margin-bottom: 16px;
-      min-height: 28px;
-    }
-
-    .thumbs-strip {
-      display: flex;
-      gap: 12px;
-      overflow-x: auto;
-      padding-bottom: 12px;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: thin;
-    }
-
-    .thumb-btn {
-      flex: 0 0 130px;
-      scroll-snap-align: start;
-      border: 2px solid var(--line);
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--panel);
-      padding: 0;
-      cursor: pointer;
-      transition: border-color var(--transition), transform var(--transition);
-    }
-
-    .thumb-btn:hover {
-      border-color: var(--cyan);
-      transform: translateY(-2px);
-    }
-
-    .thumb-btn.active {
-      border-color: var(--yellow);
-      box-shadow: 0 0 16px rgba(255, 207, 55, 0.4);
-    }
-
-    .thumb-btn img {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Features Grid */
-    .features-section {
-      padding: 56px 0;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-    }
-
-    .feature-card {
-      background: rgba(23, 20, 17, 0.85);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 28px 24px;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-      transition: transform var(--transition), border-color var(--transition);
-    }
-
-    .feature-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255, 207, 55, 0.4);
-    }
-
-    .feature-card .card-icon {
-      font-size: 2rem;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-
-    .feature-card h3 {
-      font-size: 1.3rem;
-      margin: 0 0 10px;
-      color: var(--cream);
-    }
-
-    .feature-card p {
-      font-size: 0.98rem;
-      line-height: 1.65;
-      color: var(--cream-dim);
-      margin: 0;
-    }
-
-    /* Specs & Meta */
-    .specs-section {
-      padding: 56px 0 80px;
-    }
-
-    .specs-box {
-      max-width: 860px;
-      margin: 0 auto;
-      background: rgba(23, 20, 17, 0.85);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 36px 32px;
-    }
-
-    .specs-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    .specs-table th, .specs-table td {
-      padding: 12px 14px;
-      border-bottom: 1px solid rgba(233, 224, 189, 0.1);
-      text-align: left;
-      font-size: 0.95rem;
-    }
-
-    .specs-table th {
-      color: var(--cream-dim);
-      font-weight: 600;
-      width: 32%;
-    }
-
-    .specs-table td {
-      color: var(--cream);
-    }
-
-    @media (max-width: 768px) {
-      .game-hero-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 32px;
-      }
-      .game-title {
-        font-size: 2.2rem;
-      }
-      .hero-badge-row {
-        justify-content: center;
-      }
-      .hero-cta-group {
-        justify-content: center;
-      }
-      .game-lead {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .specs-box {
-        padding: 24px 18px;
-      }
-      .specs-table th, .specs-table td {
-        padding: 10px 8px;
-        font-size: 0.88rem;
-      }
-    }
-  </style>
-</head>
-<body class="game-page">
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container top-bar">
-      <a class="brand" href="/" aria-label="Qaymaq Games home">
-        <span class="brand-mark">QG</span>
-        <span class="brand-name">Qaymaq Games</span>
-      </a>
-      <nav class="nav-actions" aria-label="Game page navigation">
-        <a href="#features">Features</a>
-        <a href="#trailer">Trailer</a>
-        <a href="#screenshots">Screenshots</a>
-        <a href="#specs">Specifications</a>
-        <a href="/knight-hamster/privacy-policy" style="color: var(--yellow);">Privacy Policy</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="game-hero">
-      <div class="container">
-        <div class="game-hero-grid">
-          <div class="game-icon-box">
-            <img class="game-icon" src="/assets/knight-hamster/icon-512.png" alt="The Knight and the Hamster game icon" width="220" height="220">
-          </div>
-          <div>
-            <div class="hero-badge-row">
-              <span class="badge-pill yellow">⭐ Google Play Store</span>
-              <span class="badge-pill red">🎮 Action Roguelite Deckbuilder</span>
-              <span class="badge-pill cyan">📶 100% Offline Playable</span>
-            </div>
-            <h1 class="game-title">The Knight and the Hamster</h1>
-            <p class="game-subtitle">Roguelite Action & Deckbuilding Adventure</p>
-            <p class="game-lead">
-              A heroic deckbuilding roguelite with fast-paced tactical combat and village meta-progression. 
-              Take command of a valiant knight and his faithful battle hamster companion: slay menacing bosses, 
-              forge unstoppable card synergies, and rebuild your fallen home kingdom!
-            </p>
-            <div class="hero-cta-group">
-              <a class="btn-playstore" href="https://play.google.com/store/apps/details?id=com.knighthamster.game" target="_blank" rel="noopener noreferrer">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3.6 1.8c-.4.4-.6 1-.6 1.7v17c0 .7.2 1.3.6 1.7l.1.1 9.6-9.6v-.2L3.7 1.7l-.1.1zM17.1 11.2l-3.3-3.3V7.7l3.3-3.3.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3l-3.9 2.2h-.1zM13.3 12.5L3.7 22.1c.3.3.9.4 1.5.1l11.9-6.8-3.8-2.9zM13.3 11.5L17.1 7.7 5.2.9C4.6.6 4 .7 3.7 1l9.6 10.5z"/>
-                </svg>
-                Google Play (Android)
-              </a>
-              <a class="btn btn-light" href="#trailer">Watch Trailer</a>
-              <a class="btn btn-secondary" href="/knight-hamster/privacy-policy">Privacy Policy</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trailer Section -->
-    <section class="video-section section" id="trailer">
-      <div class="container">
-        <div class="section-kicker reveal" style="text-align: center; margin-bottom: 24px;">
-          <p class="eyebrow">Gameplay Trailer</p>
-          <h2>Boss Combat & Dynamic Battle Flow</h2>
-        </div>
-        <div class="video-wrapper">
-          <video controls playsinline preload="metadata" poster="/assets/knight-hamster/feature-graphic-1024x500.jpg">
-            <source src="/assets/knight-hamster/trailer.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-        </div>
-      </div>
-    </section>
-
-    <!-- Screenshots Gallery -->
-    <section class="screenshots-section section" id="screenshots">
-      <div class="container">
-        <div class="section-kicker reveal" style="text-align: center; margin-bottom: 28px;">
-          <p class="eyebrow">Gallery</p>
-          <h2>In-Game Action & Screenshots</h2>
-        </div>
-
-        <div class="screenshot-viewer">
-          <div class="main-screen-frame">
-            <img class="main-screen-img" id="mainScreen" src="/assets/knight-hamster/01-boss.jpg" alt="Epic Boss Battle in The Knight and the Hamster">
-          </div>
-          <div class="screen-caption" id="screenCaption">1 / 7 · Epic Boss Battles</div>
-
-          <div class="thumbs-strip" role="tablist" aria-label="Game Screenshots">
-            <button class="thumb-btn active" type="button" data-src="/assets/knight-hamster/01-boss.jpg" data-caption="1 / 7 · Epic Boss Battles">
-              <img src="/assets/knight-hamster/01-boss.jpg" alt="Boss Battles">
-            </button>
-            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/02-cards.jpg" data-caption="2 / 7 · Tactical Deckbuilding & Combos">
-              <img src="/assets/knight-hamster/02-cards.jpg" alt="Deckbuilding">
-            </button>
-            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/03-village.jpg" data-caption="3 / 7 · Village Restoration & Upgrades">
-              <img src="/assets/knight-hamster/03-village.jpg" alt="Village Upgrades">
-            </button>
-            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/04-block.jpg" data-caption="4 / 7 · Active Shield, Blocks & Parries">
-              <img src="/assets/knight-hamster/04-block.jpg" alt="Block and Parry">
-            </button>
-            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/05-pets.jpg" data-caption="5 / 7 · Faithful Hamster Companion & Pets">
-              <img src="/assets/knight-hamster/05-pets.jpg" alt="Hamster Companions">
-            </button>
-            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/06-weapons.jpg" data-caption="6 / 7 · Weapon Arsenal & Gear Upgrades">
-              <img src="/assets/knight-hamster/06-weapons.jpg" alt="Weapons and Gear">
-            </button>
-            <button class="thumb-btn" type="button" data-src="/assets/knight-hamster/07-camp.jpg" data-caption="7 / 7 · Camp Recovery & Strategic Decisions">
-              <img src="/assets/knight-hamster/07-camp.jpg" alt="Camp Recovery">
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Key Features -->
-    <section class="features-section section" id="features">
-      <div class="container">
-        <div class="section-kicker reveal" style="text-align: center;">
-          <p class="eyebrow">Core Features</p>
-          <h2>Why Players Love The Knight and the Hamster</h2>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-card reveal">
-            <span class="card-icon">🃏</span>
-            <h3>Tactical Combat Depth</h3>
-            <p>Dozens of distinct combat cards: sweeping slashes, iron-clad shield stances, enchanted arrows, and poisonous blades. Forge unstoppable synergies on every single run.</p>
-          </div>
-
-          <div class="feature-card reveal">
-            <span class="card-icon">🐹</span>
-            <h3>Battle Hamster Companion</h3>
-            <p>Your furry partner is a true brother-in-arms! He cheers on the knight, distracts menacing foes, casts protective shields, and saves you from fatal strikes.</p>
-          </div>
-
-          <div class="feature-card reveal">
-            <span class="card-icon">🏰</span>
-            <h3>Kingdom Meta-Progression</h3>
-            <p>Spend earned gold and rations to rebuild your ruined village. Upgrade the blacksmith, ancient shrine, and tavern for permanent hero stat bonuses.</p>
-          </div>
-
-          <div class="feature-card reveal">
-            <span class="card-icon">🛡️</span>
-            <h3>Fair Play & Offline Freedom</h3>
-            <p>Zero intrusive banner ads or forced interstitials. Rewarded ads only play when you choose them for bonus perks. Fully playable offline anytime, anywhere.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Specs and Tech Info -->
-    <section class="specs-section section" id="specs">
-      <div class="container">
-        <div class="specs-box reveal">
-          <p class="eyebrow" style="color: var(--yellow);">Technical Specifications</p>
-          <h2 style="margin: 6px 0 16px; color: var(--cream);">Application & Build Details</h2>
-          <p style="color: var(--cream-dim); margin-bottom: 24px;">Official package details for Google Play Console, press, and players.</p>
-
-          <table class="specs-table">
-            <tbody>
-              <tr>
-                <th>Game Title</th>
-                <td><strong>The Knight and the Hamster</strong></td>
-              </tr>
-              <tr>
-                <th>Package ID</th>
-                <td><code>com.knighthamster.game</code></td>
-              </tr>
-              <tr>
-                <th>Developer & Publisher</th>
-                <td><strong>Qaymaq Games, MChJ</strong> (D-U-N-S: 933906925)</td>
-              </tr>
-              <tr>
-                <th>Platform</th>
-                <td>Android (Google Play)</td>
-              </tr>
-              <tr>
-                <th>Minimum OS</th>
-                <td>Android 8.0 (Oreo) or higher</td>
-              </tr>
-              <tr>
-                <th>Supported Languages</th>
-                <td>English, Russian</td>
-              </tr>
-              <tr>
-                <th>Genre</th>
-                <td>Action Roguelite / Card Battler / Casual RPG</td>
-              </tr>
-              <tr>
-                <th>Age Rating</th>
-                <td>16+ (Teen)</td>
-              </tr>
-              <tr>
-                <th>Privacy Policy</th>
-                <td><a href="/knight-hamster/privacy-policy" style="color: var(--cyan); text-decoration: underline;">Read Privacy Policy (EN / RU)</a></td>
-              </tr>
-              <tr>
-                <th>Player Support</th>
-                <td><a href="mailto:support@qaymaqgames.com" style="color: var(--cyan);">support@qaymaqgames.com</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <a class="brand footer-brand" href="/"><span class="brand-mark">QG</span></a>
-      <p>«The Knight and the Hamster» is an official mobile game by Qaymaq Games, MChJ.</p>
-      <div class="footer-links">
-        <a href="/">Qaymaq Games Home</a>
-        <a href="/knight-hamster/privacy-policy">Privacy Policy</a>
-        <a href="/terms-of-service.html">Terms of Service</a>
-        <a href="/app-ads.txt">app-ads.txt</a>
-        <a href="mailto:support@qaymaqgames.com">Support</a>
-      </div>
-      <p class="copyright">&copy; 2026 Qaymaq Games, MChJ. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Gallery script -->
   <script>
-    const mainScreen = document.getElementById("mainScreen");
-    const screenCaption = document.getElementById("screenCaption");
-    const thumbButtons = document.querySelectorAll(".thumb-btn");
-
-    thumbButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        thumbButtons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const newSrc = btn.getAttribute("data-src");
-        const newCap = btn.getAttribute("data-caption");
-
-        mainScreen.style.opacity = "0.3";
-        setTimeout(() => {
-          mainScreen.src = newSrc;
-          screenCaption.textContent = newCap;
-          mainScreen.style.opacity = "1";
-        }, 150);
-      });
-    });
+    (function () {
+      var l; try { l = localStorage.getItem("qg-lang"); } catch (e) {}
+      if (l !== "en" && l !== "ru") l = (navigator.language || "").toLowerCase().indexOf("ru") === 0 ? "ru" : "en";
+      document.documentElement.setAttribute("data-lang", l); document.documentElement.lang = l;
+    })();
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Golos+Text:wght@400;500;600&family=Sofia+Sans+Extra+Condensed:wght@700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yuji+Boku&text=%E7%8C%AB%E5%B0%81%E4%B8%80%E4%BA%8C%E4%B8%89%E5%9B%9B%E5%A2%A8%E5%87%BA%E9%8D%9B&display=swap">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/page.css">
+</head>
+<body data-title-ru="The Knight and the Hamster: экшен-рогалик с колодой карт | Qaymaq Games" data-desc-ru="The Knight and the Hamster от Qaymaq Games: экшен-рогалик с колодой карт для Android. Тактические бои картами, хомяк-напарник, деревня, которую вы отстраиваете, и полная игра без интернета.">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="7" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="4"/>
+    </filter>
+    <filter id="inkedge" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency=".03 .06" numOctaves="3" seed="3" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="14"/>
+    </filter>
+    <symbol id="qg" viewBox="76 58 368 300">
+      <path fill="var(--qg-base, #f1ede5)" style="stroke: var(--qg-base, #f1ede5); stroke-width: var(--qg-rim, 0px); stroke-linejoin: round" d="M146.8 76.8 140.8 85.5 133.2 102.5 126.8 123.8 120.8 150.5 116.5 188.5 116.5 207.8 118.2 228.5 115.5 240.0 114.5 253.0 109.8 258.0 93.0 260.5 88.2 262.8 86.0 265.5 86.5 268.5 89.2 271.5 98.0 276.0 111.5 280.0 115.0 285.2 114.2 290.2 111.5 293.2 98.0 297.5 92.0 301.2 91.5 304.2 94.0 307.5 100.5 310.5 112.0 312.8 141.8 313.2 157.8 324.5 172.2 332.2 190.2 339.0 203.5 342.5 218.5 345.0 230.2 338.8 233.2 338.2 237.5 339.5 239.8 341.8 240.8 347.5 268.5 348.2 298.8 346.0 324.8 341.0 342.0 335.5 359.2 327.5 369.2 321.2 370.2 316.8 374.5 313.0 408.0 312.8 420.2 310.2 427.8 305.8 428.5 302.2 427.2 300.5 420.8 297.0 408.5 293.2 405.0 288.0 405.8 283.0 408.5 280.0 428.5 273.0 433.0 269.2 434.0 265.5 432.8 263.5 427.8 260.8 412.2 258.0 407.5 253.0 406.5 239.2 404.0 229.2 405.8 195.0 402.2 194.0 398.8 188.8 399.5 184.0 404.8 179.2 400.0 143.5 393.5 117.0 386.2 95.8 379.2 82.0 371.2 72.8 364.0 68.8 354.0 67.8 348.0 69.5 341.5 73.8 334.2 81.2 328.0 90.0 318.0 108.2 310.8 124.8 306.2 128.8 301.5 129.0 274.0 122.5 257.0 121.5 229.0 126.5 224.8 132.0 220.5 133.2 216.2 132.0 213.5 129.2 197.0 94.8 189.2 83.0 180.0 73.2 172.2 68.8 163.5 67.8 153.8 70.8Z"/>
+      <path fill="currentColor" fill-rule="evenodd" d="M369.5 320.8 361.8 314.8 353.2 306.5 347.5 299.5 343.8 293.8 331.5 294.0 318.8 293.2 300.0 308.8 284.0 320.5 260.5 336.0 240.8 347.5 253.8 348.2 268.5 348.2 280.5 347.8 298.8 346.0 317.5 342.8 331.0 339.2 345.8 334.0 359.2 327.5 364.8 324.2Z M405.8 195.0 402.0 198.8 396.8 205.0 388.2 217.0 388.2 218.0 390.0 221.8 391.2 228.5 391.0 239.5 389.5 247.0 387.5 253.2 382.2 264.8 375.8 275.0 368.8 283.5 363.5 288.2 357.5 291.2 362.2 297.5 368.2 303.5 380.5 313.2 402.0 313.2 413.0 312.0 422.2 309.5 426.0 307.5 427.8 305.8 428.5 304.2 428.5 302.2 427.2 300.5 420.8 297.0 410.5 294.0 396.5 291.8 400.2 284.8 402.0 280.5 412.8 278.8 423.2 275.5 428.5 273.0 431.0 271.2 433.0 269.2 434.0 267.0 434.0 265.5 432.8 263.5 431.0 262.2 427.0 260.5 418.2 258.8 407.0 258.2 407.0 243.0 405.8 235.2 404.0 229.2 404.0 224.5 405.5 210.0Z M368.0 70.5 364.8 69.0 360.8 68.0 352.5 68.0 348.0 69.5 345.2 71.0 339.5 75.5 333.2 82.5 325.2 94.5 318.0 108.2 309.5 127.8 307.8 130.2 306.5 130.5 297.0 127.5 284.8 124.5 274.0 122.5 265.0 121.5 257.0 121.5 249.8 122.2 236.2 124.8 228.0 127.0 244.2 147.0 261.5 170.2 277.2 193.2 291.0 215.5 296.0 212.5 309.8 208.5 323.8 205.8 335.8 204.5 350.8 204.5 358.2 205.2 366.5 206.8 371.2 208.0 376.5 210.0 377.8 210.0 384.5 200.0 390.8 192.2 399.2 183.5 404.8 179.2 403.2 163.2 400.0 143.5 394.8 121.5 390.0 105.8 384.5 91.8 379.2 82.0 374.2 75.5Z M160.2 68.2 156.2 69.5 150.2 73.2 145.8 78.0 140.8 85.5 137.2 92.5 133.2 102.5 129.2 114.8 124.8 131.8 119.5 158.0 117.0 179.8 116.5 188.5 116.5 207.8 118.2 228.5 116.5 234.8 115.0 244.0 115.0 258.5 104.2 258.5 95.8 259.8 92.2 260.8 89.0 262.2 87.0 263.8 86.0 265.5 86.0 267.2 87.0 269.2 89.2 271.5 95.5 275.0 102.5 277.5 108.2 279.0 120.2 280.8 122.0 285.0 125.5 291.5 124.8 292.0 119.5 292.2 110.5 293.8 101.2 296.2 98.0 297.5 93.0 300.2 91.5 302.0 91.5 304.2 92.2 305.8 96.0 308.8 100.5 310.5 107.0 312.0 120.5 313.5 135.8 313.5 142.5 312.8 148.5 318.0 157.8 324.5 163.8 328.0 177.5 334.5 195.5 340.5 210.8 344.0 218.5 345.0 239.0 334.0 261.5 320.2 283.8 305.0 294.0 297.2 302.2 290.2 296.5 286.8 292.8 283.0 290.8 280.0 288.8 275.5 285.5 264.8 283.8 254.8 283.0 245.5 283.0 237.5 283.8 230.2 283.5 228.5 279.5 221.0 269.5 204.8 254.8 182.8 241.2 164.0 227.2 145.8 213.2 129.0 205.8 111.8 199.2 98.8 194.8 91.0 187.2 80.5 180.0 73.2 173.5 69.2 167.8 67.8 163.5 67.8ZM153.8 213.8 155.0 212.0 157.2 210.2 164.2 208.5 170.8 208.5 178.5 210.0 182.8 211.8 181.2 218.0 180.0 227.8 180.0 237.5 181.2 246.5 183.5 254.2 186.5 260.5 189.8 265.0 194.8 269.2 197.2 270.5 200.0 271.2 204.8 271.2 208.5 269.8 212.5 266.2 214.8 263.0 217.5 257.2 220.0 248.8 221.5 239.8 223.8 242.0 228.5 248.5 235.5 260.2 234.0 262.5 227.8 268.8 222.8 272.8 215.8 277.2 206.8 281.2 198.8 283.0 193.0 283.0 186.8 281.5 180.2 278.5 174.0 274.2 166.8 267.2 160.2 258.2 156.0 249.5 153.5 241.5 152.0 231.8 152.2 219.5 153.0 215.5Z"/>
+      <path fill="var(--qg-base, #f1ede5)" d="M201.0 221.5 207.2 226.2 207.5 236.2 206.8 249.8 205.8 256.0 203.8 259.5 202.2 258.2 201.5 256.5 199.5 243.5 199.2 230.5 199.8 225.0Z"/>
+    </symbol>
+  </defs>
+</svg>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header" data-tone="paper">
+  <nav class="nav wrap" aria-label="Primary">
+    <a class="brand" href="/" data-home aria-label="Qaymaq Games, home" data-label-ru="Qaymaq Games, на главную">
+      <svg aria-hidden="true"><use href="#qg"/></svg>
+      <span class="brand-word">QAYMAQ</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#trailer"><span lang="en">Trailer</span><span lang="ru">Трейлер</span></a></li>
+      <li><a href="#screenshots"><span lang="en">Screenshots</span><span lang="ru">Скриншоты</span></a></li>
+      <li><a href="#features"><span lang="en">Features</span><span lang="ru">Об игре</span></a></li>
+      <li><a href="#details"><span lang="en">Details</span><span lang="ru">Детали</span></a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true"><span>EN</span></button>
+      <button type="button" data-lang="ru" aria-pressed="false"><span>RU</span></button>
+    </div>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-label="Menu" data-label-ru="Меню"><span></span><span></span></button>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="kh-hero" data-tone="paper" aria-labelledby="kh-title">
+    <div class="kh-bg" aria-hidden="true"></div>
+    <img class="layer plate l-range" src="/assets/site/range.webp" alt="" aria-hidden="true">
+    <div class="mist m2" aria-hidden="true"></div>
+    <div class="wrap kh-hero-grid">
+      <div>
+        <div class="kh-id">
+          <img class="kh-icon" src="/assets/site/kh_icon.webp" alt="The Knight and the Hamster app icon" data-alt-ru="Иконка игры The Knight and the Hamster" width="84" height="84">
+          <span class="stamp stamp--on"><span lang="en">Out now</span><span lang="ru">Вышла</span></span>
+        </div>
+        <h1 id="kh-title" class="kh-title">The Knight <span class="amp">and</span> the Hamster</h1>
+        <p class="lead" lang="en">A heroic deckbuilding roguelite. Lead a knight and his battle hamster through waves of enemies, build card combos that carry the run, and rebuild your ruined village between fights.</p>
+        <p class="lead" lang="ru">Героический рогалик с колодой карт. Ведите рыцаря и его боевого хомяка сквозь волны врагов, собирайте комбо, которые вытянут забег, и отстраивайте разрушенную деревню между боями.</p>
+        <dl class="meta">
+          <dt><span lang="en">Genre</span><span lang="ru">Жанр</span></dt><dd><span lang="en">Action roguelite deckbuilder</span><span lang="ru">Экшен-рогалик с колодой карт</span></dd>
+          <dt><span lang="en">Platform</span><span lang="ru">Платформа</span></dt><dd><span lang="en">Android, plays fully offline</span><span lang="ru">Android, играется полностью без интернета</span></dd>
+          <dt><span lang="en">Languages</span><span lang="ru">Языки</span></dt><dd><span lang="en">English, Russian</span><span lang="ru">Английский, русский</span></dd>
+        </dl>
+        <div class="actions">
+          <a class="btn btn--shu" href="https://play.google.com/store/apps/details?id=com.knighthamster.game" target="_blank" rel="noopener noreferrer"><span lang="en">Get it on Google Play</span><span lang="ru">Скачать в Google Play</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          <a class="btn btn--ghost" href="#trailer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg><span lang="en">Watch the trailer</span><span lang="ru">Смотреть трейлер</span></a>
+        </div>
+      </div>
+      <div class="phones" aria-hidden="true">
+        <div class="phone"><img src="/assets/site/kh2_en_02.webp" data-ru="/assets/site/kh2_ru_02.webp" alt=""></div>
+        <div class="phone"><img src="/assets/site/kh2_en_01.webp" data-ru="/assets/site/kh2_ru_01.webp" alt=""></div>
+        <div class="phone"><img src="/assets/site/kh2_en_03.webp" data-ru="/assets/site/kh2_ru_03.webp" alt=""></div>
+      </div>
+    </div>
+    <svg class="tear bottom" viewBox="0 0 1440 34" preserveAspectRatio="none" aria-hidden="true"><path fill="var(--night)" d="M0 34V18L22 20L44 21L68 24L82 20L106 21L119 16L141 14L153 9L178 15L187 18L207 19L220 22L228 24L238 18L247 15L262 18L270 24L292 23L314 26L328 28L343 28L360 28L368 28L378 28L394 28L419 23L435 22L450 24L467 18L477 21L488 21L499 19L519 14L527 18L535 15L549 9L572 9L592 9L602 12L616 18L632 17L642 15L660 9L681 15L692 11L707 16L718 10L727 11L750 7L775 6L797 8L811 13L823 13L843 8L863 8L877 6L893 12L919 10L927 7L940 7L966 6L975 6L989 7L1005 6L1023 6L1043 6L1053 6L1067 9L1082 6L1101 6L1123 6L1149 7L1175 6L1195 6L1207 6L1222 9L1237 14L1251 10L1276 7L1296 8L1306 8L1315 6L1326 6L1350 6L1365 11L1385 9L1406 12L1429 10L1440 6V34Z"/></svg>
+  </section>
+
+  <section class="band band--night" id="trailer" data-tone="night" aria-labelledby="trailer-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="trailer-title" class="display h2"><span class="brush-u"><span lang="en">Watch the trailer</span><span lang="ru">Трейлер</span></span></h2>
+        <p class="lead" lang="en">Boss fights, blocks timed to the frame and a hamster that refuses to leave the knight alone.</p>
+        <p class="lead" lang="ru">Бои с боссами, блоки точно в момент удара и хомяк, который ни на шаг не отходит от рыцаря.</p>
+      </div>
+      <div class="screen">
+        <i class="rod top" aria-hidden="true"></i><i class="rod bot" aria-hidden="true"></i>
+        <video id="trailerVideo" controls playsinline preload="none" poster="/assets/knight-hamster/feature-graphic-1024x500.jpg" aria-label="The Knight and the Hamster gameplay trailer" data-label-ru="Геймплейный трейлер The Knight and the Hamster">
+          <source src="/assets/knight-hamster/trailer.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--night" id="screenshots" data-tone="night" aria-labelledby="shots-title" style="padding-top: 24px">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom: 40px">
+        <h2 id="shots-title" class="display h2"><span class="brush-u"><span lang="en">Inside the game</span><span lang="ru">Внутри игры</span></span></h2>
+        <p class="lead" lang="en">Eight screens from the current build. Tap one to see it full size.</p>
+        <p class="lead" lang="ru">Восемь экранов из текущей версии. Нажмите, чтобы открыть в полный размер.</p>
+      </div>
+      <div class="shots-bar">
+        <span class="shots-count" aria-hidden="true"><b id="shotsCur">01</b> / 08</span>
+        <span class="shots-track" aria-hidden="true"><i id="shotsBar"></i></span>
+        <button class="arrow" id="shotsPrev" type="button" aria-label="Previous screenshots" data-label-ru="Предыдущие скриншоты"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 12H4M11 5l-7 7 7 7"/></svg></button>
+        <button class="arrow" id="shotsNext" type="button" aria-label="Next screenshots" data-label-ru="Следующие скриншоты"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <ul class="shots" id="shots">
+      <li class="shot"><button type="button"><span class="dev"><img src="/assets/site/kh2_en_01.webp" data-ru="/assets/site/kh2_ru_01.webp" alt="Epic boss fights" data-alt-ru="Эпичные бои с боссами" width="420" height="747" loading="lazy"></span><span class="cap"><span class="n">01</span><span lang="en">Epic boss fights</span><span lang="ru">Эпичные бои с боссами</span></span></button></li>
+      <li class="shot"><button type="button"><span class="dev"><img src="/assets/site/kh2_en_02.webp" data-ru="/assets/site/kh2_ru_02.webp" alt="Pick your power: legendary cards" data-alt-ru="Выберите силу: легендарные карты" width="420" height="747" loading="lazy"></span><span class="cap"><span class="n">02</span><span lang="en">Pick your power: legendary cards</span><span lang="ru">Выберите силу: легендарные карты</span></span></button></li>
+      <li class="shot"><button type="button"><span class="dev"><img src="/assets/site/kh2_en_03.webp" data-ru="/assets/site/kh2_ru_03.webp" alt="Block at the right moment" data-alt-ru="Блок в нужный момент" width="420" height="747" loading="lazy"></span><span class="cap"><span class="n">03</span><span lang="en">Block at the right moment</span><span lang="ru">Блок в нужный момент</span></span></button></li>
+      <li class="shot"><button type="button"><span class="dev"><img src="/assets/site/kh2_en_04.webp" data-ru="/assets/site/kh2_ru_04.webp" alt="Rebuild your village" data-alt-ru="Отстройте деревню" width="420" height="747" loading="lazy"></span><span class="cap"><span class="n">04</span><span lang="en">Rebuild your village</span><span lang="ru">Отстройте деревню</span></span></button></li>
+      <li class="shot"><button type="button"><span class="dev"><img src="/assets/site/kh2_en_05.webp" data-ru="/assets/site/kh2_ru_05.webp" alt="Hamsters and hats" data-alt-ru="Хомяки и шляпы" width="420" height="747" loading="lazy"></span><span class="cap"><span class="n">05</span><span lang="en">Hamsters and hats</span><span lang="ru">Хомяки и шляпы</span></span></button></li>
+      <li class="shot"><button type="button"><span class="dev"><img src="/assets/site/kh2_en_06.webp" data-ru="/assets/site/kh2_ru_06.webp" alt="Master six weapons" data-alt-ru="Освойте шесть видов оружия" width="420" height="747" loading="lazy"></span><span class="cap"><span class="n">06</span><span lang="en">Master six weapons</span><span lang="ru">Освойте шесть видов оружия</span></span></button></li>
+      <li class="shot"><button type="button"><span class="dev"><img src="/assets/site/kh2_en_07.webp" data-ru="/assets/site/kh2_ru_07.webp" alt="New quests every day" data-alt-ru="Новые задания каждый день" width="420" height="747" loading="lazy"></span><span class="cap"><span class="n">07</span><span lang="en">New quests every day</span><span lang="ru">Новые задания каждый день</span></span></button></li>
+      <li class="shot"><button type="button"><span class="dev"><img src="/assets/site/kh2_en_08.webp" data-ru="/assets/site/kh2_ru_08.webp" alt="Grow stronger every run" data-alt-ru="Сильнее с каждым забегом" width="420" height="747" loading="lazy"></span><span class="cap"><span class="n">08</span><span lang="en">Grow stronger every run</span><span lang="ru">Сильнее с каждым забегом</span></span></button></li>
+    </ul>
+    <svg class="tear bottom" viewBox="0 0 1440 34" preserveAspectRatio="none" aria-hidden="true"><path fill="var(--paper-deep)" d="M0 34V18L23 16L47 20L66 16L86 10L105 11L121 15L143 20L158 22L166 26L178 27L197 23L215 20L224 23L238 18L262 22L280 26L300 28L310 22L319 26L343 23L353 23L375 18L396 14L421 13L446 9L455 11L468 13L478 13L499 17L522 18L542 20L550 24L560 21L576 20L595 25L615 28L632 23L648 20L666 19L685 21L711 27L735 23L743 23L764 17L788 11L803 15L824 9L844 6L855 12L880 9L893 6L909 6L930 6L953 6L962 8L984 7L998 6L1015 7L1038 12L1061 9L1074 10L1099 9L1112 6L1127 9L1135 7L1153 6L1168 12L1176 14L1185 11L1196 10L1221 12L1233 6L1251 12L1267 16L1278 13L1302 15L1325 16L1344 14L1366 19L1379 20L1396 23L1405 21L1423 23L1440 28V34Z"/></svg>
+  </section>
+
+  <section class="band band--deep" id="features" data-tone="paper" aria-labelledby="feat-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="feat-title" class="display h2"><span class="brush-u"><span lang="en">What's in a run</span><span lang="ru">Что в забеге</span></span></h2>
+        <p class="lead" lang="en">Short fights, long-term progress. Every run feeds the village, and the village makes the next run stronger.</p>
+        <p class="lead" lang="ru">Короткие бои и долгий прогресс. Каждый забег кормит деревню, а деревня делает следующий забег сильнее.</p>
+      </div>
+      <div class="tally">
+        <div><b>9</b><span class="label"><span lang="en">Hamster companions</span><span lang="ru">Хомяков-напарников</span></span></div>
+        <div><b>6</b><span class="label"><span lang="en">Weapons to master</span><span lang="ru">Видов оружия</span></span></div>
+        <div><b>7</b><span class="label"><span lang="en">Village buildings</span><span lang="ru">Построек в деревне</span></span></div>
+        <div><b><em>5</em></b><span class="label"><span lang="en">Every fifth wave, a boss</span><span lang="ru">Каждая пятая волна — босс</span></span></div>
+      </div>
+      <ol class="steps feats">
+        <li class="step"><span class="seal" aria-hidden="true">一</span>
+          <h3><span lang="en">Tactical cards</span><span lang="ru">Тактика карт</span></h3>
+          <p lang="en">Sweeping slashes, shield stances, enchanted arrows and poisoned blades. A new deck and new synergies on every run.</p>
+          <p lang="ru">Размашистые удары, стойки со щитом, зачарованные стрелы и отравленные клинки. Новая колода и новые связки в каждом забеге.</p></li>
+        <li class="step"><span class="seal" aria-hidden="true">二</span>
+          <h3><span lang="en">A hamster at your side</span><span lang="ru">Хомяк рядом</span></h3>
+          <p lang="en">Nine hamsters, each with its own power: one heals on crits, one adds magic damage, one raises a barrier when the knight needs it most.</p>
+          <p lang="ru">Девять хомяков, у каждого своя сила: один лечит на критах, другой добавляет магический урон, третий ставит барьер, когда рыцарю тяжелее всего.</p></li>
+        <li class="step"><span class="seal" aria-hidden="true">三</span>
+          <h3><span lang="en">A village to rebuild</span><span lang="ru">Деревня</span></h3>
+          <p lang="en">Spend gold and rations on the blacksmith, the shrine, the tavern and four more. Every upgrade is permanent.</p>
+          <p lang="ru">Тратьте золото и припасы на кузницу, святилище, таверну и ещё четыре постройки. Каждое улучшение остаётся навсегда.</p></li>
+        <li class="step"><span class="seal" aria-hidden="true">四</span>
+          <h3><span lang="en">Fair and offline</span><span lang="ru">Честно и офлайн</span></h3>
+          <p lang="en">No banners, no forced ads. A rewarded video plays only when you choose it. The whole game works without internet.</p>
+          <p lang="ru">Никаких баннеров и навязанной рекламы. Видео за награду запускается, только если вы сами его выбрали. Вся игра работает без интернета.</p></li>
+      </ol>
+    </div>
+    <svg class="tear bottom" viewBox="0 0 1440 34" preserveAspectRatio="none" aria-hidden="true"><path fill="var(--paper)" d="M0 34V18L16 16L29 20L44 24L56 21L69 17L79 19L93 24L110 18L131 14L139 12L151 7L167 8L188 6L204 6L219 7L244 10L265 14L284 14L302 18L313 17L329 22L351 24L363 25L385 27L398 25L412 21L436 20L452 19L474 17L490 17L502 20L525 22L540 25L555 22L574 18L584 18L606 18L614 23L635 17L650 13L673 19L695 23L711 19L732 24L748 28L767 25L786 27L798 28L813 28L836 25L845 28L871 22L890 25L916 24L929 22L943 18L968 13L983 9L993 9L1018 15L1043 20L1052 21L1070 25L1080 27L1088 23L1105 18L1126 16L1142 19L1152 20L1176 19L1185 13L1203 12L1215 13L1240 15L1264 16L1279 20L1293 18L1302 18L1326 23L1339 28L1351 26L1372 28L1386 26L1407 28L1422 27L1437 28L1440 28V34Z"/></svg>
+  </section>
+
+  <section class="band" id="details" data-tone="paper" aria-labelledby="details-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="details-title" class="display h2"><span class="brush-u"><span lang="en">The details</span><span lang="ru">Детали</span></span></h2>
+        <p class="lead" lang="en">Package details for players, press and store reviewers.</p>
+        <p class="lead" lang="ru">Данные о приложении для игроков, прессы и модераторов магазина.</p>
+      </div>
+      <dl class="specs">
+        <div class="spec"><dt><span lang="en">Game</span><span lang="ru">Игра</span></dt><dd>The Knight and the Hamster</dd></div>
+        <div class="spec"><dt><span lang="en">Package ID</span><span lang="ru">ID пакета</span></dt><dd><code>com.knighthamster.game</code></dd></div>
+        <div class="spec"><dt><span lang="en">Developer and publisher</span><span lang="ru">Разработчик и издатель</span></dt><dd>Qaymaq Games, MChJ · D-U-N-S 933906925</dd></div>
+        <div class="spec"><dt><span lang="en">Platform</span><span lang="ru">Платформа</span></dt><dd><span lang="en">Android (Google Play), Android 8.0 or higher</span><span lang="ru">Android (Google Play), Android 8.0 и выше</span></dd></div>
+        <div class="spec"><dt><span lang="en">Languages</span><span lang="ru">Языки</span></dt><dd><span lang="en">English, Russian</span><span lang="ru">Английский, русский</span></dd></div>
+        <div class="spec"><dt><span lang="en">Genre</span><span lang="ru">Жанр</span></dt><dd><span lang="en">Action roguelite, card battler, casual RPG</span><span lang="ru">Экшен-рогалик, карточные бои, казуальная RPG</span></dd></div>
+        <div class="spec"><dt><span lang="en">Age rating</span><span lang="ru">Возрастной рейтинг</span></dt><dd>16+</dd></div>
+        <div class="spec"><dt><span lang="en">Privacy policy</span><span lang="ru">Конфиденциальность</span></dt><dd><a href="/knight-hamster/privacy-policy"><span lang="en">Read the privacy policy</span><span lang="ru">Политика конфиденциальности</span></a></dd></div>
+        <div class="spec"><dt><span lang="en">Player support</span><span lang="ru">Поддержка игроков</span></dt><dd><a href="mailto:support@qaymaqgames.com">support@qaymaqgames.com</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="contact" id="get" data-tone="shu" aria-labelledby="get-title">
+    <svg class="contact-mark" aria-hidden="true" style="--qg-base: var(--shu); color: var(--ink)"><use href="#qg"/></svg>
+    <div class="wrap">
+      <h2 id="get-title" class="display h2"><span class="brush-u"><span lang="en">Take the knight on a run</span><span lang="ru">Отправьте рыцаря в забег</span></span></h2>
+      <p class="lead" lang="en">On Google Play now. Stuck on a boss or found a bug? Write to us.</p>
+      <p class="lead" lang="ru">Уже в Google Play. Застряли на боссе или нашли баг? Напишите нам.</p>
+      <div class="actions">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.knighthamster.game" target="_blank" rel="noopener noreferrer"><span lang="en">Get it on Google Play</span><span lang="ru">Скачать в Google Play</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="addr-list">
+        <div class="addr">
+          <span class="label"><span lang="en">Player support and data requests</span><span lang="ru">Поддержка игроков и запросы о данных</span></span>
+          <a href="mailto:support@qaymaqgames.com">support@qaymaqgames.com</a>
+          <button class="copy" type="button" data-copy="support@qaymaqgames.com"><span lang="en">Copy</span><span lang="ru">Копировать</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" data-tone="night">
+  <div class="wrap foot">
+    <a class="brand" href="/" data-home aria-label="Qaymaq Games, home" data-label-ru="Qaymaq Games, на главную">
+      <svg aria-hidden="true"><use href="#qg"/></svg>
+      <span class="brand-word">QAYMAQ</span>
+    </a>
+    <nav class="foot-links" aria-label="Legal">
+      <a href="/" data-home><span lang="en">Studio</span><span lang="ru">Студия</span></a>
+      <a href="/knight-hamster/privacy-policy"><span lang="en">Privacy Policy</span><span lang="ru">Политика конфиденциальности</span></a>
+      <a href="/terms"><span lang="en">Terms of Service</span><span lang="ru">Условия использования</span></a>
+      <a href="/app-ads.txt">app-ads.txt</a>
+    </nav>
+    <small>&copy; <span id="year">2026</span> Qaymaq Games, MChJ · D-U-N-S 933906925 · <span lang="en">Samarkand Region, Uzbekistan</span><span lang="ru">Самаркандская область, Узбекистан</span></small>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Screenshot" data-label-ru="Скриншот">
+  <button class="arrow lb-close" type="button" aria-label="Close" data-label-ru="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="arrow lb-prev" type="button" aria-label="Previous" data-label-ru="Предыдущий"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 12H4M11 5l-7 7 7 7"/></svg></button>
+  <figure><img alt=""></figure>
+  <button class="arrow lb-next" type="button" aria-label="Next" data-label-ru="Следующий"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></button>
+  <p class="lb-cap"><b class="lb-n">01 / 08</b><span class="lb-t"></span></p>
+</dialog>
+
+<script src="/js/page.js"></script>
 </body>
 </html>

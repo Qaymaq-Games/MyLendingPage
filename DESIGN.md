@@ -270,4 +270,4 @@ The one motion grammar, on the cut ease (`cubic-bezier(.7, 0, .2, 1)`). Intro ga
 - **Don't** set Latin or Cyrillic text in Yuji Boku, or headings in Anton.
 - **Don't** add small uppercase lines above headings; a heading stands on its own with its brush underline.
 
-<!-- Out of scope: /css/style.css is the older system still used by the legal pages (/privacy, /terms) and /knight-hamster. It is a separate legacy surface and is not described here. -->
+<!-- Inner pages: /knight-hamster uses this system through /css/page.css and /js/page.js (full-bleed bands, screenshot strip with lightbox; EN/RU text sits side by side with lang attributes and the inactive one is hidden). Out of scope: /style.css and the inline-styled legal pages (/privacy, /terms, /knight-hamster/privacy-policy) are a separate legacy surface and are not described here. -->
